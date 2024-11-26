@@ -142,6 +142,7 @@
             // 
             this.passworduserbox.Location = new System.Drawing.Point(320, 43);
             this.passworduserbox.Name = "passworduserbox";
+            this.passworduserbox.PasswordChar = '*';
             this.passworduserbox.Size = new System.Drawing.Size(138, 20);
             this.passworduserbox.TabIndex = 2;
             // 

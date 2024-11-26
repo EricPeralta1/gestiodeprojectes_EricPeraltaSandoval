@@ -54,6 +54,27 @@ namespace gestiodeprojectes_EricPeraltaSandoval
                 return;
             }
 
+
+            if (string.IsNullOrWhiteSpace(nameuserbox.Text) || string.IsNullOrWhiteSpace(surnameuserbox.Text) || string.IsNullOrWhiteSpace(emailuserbox.Text) || string.IsNullOrWhiteSpace(passworduserbox.Text))
+            {
+                MessageBox.Show("Por favor, completa todos los campos antes de crear un usuario.","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (nameuserbox.Text.Any(char.IsDigit) || surnameuserbox.Text.Any(char.IsDigit))
+            {
+                MessageBox.Show("Ni el nombre ni el apellido pueden contener numeros.","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string email = emailuserbox.Text;
+            if (!email.Contains("@") || email.StartsWith("@") || email.EndsWith("@"))
+            {
+                MessageBox.Show("El correo electrónico debe tener un formato válido (con texto antes y después de '@').","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
             user user = new user();
 
             user.name  = nameuserbox.Text;
@@ -63,14 +84,19 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             int lastuserId = userlist.Last().userId;
             user.userId = lastuserId + 1;
 
-            userlist.Add(user);
 
+            userlist.Add(user);
            
             File.WriteAllText(textBoxRuta.Text, JArray.FromObject(userlist).ToString());
 
             dataGridUsers.DataSource = null;
             dataGridUsers.DataSource = userlist;
 
+            if (dataGridUsers.Columns.Contains("password"))
+            {
+                dataGridUsers.Columns["password"].Visible = false;
+            }
+                
             nameuserbox.Clear();
             surnameuserbox.Clear();
             emailuserbox.Clear();
@@ -155,6 +181,10 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
             dataGridUsers.DataSource = null;
             dataGridUsers.DataSource = userlist;
+
+            userSelectBox.DataSource = null;
+            userSelectBox.DataSource = userlist;
+            userSelectBox.DisplayMember = "Name";
 
             MessageBox.Show("Usuario eliminado.", "Operación completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

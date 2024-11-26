@@ -27,6 +27,9 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             usergestion usergestion = new usergestion();
 
             usergestion.Show();
+
+            this.Hide();
+
         }
     }
 }
