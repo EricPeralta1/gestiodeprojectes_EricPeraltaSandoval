@@ -1,0 +1,46 @@
+[
+  {
+    "projecteId": "01",
+    "projecteNom": "Crear aplicació",
+    "projecteDesc": "Crear una aplicació per Android",
+
+    "tasques": [
+      {
+        "tascaId": "01",
+        "tascaNom": "Crear diseny",
+        "tascaUsuari": "Eric Peralta",
+        "tascaStart": "12/11/24",
+        "tascaEnd": "13/11/24",
+        "tascaEstat": "En procés",
+        "tascaDesc": "Crear el diseny inicial per al joc",
+
+        "subtasques": [
+          {
+            "subtascaId": "",
+            "subtascaNom": "",
+            "subtascaUsuari": "",
+            "subtascaStart": "",
+            "subtascaEnd": "",
+            "subtascaEstat": " ",
+            "subtascaDesc": ""
+          }
+        ]
+      },
+      {
+        "tascaId": "02",
+        "tascaNom": "Nombrar les funcions",
+        "tascaUsuari": " ",
+        "tascaStart": "12/11/24",
+        "tascaEnd": "13/11/24",
+        "tascaEstat": "Disponible",
+        "tascaDesc": "Idear quines funcions es necesitaràn al joc"
+      }
+    ]
+  },
+  {
+    "projecteId": "02",
+    "projecteNom": "Crear aplicació d'escriptori'",
+    "projecteDesc": "Crear una aplicació per Android"
+  }
+]
+ 
