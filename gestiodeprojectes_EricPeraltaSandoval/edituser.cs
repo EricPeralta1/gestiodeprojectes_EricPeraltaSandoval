@@ -30,7 +30,6 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             nomEditBox.Text = editedUser.name;
             apellidoEditBox.Text = editedUser.surname;
             emailEditBox.Text = editedUser.email;
-            contraseñaEditBox.Text = editedUser.password;
         }
 
         private void aplicarBoton_Click(object sender, EventArgs e)
@@ -38,7 +37,6 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             editedUser.name = nomEditBox.Text;
             editedUser.surname = apellidoEditBox.Text;
             editedUser.email = emailEditBox.Text;
-            editedUser.password = contraseñaEditBox.Text;
 
             JArray jarrayusers = JArray.Parse(File.ReadAllText(jsonfilepath, Encoding.Default));
             userlist = jarrayusers.ToObject<List<user>>();
@@ -58,6 +56,17 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         private void cancelarBoton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            checkpasswordform checkPasswordForm = new checkpasswordform(editedUser);
+
+            checkPasswordForm.ShowDialog();
+
+            nomEditBox.Text = editedUser.name;
+            apellidoEditBox.Text = editedUser.surname;
+            emailEditBox.Text = editedUser.email;
         }
     }
 }

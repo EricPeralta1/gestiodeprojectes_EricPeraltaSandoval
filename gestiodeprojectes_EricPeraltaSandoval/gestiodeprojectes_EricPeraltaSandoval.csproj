@@ -49,6 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="changepasswordform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changepasswordform.Designer.cs">
+      <DependentUpon>changepasswordform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="checkpasswordform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="checkpasswordform.Designer.cs">
+      <DependentUpon>checkpasswordform.cs</DependentUpon>
+    </Compile>
     <Compile Include="project.cs" />
     <Compile Include="subtask.cs" />
     <Compile Include="task.cs" />
@@ -91,6 +103,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="changepasswordform.resx">
+      <DependentUpon>changepasswordform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="checkpasswordform.resx">
+      <DependentUpon>checkpasswordform.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="edituser.resx">
       <DependentUpon>edituser.cs</DependentUpon>
     </EmbeddedResource>

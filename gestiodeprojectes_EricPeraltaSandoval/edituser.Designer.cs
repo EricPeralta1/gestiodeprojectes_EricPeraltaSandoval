@@ -33,7 +33,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cancelarBoton = new System.Windows.Forms.Button();
             this.aplicarBoton = new System.Windows.Forms.Button();
-            this.contraseñaEditBox = new System.Windows.Forms.TextBox();
             this.emailEditBox = new System.Windows.Forms.TextBox();
             this.apellidoEditBox = new System.Windows.Forms.TextBox();
             this.nomEditBox = new System.Windows.Forms.TextBox();
@@ -45,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupox1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -62,8 +62,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.contraseñaEditBox);
             this.groupBox1.Controls.Add(this.emailEditBox);
             this.groupBox1.Controls.Add(this.apellidoEditBox);
             this.groupBox1.Controls.Add(this.nomEditBox);
@@ -107,13 +107,6 @@
             this.aplicarBoton.Text = "Aplicar cambios";
             this.aplicarBoton.UseVisualStyleBackColor = true;
             this.aplicarBoton.Click += new System.EventHandler(this.aplicarBoton_Click);
-            // 
-            // contraseñaEditBox
-            // 
-            this.contraseñaEditBox.Location = new System.Drawing.Point(90, 267);
-            this.contraseñaEditBox.Name = "contraseñaEditBox";
-            this.contraseñaEditBox.Size = new System.Drawing.Size(131, 20);
-            this.contraseñaEditBox.TabIndex = 9;
             // 
             // emailEditBox
             // 
@@ -190,6 +183,16 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre:";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(93, 265);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(170, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "CAMBIAR CONTRASEÑA";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // edituser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,12 +223,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox contraseñaEditBox;
         private System.Windows.Forms.TextBox emailEditBox;
         private System.Windows.Forms.TextBox apellidoEditBox;
         private System.Windows.Forms.TextBox nomEditBox;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button aplicarBoton;
         private System.Windows.Forms.Button cancelarBoton;
+        private System.Windows.Forms.Button button1;
     }
 }

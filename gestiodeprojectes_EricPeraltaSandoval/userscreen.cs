@@ -127,6 +127,11 @@ namespace gestiodeprojectes_EricPeraltaSandoval
                 dataGridUsers.DataSource = null;
                 dataGridUsers.DataSource = userlist;
 
+                if (dataGridUsers.Columns.Contains("password"))
+                {
+                    dataGridUsers.Columns["password"].Visible = false;
+                }
+
                 userSelectBox.DataSource = null;
                 userSelectBox.DataSource = userlist;
                 userSelectBox.DisplayMember = "Name";
@@ -159,6 +164,11 @@ namespace gestiodeprojectes_EricPeraltaSandoval
                 dataGridUsers.DataSource = null;
                 dataGridUsers.DataSource = userlist;
 
+                if (dataGridUsers.Columns.Contains("password"))
+                {
+                    dataGridUsers.Columns["password"].Visible = false;
+                }
+
                 userSelectBox.DataSource = null;
                 userSelectBox.DataSource = userlist;
                 userSelectBox.DisplayMember = "Name";
@@ -181,6 +191,11 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
             dataGridUsers.DataSource = null;
             dataGridUsers.DataSource = userlist;
+
+            if (dataGridUsers.Columns.Contains("password"))
+            {
+                dataGridUsers.Columns["password"].Visible = false;
+            }
 
             userSelectBox.DataSource = null;
             userSelectBox.DataSource = userlist;
