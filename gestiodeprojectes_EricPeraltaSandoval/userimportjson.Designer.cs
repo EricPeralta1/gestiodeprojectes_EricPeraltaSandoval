@@ -1,6 +1,6 @@
 ﻿namespace gestiodeprojectes_EricPeraltaSandoval
 {
-    partial class usergestion
+    partial class userimportjson
     {
         /// <summary>
         /// Required designer variable.

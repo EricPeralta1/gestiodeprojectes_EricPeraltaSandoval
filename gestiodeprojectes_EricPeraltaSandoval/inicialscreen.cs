@@ -24,12 +24,20 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
         private void button1_Click(object sender, EventArgs e)
         {
-            usergestion usergestion = new usergestion();
+            userscreen userscreen = new userscreen();
 
-            usergestion.Show();
+            userscreen.Show();
 
             this.Hide();
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            userimportjson userimportjson = new userimportjson();
+            
+            userimportjson.Show();
+            this.Hide();
         }
     }
 }

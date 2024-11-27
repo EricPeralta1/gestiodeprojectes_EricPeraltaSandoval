@@ -14,18 +14,19 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
         public string taskUser { get; set; }
 
-        public DateTime startDate { get; set; }
-        public DateTime endDate { get; set; }
+        public string startDate { get; set; }
+        public string endDate { get; set; }
 
         public String status { get; set; }
 
         public String description { get; set; }
 
+        public List<subtask> subtasks { get; set; }
+
         public task() { 
 
         }
-
-        public task(int taskId, string name, string taskUser, DateTime startDate, DateTime endDate, String status, String description) { 
+        public task(int taskId, string name, string taskUser, string startDate, string endDate, String status, String description, List<subtask>subtasks) { 
             this.taskId = taskId;
             this.name = name;  
             this.taskUser = taskUser;
@@ -33,6 +34,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             this.endDate = endDate;
             this.status = status;
             this.description = description;
+            this.subtasks = subtasks;
         }
     }
 }

@@ -1,46 +1,113 @@
 [
   {
-    "projecteId": "01",
-    "projecteNom": "Crear aplicació",
-    "projecteDesc": "Crear una aplicació per Android",
-
-    "tasques": [
+    "projectId": 1,
+    "name": "Crear aplicaciÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³",
+    "description": "Crear una aplicaciÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³ per Android",
+    "tasks": [
       {
-        "tascaId": "01",
-        "tascaNom": "Crear diseny",
-        "tascaUsuari": "Eric Peralta",
-        "tascaStart": "12/11/24",
-        "tascaEnd": "13/11/24",
-        "tascaEstat": "En procés",
-        "tascaDesc": "Crear el diseny inicial per al joc",
-
-        "subtasques": [
+        "taskId": 1,
+        "name": "Crear diseny",
+        "taskUser": "Eric Peralta",
+        "startDate": "12/11/24",
+        "endDate": "13/11/24",
+        "status": "En procÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©s",
+        "description": "Crear el diseny inicial per al joc",
+        "subtasks": [
           {
-            "subtascaId": "",
-            "subtascaNom": "",
-            "subtascaUsuari": "",
-            "subtascaStart": "",
-            "subtascaEnd": "",
-            "subtascaEstat": " ",
-            "subtascaDesc": ""
+            "subtaskId": 1,
+            "name": "a",
+            "subtaskUser": "b",
+            "startDate": "c",
+            "endDate": "d",
+            "status": "e ",
+            "description": "f"
           }
         ]
       },
       {
-        "tascaId": "02",
-        "tascaNom": "Nombrar les funcions",
-        "tascaUsuari": " ",
-        "tascaStart": "12/11/24",
-        "tascaEnd": "13/11/24",
-        "tascaEstat": "Disponible",
-        "tascaDesc": "Idear quines funcions es necesitaràn al joc"
+        "taskId": 2,
+        "name": "Nombrar les funcions",
+        "taskUser": "b ",
+        "startDate": "12/11/24",
+        "endDate": "13/11/24",
+        "status": "Disponible",
+        "description": "Idear quines funcions es necesitarÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â n al joc",
+        "subtasks": null
+      },
+      {
+        "taskId": 3,
+        "name": "Hacer funciÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³n de arrastre",
+        "taskUser": "Hacer funciÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³n de arrastre",
+        "startDate": "12/01/24",
+        "endDate": "14/01/24",
+        "status": "Disponible",
+        "description": "Hacer arrastre de imagenes",
+        "subtasks": null
       }
     ]
   },
   {
-    "projecteId": "02",
-    "projecteNom": "Crear aplicació d'escriptori'",
-    "projecteDesc": "Crear una aplicació per Android"
+    "projectId": 2,
+    "name": "Prueba de gestion de proyectos",
+    "description": "Vamos a probar si funciona",
+    "tasks": [
+      {
+        "taskId": 1,
+        "name": "dasda",
+        "taskUser": "dasda",
+        "startDate": "dasd",
+        "endDate": "dsad",
+        "status": "Disponible",
+        "description": "dasda",
+        "subtasks": [
+          {
+            "subtaskId": 1,
+            "name": "FJSDFBJSDF",
+            "subtaskUser": "Eric",
+            "startDate": "SDKFSDFLK",
+            "endDate": "SDKFSKDF",
+            "status": "Disponible",
+            "description": "SIDFHSO"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "projectId": 3,
+    "name": "Proyecto de prueba",
+    "description": "esto es una prueba",
+    "tasks": [
+      {
+        "taskId": 1,
+        "name": "FIUSDFHSIDFBHDISFGUISDFIOU",
+        "taskUser": "FIUSDFHSIDFBHDISFGUISDFIOU",
+        "startDate": "ASDASDD",
+        "endDate": "DASDAS",
+        "status": "Disponible",
+        "description": "SADAD",
+        "subtasks": [
+          {
+            "subtaskId": 1,
+            "name": "ASDKJHASIDI",
+            "subtaskUser": "Matias",
+            "startDate": "ASIODHASOD",
+            "endDate": "IOFHISDGHGOI",
+            "status": "Disponible",
+            "description": "WIOEFYUIEYUWEOG"
+          }
+        ]
+      },
+      {
+        "taskId": 2,
+        "name": "jafhuiasgfuigf",
+        "taskUser": "jafhuiasgfuigf",
+        "startDate": "ifhaeifhoaeifhoi",
+        "endDate": "ioefhowehfw",
+        "status": "Disponible",
+        "description": "uiwegfiuwefiewgwe",
+        "subtasks": null
+      }
+    ]
   }
 ]
- 

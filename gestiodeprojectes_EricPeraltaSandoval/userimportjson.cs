@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace gestiodeprojectes_EricPeraltaSandoval
 {
-    public partial class usergestion : Form
+    public partial class userimportjson : Form
     {
-        public usergestion()
+        public userimportjson()
         {
             InitializeComponent();
         }

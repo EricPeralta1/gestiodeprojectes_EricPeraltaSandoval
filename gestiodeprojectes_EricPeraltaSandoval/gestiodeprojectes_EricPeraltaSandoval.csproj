@@ -89,11 +89,11 @@
     <Compile Include="userscreen.Designer.cs">
       <DependentUpon>userscreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="usergestion.cs">
+    <Compile Include="userimportjson.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="usergestion.Designer.cs">
-      <DependentUpon>usergestion.cs</DependentUpon>
+    <Compile Include="userimportjson.Designer.cs">
+      <DependentUpon>userimportjson.cs</DependentUpon>
     </Compile>
     <Compile Include="inicialscreen.cs">
       <SubType>Form</SubType>
@@ -130,8 +130,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="usergestion.resx">
-      <DependentUpon>usergestion.cs</DependentUpon>
+    <EmbeddedResource Include="userimportjson.resx">
+      <DependentUpon>userimportjson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userscreen.resx">
       <DependentUpon>userscreen.cs</DependentUpon>

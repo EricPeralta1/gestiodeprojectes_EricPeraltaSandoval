@@ -204,6 +204,7 @@
             // 
             // userSelectBox
             // 
+            this.userSelectBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.userSelectBox.FormattingEnabled = true;
             this.userSelectBox.Location = new System.Drawing.Point(150, 42);
             this.userSelectBox.Name = "userSelectBox";

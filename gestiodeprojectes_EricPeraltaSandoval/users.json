@@ -10,28 +10,14 @@
     "name": "Matias",
     "surname": "Prats",
     "email": "m38matias@gmail.com",
-    "password": "nuevanuevacontra1234",
+    "password": "contranueva1234",
     "userId": 2
   },
   {
-    "name": "Marcos",
-    "surname": "Perez",
-    "email": "marcos234@gmail.com",
-    "password": "marcos1234",
+    "name": "asdsd",
+    "surname": "asdasdsa",
+    "email": "dasdad@gmail.com",
+    "password": "asdasdsadsadsadas",
     "userId": 3
-  },
-  {
-    "name": "Pepe",
-    "surname": "Viyuela",
-    "email": "pepeviyuela@gmail.com",
-    "password": "pepe1234",
-    "userId": 4
-  },
-  {
-    "name": "Mike",
-    "surname": "Fernandez",
-    "email": "mikefernandez@gmail.com",
-    "password": "mike1234",
-    "userId": 5
   }
 ]

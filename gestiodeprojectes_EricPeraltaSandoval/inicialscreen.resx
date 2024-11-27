@@ -117,4 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Bienvenido a la aplicación de escritorio de Project Manager.
+Si ya posee JSONs existentes, seleccione importar JSON.
+De lo contrario, seleccione crear JSON, y el sistema le crearà 2 JSON vacios listos para su edición.</value>
+  </data>
 </root>

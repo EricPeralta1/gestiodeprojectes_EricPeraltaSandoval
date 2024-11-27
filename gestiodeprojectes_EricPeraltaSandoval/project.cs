@@ -14,15 +14,18 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
         public String description { get; set; }
 
+        public List<task> tasks { get; set; }
+
         public project() { 
         
         }
 
-        public project (int projectId, string name, string description)
+        public project (int projectId, string name, string description, List<task>tasks)
         {
             this.projectId = projectId;
             this.name = name;
             this.description = description;
+            this.tasks = tasks;
         }
     }
 }

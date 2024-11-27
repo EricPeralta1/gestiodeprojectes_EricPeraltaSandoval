@@ -187,6 +187,11 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             int userIndex = userlist.IndexOf((user)userSelectBox.SelectedItem);
             userlist.RemoveAt(userIndex);
 
+            for (int i = 0; i < userlist.Count; i++)
+            {
+                userlist[i].userId = i + 1; 
+            }
+
             File.WriteAllText(textBoxRuta.Text, JArray.FromObject(userlist).ToString());
 
             dataGridUsers.DataSource = null;
