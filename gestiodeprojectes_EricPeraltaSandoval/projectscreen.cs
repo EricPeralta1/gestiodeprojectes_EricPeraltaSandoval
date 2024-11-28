@@ -20,22 +20,52 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         List<subtask> subtaskList;
         List<user> userList;
 
-        public projectscreen()
+        public projectscreen(string jsonUsersPath, string jsonProjectsPath)
         {
             InitializeComponent();
+
+            rutaUsuariosBox.Text = jsonUsersPath;
+            textBoxRuta.Text = jsonProjectsPath;
+
+            JArray jarrayusers = JArray.Parse(File.ReadAllText(rutaUsuariosBox.Text, Encoding.Default));
+            JArray jarrayprojects = JArray.Parse(File.ReadAllText(textBoxRuta.Text, Encoding.Default));
+
+            userList = jarrayusers.ToObject<List<user>>();
+            projectList = jarrayprojects.ToObject<List<project>>();
+
+
+            usuarioTareaBox.DataSource = null;
+            usuarioTareaBox.DataSource = userList;
+            usuarioTareaBox.DisplayMember = "Name";
+
+            subtareaUsuarioBox.DataSource = null;
+            subtareaUsuarioBox.DataSource = userList;
+            subtareaUsuarioBox.DisplayMember = "Name";
+
+            dataGridProjects.DataSource = null;
+            dataGridProjects.DataSource = projectList;
+
+            projectComboBox.DataSource = null;
+            projectComboBox.DataSource = projectList;
+            projectComboBox.DisplayMember = "Name";
+
         }
 
         private void gestiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            userscreen userscreen = new userscreen();
-            userscreen.Show();
+            userscreen userscreen = new userscreen(rutaUsuariosBox.Text, textBoxRuta.Text);
+
+            userscreen.ShowDialog();
+            this.Hide();
         }
 
         private void gestiónDelJSONToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            jsonscreen jsonscreen = new jsonscreen();
+            jsonscreen jsonscreen = new jsonscreen(rutaUsuariosBox.Text, textBoxRuta.Text);
 
-            jsonscreen.Show();
+            jsonscreen.ShowDialog();
+            this.Hide();
+
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -86,9 +116,15 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
             project.name = projectNameBox.Text;
             project.description = projectDescriptionBox.Text;
-            int lastprojectId = projectList.Last().projectId;
-            project.projectId = lastprojectId + 1;
-
+            if (projectList.Count == 0)
+            {
+                project.projectId = 1;
+            }
+            else {
+                int lastprojectId = projectList.Last().projectId;
+                project.projectId = lastprojectId + 1;
+            }
+         
             projectList.Add(project);
 
             File.WriteAllText(textBoxRuta.Text, JArray.FromObject(projectList).ToString());
@@ -104,10 +140,6 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             projectComboBox.DisplayMember = "Name";
 
             MessageBox.Show("El proyecto se ha creado y añadido satisfactoriamente.", "Operación realizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-
-
         }
 
         private void borrarButton_Click(object sender, EventArgs e)
@@ -148,7 +180,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
             if (selectedProject.tasks == null || selectedProject.tasks.Count == 0)
             {
-                MessageBox.Show("El proyecto seleccionado no tiene tareas asociadas.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El proyecto seleccionado no tiene tareas asociadas. Recuerde que puede añadir tareas cuando desee.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 taskGridView.DataSource = null;
                 return;

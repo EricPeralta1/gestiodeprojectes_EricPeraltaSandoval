@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,17 +18,23 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             InitializeComponent();
         }
 
-        private void gestiónDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            userscreen userscreen = new userscreen();
+            string projectDirectory = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
 
-            userscreen.Show();
+            string jsonsFolderPath = Path.Combine(projectDirectory, "JSONs");
 
+
+            string userJsonPath = Path.Combine(jsonsFolderPath, "newUsers.json");
+            string projectJsonPath = Path.Combine(jsonsFolderPath, "newProjects.json");
+            string initialBody = "[]";
+
+            File.WriteAllText(userJsonPath, initialBody);
+            File.WriteAllText(projectJsonPath, initialBody);
+
+            userscreen userscreen = new userscreen(userJsonPath, projectJsonPath);
+
+            userscreen.ShowDialog();
             this.Hide();
 
         }
@@ -36,7 +43,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         {
             userimportjson userimportjson = new userimportjson();
             
-            userimportjson.Show();
+            userimportjson.ShowDialog();
             this.Hide();
         }
     }

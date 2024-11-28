@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json.Linq;
 
 namespace gestiodeprojectes_EricPeraltaSandoval
 {
     public partial class userimportjson : Form
     {
+        private string jsonUsersPath;
+        private string jsonProjectsPath;
+
         public userimportjson()
         {
             InitializeComponent();
@@ -19,7 +23,12 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
         private void button1_Click(object sender, EventArgs e)
         {
-            userscreen userscreen = new userscreen(); 
+            if (string.IsNullOrEmpty(rutaProyectosBox.Text) || string.IsNullOrEmpty(rutaUsuariosBox.Text)){
+                MessageBox.Show("Selecciona los 2 JSON para poder continuar, por favor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            userscreen userscreen = new userscreen(jsonUsersPath, jsonProjectsPath); 
             
             userscreen.Show();
             this.Hide();
@@ -28,7 +37,13 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
         private void button2_Click(object sender, EventArgs e)
         {
-            projectscreen projectscreen = new projectscreen();
+            if (string.IsNullOrEmpty(rutaProyectosBox.Text) || string.IsNullOrEmpty(rutaUsuariosBox.Text))
+            {
+                MessageBox.Show("Selecciona los 2 JSON para poder continuar, por favor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            projectscreen projectscreen = new projectscreen(jsonUsersPath, jsonProjectsPath);
             projectscreen.Show();
             this.Hide();
 
@@ -36,10 +51,44 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
         private void button3_Click(object sender, EventArgs e)
         {
-            jsonscreen jsonscreen = new jsonscreen();   
+            if (string.IsNullOrEmpty(rutaProyectosBox.Text) || string.IsNullOrEmpty(rutaUsuariosBox.Text))
+            {
+                MessageBox.Show("Selecciona los 2 JSON para poder continuar, por favor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            jsonscreen jsonscreen = new jsonscreen(jsonUsersPath, jsonProjectsPath);   
             jsonscreen.Show();
             this.Hide();
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.InitialDirectory = Application.StartupPath;
+            openFileDialog.Filter = "Ficheros JSON (*.json)|*.json";
+
+            if (openFileDialog.ShowDialog().Equals(DialogResult.OK))
+            {
+                rutaUsuariosBox.Text = openFileDialog.FileName;
+                jsonUsersPath = openFileDialog.FileName;
+            }
+        }
+
+        private void jsonProjectsButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.InitialDirectory = Application.StartupPath;
+            openFileDialog.Filter = "Ficheros JSON (*.json)|*.json";
+
+            if (openFileDialog.ShowDialog().Equals(DialogResult.OK))
+            {
+                rutaProyectosBox.Text = openFileDialog.FileName;
+                jsonProjectsPath = openFileDialog.FileName;
+            }
         }
     }
 }

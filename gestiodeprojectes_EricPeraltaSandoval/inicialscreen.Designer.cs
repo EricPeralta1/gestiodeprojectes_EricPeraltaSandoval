@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(inicialscreen));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.createJSONButton = new System.Windows.Forms.Button();
+            this.importJSONButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,30 +38,30 @@
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // createJSONButton
             // 
-            this.button1.Location = new System.Drawing.Point(237, 244);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(664, 114);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "CREAR JSON";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.createJSONButton.Location = new System.Drawing.Point(237, 244);
+            this.createJSONButton.Name = "createJSONButton";
+            this.createJSONButton.Size = new System.Drawing.Size(664, 114);
+            this.createJSONButton.TabIndex = 1;
+            this.createJSONButton.Text = "CREAR JSON";
+            this.createJSONButton.UseVisualStyleBackColor = true;
+            this.createJSONButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // importJSONButton
             // 
-            this.button2.Location = new System.Drawing.Point(269, 422);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(664, 114);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "IMPORTAR JSON";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.importJSONButton.Location = new System.Drawing.Point(269, 422);
+            this.importJSONButton.Name = "importJSONButton";
+            this.importJSONButton.Size = new System.Drawing.Size(664, 114);
+            this.importJSONButton.TabIndex = 2;
+            this.importJSONButton.Text = "IMPORTAR JSON";
+            this.importJSONButton.UseVisualStyleBackColor = true;
+            this.importJSONButton.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.createJSONButton);
             this.groupBox1.Location = new System.Drawing.Point(32, 22);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1205, 666);
@@ -92,7 +92,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1249, 700);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.importJSONButton);
             this.Controls.Add(this.groupBox1);
             this.Name = "inicialscreen";
             this.Text = "Form1";
@@ -105,8 +105,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button createJSONButton;
+        private System.Windows.Forms.Button importJSONButton;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;

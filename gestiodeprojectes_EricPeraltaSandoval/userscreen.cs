@@ -15,10 +15,30 @@ namespace gestiodeprojectes_EricPeraltaSandoval
     public partial class userscreen : Form
     {
         List<user> userlist;
+        string rutaProjects;
 
-        public userscreen()
+        public userscreen(string userJsonPath, string projectJsonPath)
         {
             InitializeComponent();
+
+            textBoxRuta.Text = userJsonPath;
+            rutaProjects = projectJsonPath;
+
+            JArray jarrayusers = JArray.Parse(File.ReadAllText(textBoxRuta.Text, Encoding.Default));
+            userlist = jarrayusers.ToObject<List<user>>();
+
+            dataGridUsers.DataSource = null;
+            dataGridUsers.DataSource = userlist;
+
+            if (dataGridUsers.Columns.Contains("password"))
+            {
+                dataGridUsers.Columns["password"].Visible = false;
+            }
+
+            userSelectBox.DataSource = null;
+            userSelectBox.DataSource = userlist;
+            userSelectBox.DisplayMember = "Name";
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -28,16 +48,18 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
         private void gestionDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            projectscreen projectscreen = new projectscreen(); 
+            projectscreen projectscreen = new projectscreen(textBoxRuta.Text, rutaProjects); 
 
-            projectscreen.Show();
+            projectscreen.ShowDialog();
+            this.Hide();
         }
 
         private void gestiónDelJSONToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            jsonscreen jsonscreen = new jsonscreen();
+            jsonscreen jsonscreen = new jsonscreen(textBoxRuta.Text, rutaProjects);
 
-            jsonscreen.Show();
+            jsonscreen.ShowDialog();
+            this.Hide();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -81,8 +103,16 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             user.surname = surnameuserbox.Text;
             user.email = emailuserbox.Text;
             user.password = passworduserbox.Text;
-            int lastuserId = userlist.Last().userId;
-            user.userId = lastuserId + 1;
+            Console.WriteLine(userlist.Count);
+            if (userlist.Count == 0)
+            {
+                user.userId = 1;
+            }
+            else
+            {
+                int lasttaskId = userlist.Last().userId;
+                user.userId = lasttaskId + 1;
+            }
 
 
             userlist.Add(user);
