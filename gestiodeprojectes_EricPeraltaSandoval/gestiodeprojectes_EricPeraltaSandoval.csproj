@@ -158,6 +158,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\buttonbackground.png" />
+    <Content Include="Resources\changepasswordformbackground.png" />
+    <Content Include="Resources\checkpasswordform.png" />
     <Content Include="Resources\comboboxinitialbackground.png" />
     <Content Include="Resources\edituserbackground.png" />
     <Content Include="Resources\initialscreenbackground.png" />

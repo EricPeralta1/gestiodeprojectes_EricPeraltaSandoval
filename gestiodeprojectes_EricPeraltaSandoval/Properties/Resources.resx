@@ -118,17 +118,29 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="buttonbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\buttonbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="initialscreenbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\initialscreenbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="comboboxinitialbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\comboboxinitialbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="userimportjsonbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\userimportjsonbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="navigatorbarbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\navigatorbarbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="initialscreenbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\initialscreenbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="whitelogoappescriptori" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whitelogoappescriptori.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttonbackground1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="userscreenbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\userscreenbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttonbackground2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buttonbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="edituserbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edituserbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,19 +151,13 @@
   <data name="logoappescriptori" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logoappescriptori.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="userscreenbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\userscreenbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="checkpasswordform" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\checkpasswordform.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buttonbackground1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\buttonbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="comboboxinitialbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\comboboxinitialbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="userimportjsonbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\userimportjsonbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="whitelogoappescriptori" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\whitelogoappescriptori.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="buttonbackground2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\buttonbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="changepasswordformbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\changepasswordformbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

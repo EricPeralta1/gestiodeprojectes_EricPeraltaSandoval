@@ -93,6 +93,26 @@ namespace gestiodeprojectes_EricPeraltaSandoval.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap changepasswordformbackground {
+            get {
+                object obj = ResourceManager.GetObject("changepasswordformbackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap checkpasswordform {
+            get {
+                object obj = ResourceManager.GetObject("checkpasswordform", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap comboboxinitialbackground {
             get {
                 object obj = ResourceManager.GetObject("comboboxinitialbackground", resourceCulture);
