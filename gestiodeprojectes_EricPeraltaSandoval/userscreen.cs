@@ -50,7 +50,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         {
             projectscreen projectscreen = new projectscreen(textBoxRuta.Text, rutaProjects); 
 
-            projectscreen.ShowDialog();
+            projectscreen.Show();
             this.Hide();
         }
 
@@ -58,7 +58,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         {
             jsonscreen jsonscreen = new jsonscreen(textBoxRuta.Text, rutaProjects);
 
-            jsonscreen.ShowDialog();
+            jsonscreen.Show();
             this.Hide();
         }
 

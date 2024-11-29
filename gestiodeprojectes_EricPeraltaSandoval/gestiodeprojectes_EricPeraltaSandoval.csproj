@@ -163,9 +163,11 @@
     <Content Include="Resources\comboboxinitialbackground.png" />
     <Content Include="Resources\edituserbackground.png" />
     <Content Include="Resources\initialscreenbackground.png" />
+    <Content Include="Resources\jsonscreenbackground.png" />
     <Content Include="Resources\labelbackground.png" />
     <Content Include="Resources\logoappescriptori.png" />
     <Content Include="Resources\navigatorbarbackground.png" />
+    <Content Include="Resources\projectscreenbackground.png" />
     <Content Include="Resources\userimportjsonbackground.png" />
     <Content Include="Resources\userscreenbackground.png" />
     <Content Include="Resources\whitelogoappescriptori.png" />

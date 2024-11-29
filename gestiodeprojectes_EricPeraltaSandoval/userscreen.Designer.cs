@@ -282,8 +282,10 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.nameuserbox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "userscreen";
-            this.Text = "Gestión de usuarios";
+            this.Text = "GESTIÓN DE USUARIOS";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridUsers)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

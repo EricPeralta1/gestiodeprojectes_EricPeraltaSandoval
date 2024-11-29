@@ -143,6 +143,16 @@ namespace gestiodeprojectes_EricPeraltaSandoval.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap jsonscreenbackground {
+            get {
+                object obj = ResourceManager.GetObject("jsonscreenbackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap labelbackground {
             get {
                 object obj = ResourceManager.GetObject("labelbackground", resourceCulture);
@@ -166,6 +176,16 @@ namespace gestiodeprojectes_EricPeraltaSandoval.Properties {
         internal static System.Drawing.Bitmap navigatorbarbackground {
             get {
                 object obj = ResourceManager.GetObject("navigatorbarbackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap projectscreenbackground {
+            get {
+                object obj = ResourceManager.GetObject("projectscreenbackground", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

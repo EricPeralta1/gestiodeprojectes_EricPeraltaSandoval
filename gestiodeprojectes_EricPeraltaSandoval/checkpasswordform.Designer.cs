@@ -71,6 +71,8 @@
             this.Controls.Add(this.checkPasswordButton);
             this.Controls.Add(this.passwordCheckBox);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "checkpasswordform";
             this.Text = "COMPROVANDO ADMINISTRADOR...";
             this.ResumeLayout(false);

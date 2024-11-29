@@ -142,6 +142,12 @@
   <data name="buttonbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buttonbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="projectscreenbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\projectscreenbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="checkpasswordform" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\checkpasswordform.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="edituserbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edituserbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,13 +157,13 @@
   <data name="logoappescriptori" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logoappescriptori.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="checkpasswordform" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\checkpasswordform.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="changepasswordformbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\changepasswordformbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="comboboxinitialbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\comboboxinitialbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="changepasswordformbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\changepasswordformbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="jsonscreenbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jsonscreenbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

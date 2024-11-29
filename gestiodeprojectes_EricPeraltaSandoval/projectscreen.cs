@@ -55,7 +55,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         {
             userscreen userscreen = new userscreen(rutaUsuariosBox.Text, textBoxRuta.Text);
 
-            userscreen.ShowDialog();
+            userscreen.Show();
             this.Hide();
         }
 
@@ -63,7 +63,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         {
             jsonscreen jsonscreen = new jsonscreen(rutaUsuariosBox.Text, textBoxRuta.Text);
 
-            jsonscreen.ShowDialog();
+            jsonscreen.Show();
             this.Hide();
 
         }
@@ -379,6 +379,10 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             descripcionSubtareaBox.Clear();
 
             MessageBox.Show("La subtarea ha sido añadida correctamente a la tarea del proyecto.", "Operación realizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+        private void projectscreen_Load_1(object sender, EventArgs e)
+        {
 
         }
     }

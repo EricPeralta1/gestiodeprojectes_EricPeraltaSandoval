@@ -70,8 +70,10 @@
             this.Controls.Add(this.aceptarButton);
             this.Controls.Add(this.nuevaContraseñaBox);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "changepasswordform";
-            this.Text = "changepasswordform";
+            this.Text = "CAMBIANDO CONTRASEÑA...";
             this.ResumeLayout(false);
             this.PerformLayout();
 
