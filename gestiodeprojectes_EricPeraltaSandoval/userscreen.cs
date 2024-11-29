@@ -239,5 +239,10 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             MessageBox.Show("Usuario eliminado.", "Operación completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }
