@@ -150,7 +150,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "userimportjson";
-            this.Text = "Form1";
+            this.Text = "Selección de JSON";
             this.ResumeLayout(false);
             this.PerformLayout();
 

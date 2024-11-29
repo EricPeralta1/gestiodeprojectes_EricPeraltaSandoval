@@ -83,9 +83,29 @@ namespace gestiodeprojectes_EricPeraltaSandoval.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap buttonbackground2 {
+            get {
+                object obj = ResourceManager.GetObject("buttonbackground2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap comboboxinitialbackground {
             get {
                 object obj = ResourceManager.GetObject("comboboxinitialbackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edituserbackground {
+            get {
+                object obj = ResourceManager.GetObject("edituserbackground", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
