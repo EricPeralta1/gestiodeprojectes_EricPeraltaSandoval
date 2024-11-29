@@ -141,8 +141,8 @@
             this.gestionDeToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.oPCIONESToolStripMenuItem.Name = "oPCIONESToolStripMenuItem";
-            this.oPCIONESToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
-            this.oPCIONESToolStripMenuItem.Text = "OPCIONES";
+            this.oPCIONESToolStripMenuItem.Size = new System.Drawing.Size(120, 20);
+            this.oPCIONESToolStripMenuItem.Text = "MENÚ DE GESTIÓN";
             // 
             // gestiónToolStripMenuItem
             // 
@@ -173,6 +173,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "VOLVER A LA PANTALLA DE INICIO";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // jsonscreen
             // 

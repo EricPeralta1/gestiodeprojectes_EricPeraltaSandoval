@@ -30,6 +30,7 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.borrarButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.projectComboBox = new System.Windows.Forms.ComboBox();
             this.elegirProyectoButton = new System.Windows.Forms.Button();
@@ -44,19 +45,32 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.tareaEstadoBox = new System.Windows.Forms.ComboBox();
+            this.usuarioTareaBox = new System.Windows.Forms.ComboBox();
+            this.crearTareaButton = new System.Windows.Forms.Button();
+            this.descripcionTareaBox = new System.Windows.Forms.TextBox();
+            this.nombreTareaBox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.selectTaskButton = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.tasksListComboBox = new System.Windows.Forms.ComboBox();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.label21 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.estadoSubtareaBox = new System.Windows.Forms.ComboBox();
             this.crearSubtareaBox = new System.Windows.Forms.Button();
+            this.subtareaUsuarioBox = new System.Windows.Forms.ComboBox();
             this.descripcionSubtareaBox = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.endDateSubtareaBox = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.startDateSubtareaBox = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -65,18 +79,6 @@
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.tareaElegidaLabel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.crearTareaButton = new System.Windows.Forms.Button();
-            this.descripcionTareaBox = new System.Windows.Forms.TextBox();
-            this.fechaFinalTareaBox = new System.Windows.Forms.TextBox();
-            this.fechaInicioTareaBox = new System.Windows.Forms.TextBox();
-            this.nombreTareaBox = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.dataGridProjects = new System.Windows.Forms.DataGridView();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.proyectoElegidoLabel = new System.Windows.Forms.Label();
@@ -91,30 +93,28 @@
             this.label24 = new System.Windows.Forms.Label();
             this.textBoxRuta = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
-            this.borrarButton = new System.Windows.Forms.Button();
-            this.selectTaskButton = new System.Windows.Forms.Button();
-            this.usuarioTareaBox = new System.Windows.Forms.ComboBox();
-            this.tareaEstadoBox = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.rutaUsuariosBox = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.estadoSubtareaBox = new System.Windows.Forms.ComboBox();
-            this.subtareaUsuarioBox = new System.Windows.Forms.ComboBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.startDateSubtareaBox = new System.Windows.Forms.DateTimePicker();
+            this.endDateSubtareaBox = new System.Windows.Forms.DateTimePicker();
+            this.fechaInicioTareaBox = new System.Windows.Forms.DateTimePicker();
+            this.fechaFinalTareaBox = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
-            this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProjects)).BeginInit();
             this.groupBox7.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -145,6 +145,16 @@
             this.groupBox4.Size = new System.Drawing.Size(781, 115);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
+            // 
+            // borrarButton
+            // 
+            this.borrarButton.Location = new System.Drawing.Point(570, 80);
+            this.borrarButton.Name = "borrarButton";
+            this.borrarButton.Size = new System.Drawing.Size(111, 23);
+            this.borrarButton.TabIndex = 12;
+            this.borrarButton.Text = "Borrar";
+            this.borrarButton.UseVisualStyleBackColor = true;
+            this.borrarButton.Click += new System.EventHandler(this.borrarButton_Click);
             // 
             // label5
             // 
@@ -275,6 +285,130 @@
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.fechaFinalTareaBox);
+            this.groupBox8.Controls.Add(this.fechaInicioTareaBox);
+            this.groupBox8.Controls.Add(this.tareaEstadoBox);
+            this.groupBox8.Controls.Add(this.usuarioTareaBox);
+            this.groupBox8.Controls.Add(this.crearTareaButton);
+            this.groupBox8.Controls.Add(this.descripcionTareaBox);
+            this.groupBox8.Controls.Add(this.nombreTareaBox);
+            this.groupBox8.Controls.Add(this.label13);
+            this.groupBox8.Controls.Add(this.label12);
+            this.groupBox8.Controls.Add(this.label11);
+            this.groupBox8.Controls.Add(this.label10);
+            this.groupBox8.Controls.Add(this.label9);
+            this.groupBox8.Controls.Add(this.label8);
+            this.groupBox8.Location = new System.Drawing.Point(6, 46);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(487, 199);
+            this.groupBox8.TabIndex = 0;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "CREAR TAREA";
+            // 
+            // tareaEstadoBox
+            // 
+            this.tareaEstadoBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tareaEstadoBox.FormattingEnabled = true;
+            this.tareaEstadoBox.Items.AddRange(new object[] {
+            "Disponible",
+            "En procés",
+            "Acabado"});
+            this.tareaEstadoBox.Location = new System.Drawing.Point(124, 79);
+            this.tareaEstadoBox.Name = "tareaEstadoBox";
+            this.tareaEstadoBox.Size = new System.Drawing.Size(198, 21);
+            this.tareaEstadoBox.TabIndex = 20;
+            // 
+            // usuarioTareaBox
+            // 
+            this.usuarioTareaBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.usuarioTareaBox.FormattingEnabled = true;
+            this.usuarioTareaBox.Location = new System.Drawing.Point(124, 53);
+            this.usuarioTareaBox.Name = "usuarioTareaBox";
+            this.usuarioTareaBox.Size = new System.Drawing.Size(198, 21);
+            this.usuarioTareaBox.TabIndex = 13;
+            // 
+            // crearTareaButton
+            // 
+            this.crearTareaButton.Location = new System.Drawing.Point(381, 84);
+            this.crearTareaButton.Name = "crearTareaButton";
+            this.crearTareaButton.Size = new System.Drawing.Size(75, 23);
+            this.crearTareaButton.TabIndex = 5;
+            this.crearTareaButton.Text = "Crear";
+            this.crearTareaButton.UseVisualStyleBackColor = true;
+            this.crearTareaButton.Click += new System.EventHandler(this.crearTareaButton_Click);
+            // 
+            // descripcionTareaBox
+            // 
+            this.descripcionTareaBox.Location = new System.Drawing.Point(124, 168);
+            this.descripcionTareaBox.Name = "descripcionTareaBox";
+            this.descripcionTareaBox.Size = new System.Drawing.Size(199, 20);
+            this.descripcionTareaBox.TabIndex = 19;
+            // 
+            // nombreTareaBox
+            // 
+            this.nombreTareaBox.Location = new System.Drawing.Point(124, 21);
+            this.nombreTareaBox.Name = "nombreTareaBox";
+            this.nombreTareaBox.Size = new System.Drawing.Size(199, 20);
+            this.nombreTareaBox.TabIndex = 9;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(37, 161);
+            this.label13.Name = "label13";
+            this.label13.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label13.Size = new System.Drawing.Size(78, 26);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "Descripción de\r\n la tarea:";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(41, 138);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(77, 13);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "Fecha de final:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(36, 109);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(82, 13);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "Fecha de inicio:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(22, 84);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(96, 13);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Estado de la tarea:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(26, 53);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(92, 13);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Usuario asignado:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(18, 25);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(100, 13);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "Nombre de la tarea:";
+            // 
             // groupBox11
             // 
             this.groupBox11.Controls.Add(this.selectTaskButton);
@@ -287,6 +421,16 @@
             this.groupBox11.Size = new System.Drawing.Size(493, 84);
             this.groupBox11.TabIndex = 12;
             this.groupBox11.TabStop = false;
+            // 
+            // selectTaskButton
+            // 
+            this.selectTaskButton.Location = new System.Drawing.Point(393, 43);
+            this.selectTaskButton.Name = "selectTaskButton";
+            this.selectTaskButton.Size = new System.Drawing.Size(75, 23);
+            this.selectTaskButton.TabIndex = 20;
+            this.selectTaskButton.Text = "Selecc.";
+            this.selectTaskButton.UseVisualStyleBackColor = true;
+            this.selectTaskButton.Click += new System.EventHandler(this.selectTaskButton_Click);
             // 
             // label20
             // 
@@ -335,14 +479,14 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.endDateSubtareaBox);
+            this.groupBox10.Controls.Add(this.startDateSubtareaBox);
             this.groupBox10.Controls.Add(this.estadoSubtareaBox);
             this.groupBox10.Controls.Add(this.crearSubtareaBox);
             this.groupBox10.Controls.Add(this.subtareaUsuarioBox);
             this.groupBox10.Controls.Add(this.descripcionSubtareaBox);
             this.groupBox10.Controls.Add(this.label19);
-            this.groupBox10.Controls.Add(this.endDateSubtareaBox);
             this.groupBox10.Controls.Add(this.label18);
-            this.groupBox10.Controls.Add(this.startDateSubtareaBox);
             this.groupBox10.Controls.Add(this.label17);
             this.groupBox10.Controls.Add(this.label16);
             this.groupBox10.Controls.Add(this.label15);
@@ -355,6 +499,19 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "CREAR SUBTAREA";
             // 
+            // estadoSubtareaBox
+            // 
+            this.estadoSubtareaBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.estadoSubtareaBox.FormattingEnabled = true;
+            this.estadoSubtareaBox.Items.AddRange(new object[] {
+            "Disponible",
+            "En procés",
+            "Acabado"});
+            this.estadoSubtareaBox.Location = new System.Drawing.Point(125, 78);
+            this.estadoSubtareaBox.Name = "estadoSubtareaBox";
+            this.estadoSubtareaBox.Size = new System.Drawing.Size(198, 21);
+            this.estadoSubtareaBox.TabIndex = 22;
+            // 
             // crearSubtareaBox
             // 
             this.crearSubtareaBox.Location = new System.Drawing.Point(382, 85);
@@ -364,6 +521,15 @@
             this.crearSubtareaBox.Text = "Crear";
             this.crearSubtareaBox.UseVisualStyleBackColor = true;
             this.crearSubtareaBox.Click += new System.EventHandler(this.crearSubtareaBox_Click);
+            // 
+            // subtareaUsuarioBox
+            // 
+            this.subtareaUsuarioBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.subtareaUsuarioBox.FormattingEnabled = true;
+            this.subtareaUsuarioBox.Location = new System.Drawing.Point(125, 52);
+            this.subtareaUsuarioBox.Name = "subtareaUsuarioBox";
+            this.subtareaUsuarioBox.Size = new System.Drawing.Size(198, 21);
+            this.subtareaUsuarioBox.TabIndex = 21;
             // 
             // descripcionSubtareaBox
             // 
@@ -381,13 +547,6 @@
             this.label19.TabIndex = 22;
             this.label19.Text = "Nombre de la tarea:";
             // 
-            // endDateSubtareaBox
-            // 
-            this.endDateSubtareaBox.Location = new System.Drawing.Point(125, 135);
-            this.endDateSubtareaBox.Name = "endDateSubtareaBox";
-            this.endDateSubtareaBox.Size = new System.Drawing.Size(199, 20);
-            this.endDateSubtareaBox.TabIndex = 31;
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -396,13 +555,6 @@
             this.label18.Size = new System.Drawing.Size(92, 13);
             this.label18.TabIndex = 23;
             this.label18.Text = "Usuario asignado:";
-            // 
-            // startDateSubtareaBox
-            // 
-            this.startDateSubtareaBox.Location = new System.Drawing.Point(124, 107);
-            this.startDateSubtareaBox.Name = "startDateSubtareaBox";
-            this.startDateSubtareaBox.Size = new System.Drawing.Size(199, 20);
-            this.startDateSubtareaBox.TabIndex = 30;
             // 
             // label17
             // 
@@ -477,122 +629,6 @@
             this.label7.TabIndex = 2;
             this.label7.Text = "CREANDO SUBTAREAS DE:";
             // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.tareaEstadoBox);
-            this.groupBox8.Controls.Add(this.usuarioTareaBox);
-            this.groupBox8.Controls.Add(this.crearTareaButton);
-            this.groupBox8.Controls.Add(this.descripcionTareaBox);
-            this.groupBox8.Controls.Add(this.fechaFinalTareaBox);
-            this.groupBox8.Controls.Add(this.fechaInicioTareaBox);
-            this.groupBox8.Controls.Add(this.nombreTareaBox);
-            this.groupBox8.Controls.Add(this.label13);
-            this.groupBox8.Controls.Add(this.label12);
-            this.groupBox8.Controls.Add(this.label11);
-            this.groupBox8.Controls.Add(this.label10);
-            this.groupBox8.Controls.Add(this.label9);
-            this.groupBox8.Controls.Add(this.label8);
-            this.groupBox8.Location = new System.Drawing.Point(6, 46);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(487, 199);
-            this.groupBox8.TabIndex = 0;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "CREAR TAREA";
-            // 
-            // crearTareaButton
-            // 
-            this.crearTareaButton.Location = new System.Drawing.Point(381, 84);
-            this.crearTareaButton.Name = "crearTareaButton";
-            this.crearTareaButton.Size = new System.Drawing.Size(75, 23);
-            this.crearTareaButton.TabIndex = 5;
-            this.crearTareaButton.Text = "Crear";
-            this.crearTareaButton.UseVisualStyleBackColor = true;
-            this.crearTareaButton.Click += new System.EventHandler(this.crearTareaButton_Click);
-            // 
-            // descripcionTareaBox
-            // 
-            this.descripcionTareaBox.Location = new System.Drawing.Point(124, 168);
-            this.descripcionTareaBox.Name = "descripcionTareaBox";
-            this.descripcionTareaBox.Size = new System.Drawing.Size(199, 20);
-            this.descripcionTareaBox.TabIndex = 19;
-            // 
-            // fechaFinalTareaBox
-            // 
-            this.fechaFinalTareaBox.Location = new System.Drawing.Point(124, 139);
-            this.fechaFinalTareaBox.Name = "fechaFinalTareaBox";
-            this.fechaFinalTareaBox.Size = new System.Drawing.Size(199, 20);
-            this.fechaFinalTareaBox.TabIndex = 18;
-            // 
-            // fechaInicioTareaBox
-            // 
-            this.fechaInicioTareaBox.Location = new System.Drawing.Point(123, 110);
-            this.fechaInicioTareaBox.Name = "fechaInicioTareaBox";
-            this.fechaInicioTareaBox.Size = new System.Drawing.Size(199, 20);
-            this.fechaInicioTareaBox.TabIndex = 17;
-            // 
-            // nombreTareaBox
-            // 
-            this.nombreTareaBox.Location = new System.Drawing.Point(124, 21);
-            this.nombreTareaBox.Name = "nombreTareaBox";
-            this.nombreTareaBox.Size = new System.Drawing.Size(199, 20);
-            this.nombreTareaBox.TabIndex = 9;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(37, 161);
-            this.label13.Name = "label13";
-            this.label13.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label13.Size = new System.Drawing.Size(78, 26);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "Descripción de\r\n la tarea:";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(41, 138);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(77, 13);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "Fecha de final:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(36, 109);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(82, 13);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "Fecha de inicio:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(22, 84);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(96, 13);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Estado de la tarea:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(26, 53);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(92, 13);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Usuario asignado:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 25);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 13);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Nombre de la tarea:";
-            // 
             // dataGridProjects
             // 
             this.dataGridProjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -646,8 +682,8 @@
             this.gestiónDelJSONToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.oPCIONESToolStripMenuItem.Name = "oPCIONESToolStripMenuItem";
-            this.oPCIONESToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
-            this.oPCIONESToolStripMenuItem.Text = "OPCIONES";
+            this.oPCIONESToolStripMenuItem.Size = new System.Drawing.Size(120, 20);
+            this.oPCIONESToolStripMenuItem.Text = "MENÚ DE GESTIÓN";
             // 
             // gestiónToolStripMenuItem
             // 
@@ -713,48 +749,6 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // borrarButton
-            // 
-            this.borrarButton.Location = new System.Drawing.Point(570, 80);
-            this.borrarButton.Name = "borrarButton";
-            this.borrarButton.Size = new System.Drawing.Size(111, 23);
-            this.borrarButton.TabIndex = 12;
-            this.borrarButton.Text = "Borrar";
-            this.borrarButton.UseVisualStyleBackColor = true;
-            this.borrarButton.Click += new System.EventHandler(this.borrarButton_Click);
-            // 
-            // selectTaskButton
-            // 
-            this.selectTaskButton.Location = new System.Drawing.Point(393, 43);
-            this.selectTaskButton.Name = "selectTaskButton";
-            this.selectTaskButton.Size = new System.Drawing.Size(75, 23);
-            this.selectTaskButton.TabIndex = 20;
-            this.selectTaskButton.Text = "Selecc.";
-            this.selectTaskButton.UseVisualStyleBackColor = true;
-            this.selectTaskButton.Click += new System.EventHandler(this.selectTaskButton_Click);
-            // 
-            // usuarioTareaBox
-            // 
-            this.usuarioTareaBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.usuarioTareaBox.FormattingEnabled = true;
-            this.usuarioTareaBox.Location = new System.Drawing.Point(124, 53);
-            this.usuarioTareaBox.Name = "usuarioTareaBox";
-            this.usuarioTareaBox.Size = new System.Drawing.Size(198, 21);
-            this.usuarioTareaBox.TabIndex = 13;
-            // 
-            // tareaEstadoBox
-            // 
-            this.tareaEstadoBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.tareaEstadoBox.FormattingEnabled = true;
-            this.tareaEstadoBox.Items.AddRange(new object[] {
-            "Disponible",
-            "En procés",
-            "Acabado"});
-            this.tareaEstadoBox.Location = new System.Drawing.Point(124, 79);
-            this.tareaEstadoBox.Name = "tareaEstadoBox";
-            this.tareaEstadoBox.Size = new System.Drawing.Size(198, 21);
-            this.tareaEstadoBox.TabIndex = 20;
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(978, 70);
@@ -781,28 +775,6 @@
             this.label22.Size = new System.Drawing.Size(169, 13);
             this.label22.TabIndex = 11;
             this.label22.Text = "RUTA DEL JSON DE USUARIOS";
-            // 
-            // estadoSubtareaBox
-            // 
-            this.estadoSubtareaBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.estadoSubtareaBox.FormattingEnabled = true;
-            this.estadoSubtareaBox.Items.AddRange(new object[] {
-            "Disponible",
-            "En procés",
-            "Acabado"});
-            this.estadoSubtareaBox.Location = new System.Drawing.Point(125, 78);
-            this.estadoSubtareaBox.Name = "estadoSubtareaBox";
-            this.estadoSubtareaBox.Size = new System.Drawing.Size(198, 21);
-            this.estadoSubtareaBox.TabIndex = 22;
-            // 
-            // subtareaUsuarioBox
-            // 
-            this.subtareaUsuarioBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.subtareaUsuarioBox.FormattingEnabled = true;
-            this.subtareaUsuarioBox.Location = new System.Drawing.Point(125, 52);
-            this.subtareaUsuarioBox.Name = "subtareaUsuarioBox";
-            this.subtareaUsuarioBox.Size = new System.Drawing.Size(198, 21);
-            this.subtareaUsuarioBox.TabIndex = 21;
             // 
             // groupBox13
             // 
@@ -842,6 +814,42 @@
             this.groupBox16.TabIndex = 17;
             this.groupBox16.TabStop = false;
             // 
+            // startDateSubtareaBox
+            // 
+            this.startDateSubtareaBox.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.startDateSubtareaBox.Location = new System.Drawing.Point(124, 105);
+            this.startDateSubtareaBox.MinDate = new System.DateTime(2024, 11, 29, 0, 0, 0, 0);
+            this.startDateSubtareaBox.Name = "startDateSubtareaBox";
+            this.startDateSubtareaBox.Size = new System.Drawing.Size(200, 20);
+            this.startDateSubtareaBox.TabIndex = 33;
+            this.startDateSubtareaBox.Value = new System.DateTime(2024, 11, 29, 0, 0, 0, 0);
+            // 
+            // endDateSubtareaBox
+            // 
+            this.endDateSubtareaBox.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.endDateSubtareaBox.Location = new System.Drawing.Point(125, 139);
+            this.endDateSubtareaBox.Name = "endDateSubtareaBox";
+            this.endDateSubtareaBox.Size = new System.Drawing.Size(200, 20);
+            this.endDateSubtareaBox.TabIndex = 34;
+            // 
+            // fechaInicioTareaBox
+            // 
+            this.fechaInicioTareaBox.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fechaInicioTareaBox.Location = new System.Drawing.Point(122, 109);
+            this.fechaInicioTareaBox.Name = "fechaInicioTareaBox";
+            this.fechaInicioTareaBox.Size = new System.Drawing.Size(200, 20);
+            this.fechaInicioTareaBox.TabIndex = 21;
+            this.fechaInicioTareaBox.Value = new System.DateTime(2024, 11, 29, 0, 0, 0, 0);
+            // 
+            // fechaFinalTareaBox
+            // 
+            this.fechaFinalTareaBox.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fechaFinalTareaBox.Location = new System.Drawing.Point(124, 138);
+            this.fechaFinalTareaBox.Name = "fechaFinalTareaBox";
+            this.fechaFinalTareaBox.Size = new System.Drawing.Size(200, 20);
+            this.fechaFinalTareaBox.TabIndex = 22;
+            this.fechaFinalTareaBox.Value = new System.DateTime(2024, 11, 29, 0, 0, 0, 0);
+            // 
             // projectscreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -876,6 +884,8 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
             this.groupBox12.ResumeLayout(false);
@@ -884,8 +894,6 @@
             this.groupBox10.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProjects)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
@@ -931,8 +939,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button crearSubtareaBox;
         private System.Windows.Forms.TextBox descripcionSubtareaBox;
-        private System.Windows.Forms.TextBox endDateSubtareaBox;
-        private System.Windows.Forms.TextBox startDateSubtareaBox;
         private System.Windows.Forms.TextBox subtareaNombreBox;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
@@ -942,8 +948,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button crearTareaButton;
         private System.Windows.Forms.TextBox descripcionTareaBox;
-        private System.Windows.Forms.TextBox fechaFinalTareaBox;
-        private System.Windows.Forms.TextBox fechaInicioTareaBox;
         private System.Windows.Forms.TextBox nombreTareaBox;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -977,5 +981,9 @@
         private System.Windows.Forms.GroupBox groupBox14;
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.GroupBox groupBox16;
+        private System.Windows.Forms.DateTimePicker startDateSubtareaBox;
+        private System.Windows.Forms.DateTimePicker fechaFinalTareaBox;
+        private System.Windows.Forms.DateTimePicker fechaInicioTareaBox;
+        private System.Windows.Forms.DateTimePicker endDateSubtareaBox;
     }
 }

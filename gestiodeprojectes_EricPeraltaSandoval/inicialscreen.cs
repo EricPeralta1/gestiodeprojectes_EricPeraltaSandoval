@@ -34,7 +34,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
             userscreen userscreen = new userscreen(userJsonPath, projectJsonPath);
 
-            userscreen.ShowDialog();
+            userscreen.Show();
             this.Hide();
 
         }
@@ -43,7 +43,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         {
             userimportjson userimportjson = new userimportjson();
             
-            userimportjson.ShowDialog();
+            userimportjson.Show();
             this.Hide();
         }
     }

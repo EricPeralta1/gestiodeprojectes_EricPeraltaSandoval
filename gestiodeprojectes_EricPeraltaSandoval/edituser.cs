@@ -63,6 +63,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             checkpasswordform checkPasswordForm = new checkpasswordform(editedUser);
 
             checkPasswordForm.ShowDialog();
+            this.Hide();
 
             nomEditBox.Text = editedUser.name;
             apellidoEditBox.Text = editedUser.surname;

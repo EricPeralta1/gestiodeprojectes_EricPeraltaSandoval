@@ -213,6 +213,15 @@ namespace gestiodeprojectes_EricPeraltaSandoval
                 return;
             }
 
+            DateTime startDate = fechaInicioTareaBox.Value;
+            DateTime endDate = fechaFinalTareaBox.Value;
+
+            if (endDate <= startDate)
+            {
+                MessageBox.Show("La fecha final debe ser posterior a la fecha inicial.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             task task = new task();
 
             task.name = nombreTareaBox.Text;
@@ -248,8 +257,6 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
             nombreTareaBox.Clear();
             tareaEstadoBox.Items.Clear();
-            fechaInicioTareaBox.Clear();
-            fechaFinalTareaBox.Clear();
             descripcionTareaBox.Clear();
 
             MessageBox.Show("La tarea ha sido añadida correctamente al proyecto.", "Operación realizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -324,6 +331,16 @@ namespace gestiodeprojectes_EricPeraltaSandoval
                 return;
             }
 
+            DateTime startDate = startDateSubtareaBox.Value;
+            DateTime endDate = endDateSubtareaBox.Value;
+
+            if (endDate <= startDate)
+            {
+                MessageBox.Show("La fecha final debe ser posterior a la fecha inicial.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
             subtask subtarea = new subtask();
             subtarea.name = subtareaNombreBox.Text;
             subtarea.subtaskUser = subtareaUsuarioBox.Text;
@@ -359,8 +376,6 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
             nombreTareaBox.Clear();
             estadoSubtareaBox.Items.Clear();
-            startDateSubtareaBox.Clear();
-            endDateSubtareaBox.Clear();
             descripcionSubtareaBox.Clear();
 
             MessageBox.Show("La subtarea ha sido añadida correctamente a la tarea del proyecto.", "Operación realizada", MessageBoxButtons.OK, MessageBoxIcon.Information);

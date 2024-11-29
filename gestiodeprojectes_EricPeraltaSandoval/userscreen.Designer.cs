@@ -294,8 +294,8 @@
             this.gestiónDelJSONToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.oPCIONESToolStripMenuItem.Name = "oPCIONESToolStripMenuItem";
-            this.oPCIONESToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
-            this.oPCIONESToolStripMenuItem.Text = "OPCIONES";
+            this.oPCIONESToolStripMenuItem.Size = new System.Drawing.Size(120, 20);
+            this.oPCIONESToolStripMenuItem.Text = "MENÚ DE GESTIÓN";
             // 
             // gestionDeToolStripMenuItem
             // 

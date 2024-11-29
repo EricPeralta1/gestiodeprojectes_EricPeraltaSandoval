@@ -129,6 +129,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="userimportjson.resx">
       <DependentUpon>userimportjson.cs</DependentUpon>
@@ -154,6 +155,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="JSONs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\buttonbackground.png" />
+    <Content Include="Resources\comboboxinitialbackground.png" />
+    <Content Include="Resources\initialscreenbackground.png" />
+    <Content Include="Resources\labelbackground.png" />
+    <Content Include="Resources\logoappescriptori.png" />
+    <Content Include="Resources\whitelogoappescriptori.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

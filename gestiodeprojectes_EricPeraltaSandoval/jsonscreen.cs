@@ -37,6 +37,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             projectscreen projectscreen = new projectscreen(rutaUsers, rutaProjects);
 
             projectscreen.Show();
+            this.Hide();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -94,6 +95,13 @@ namespace gestiodeprojectes_EricPeraltaSandoval
                 MessageBox.Show("Archivo guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            inicialscreen inicialscreen = new inicialscreen();
+            inicialscreen.Show();
+            this.Close();
         }
     }
 }
