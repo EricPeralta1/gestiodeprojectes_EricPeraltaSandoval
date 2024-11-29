@@ -81,7 +81,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::gestiodeprojectes_EricPeraltaSandoval.Properties.Resources.whitelogoappescriptori;
-            this.pictureBox1.Location = new System.Drawing.Point(359, 130);
+            this.pictureBox1.Location = new System.Drawing.Point(359, 106);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(539, 124);
             this.pictureBox1.TabIndex = 3;
@@ -102,7 +102,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::gestiodeprojectes_EricPeraltaSandoval.Properties.Resources.initialscreenbackground;
-            this.ClientSize = new System.Drawing.Size(1249, 711);
+            this.ClientSize = new System.Drawing.Size(1249, 663);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
