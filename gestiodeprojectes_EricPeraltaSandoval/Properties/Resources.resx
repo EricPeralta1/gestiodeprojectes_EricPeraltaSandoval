@@ -127,6 +127,9 @@
   <data name="initialscreenbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\initialscreenbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="labelbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\labelbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logoappescriptori" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logoappescriptori.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,7 +139,7 @@
   <data name="whitelogoappescriptori" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\whitelogoappescriptori.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="labelbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\labelbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="userimportjsonbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\userimportjsonbackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

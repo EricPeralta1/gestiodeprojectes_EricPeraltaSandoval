@@ -162,6 +162,7 @@
     <Content Include="Resources\initialscreenbackground.png" />
     <Content Include="Resources\labelbackground.png" />
     <Content Include="Resources\logoappescriptori.png" />
+    <Content Include="Resources\userimportjsonbackground.png" />
     <Content Include="Resources\whitelogoappescriptori.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

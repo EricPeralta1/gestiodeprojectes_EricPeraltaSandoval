@@ -41,7 +41,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(119, 324);
+            this.button1.BackgroundImage = global::gestiodeprojectes_EricPeraltaSandoval.Properties.Resources.buttonbackground;
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(111, 395);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(338, 100);
             this.button1.TabIndex = 0;
@@ -51,7 +53,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(805, 324);
+            this.button2.BackgroundImage = global::gestiodeprojectes_EricPeraltaSandoval.Properties.Resources.buttonbackground;
+            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(837, 395);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(310, 100);
             this.button2.TabIndex = 1;
@@ -61,7 +65,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(466, 324);
+            this.button3.BackgroundImage = global::gestiodeprojectes_EricPeraltaSandoval.Properties.Resources.buttonbackground;
+            this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(493, 395);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(313, 100);
             this.button3.TabIndex = 2;
@@ -72,25 +78,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(149, 172);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(123, 114);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 13);
+            this.label1.Size = new System.Drawing.Size(204, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "RUTA DEL JSON DE USUARIOS";
             // 
             // rutaUsuariosBox
             // 
             this.rutaUsuariosBox.Enabled = false;
-            this.rutaUsuariosBox.Location = new System.Drawing.Point(351, 165);
+            this.rutaUsuariosBox.Location = new System.Drawing.Point(351, 116);
             this.rutaUsuariosBox.Name = "rutaUsuariosBox";
             this.rutaUsuariosBox.Size = new System.Drawing.Size(640, 20);
             this.rutaUsuariosBox.TabIndex = 4;
             // 
             // jsonUsersButton
             // 
-            this.jsonUsersButton.Location = new System.Drawing.Point(1026, 162);
+            this.jsonUsersButton.Location = new System.Drawing.Point(1025, 114);
             this.jsonUsersButton.Name = "jsonUsersButton";
-            this.jsonUsersButton.Size = new System.Drawing.Size(75, 23);
+            this.jsonUsersButton.Size = new System.Drawing.Size(90, 23);
             this.jsonUsersButton.TabIndex = 5;
             this.jsonUsersButton.Text = "...";
             this.jsonUsersButton.UseVisualStyleBackColor = true;
@@ -99,25 +107,27 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(139, 229);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(118, 205);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(179, 13);
+            this.label2.Size = new System.Drawing.Size(218, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "RUTA DEL JSON DE PROYECTOS";
             // 
             // rutaProyectosBox
             // 
             this.rutaProyectosBox.Enabled = false;
-            this.rutaProyectosBox.Location = new System.Drawing.Point(351, 222);
+            this.rutaProyectosBox.Location = new System.Drawing.Point(351, 205);
             this.rutaProyectosBox.Name = "rutaProyectosBox";
             this.rutaProyectosBox.Size = new System.Drawing.Size(640, 20);
             this.rutaProyectosBox.TabIndex = 7;
             // 
             // jsonProjectsButton
             // 
-            this.jsonProjectsButton.Location = new System.Drawing.Point(1026, 219);
+            this.jsonProjectsButton.Location = new System.Drawing.Point(1025, 202);
             this.jsonProjectsButton.Name = "jsonProjectsButton";
-            this.jsonProjectsButton.Size = new System.Drawing.Size(75, 23);
+            this.jsonProjectsButton.Size = new System.Drawing.Size(90, 23);
             this.jsonProjectsButton.TabIndex = 8;
             this.jsonProjectsButton.Text = "...";
             this.jsonProjectsButton.UseVisualStyleBackColor = true;
@@ -127,6 +137,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::gestiodeprojectes_EricPeraltaSandoval.Properties.Resources.userimportjsonbackground;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1244, 611);
             this.Controls.Add(this.jsonProjectsButton);
             this.Controls.Add(this.rutaProyectosBox);
