@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.contraeñaBoton = new System.Windows.Forms.Button();
             this.cancelarBoton = new System.Windows.Forms.Button();
             this.aplicarBoton = new System.Windows.Forms.Button();
             this.emailEditBox = new System.Windows.Forms.TextBox();
@@ -43,16 +43,16 @@
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
-            // button1
+            // contraeñaBoton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(133, 311);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "CAMBIAR CONTRASEÑA";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.contraeñaBoton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contraeñaBoton.Location = new System.Drawing.Point(133, 311);
+            this.contraeñaBoton.Name = "contraeñaBoton";
+            this.contraeñaBoton.Size = new System.Drawing.Size(131, 23);
+            this.contraeñaBoton.TabIndex = 11;
+            this.contraeñaBoton.Text = "CAMBIAR CONTRASEÑA";
+            this.contraeñaBoton.UseVisualStyleBackColor = true;
+            this.contraeñaBoton.Click += new System.EventHandler(this.button1_Click);
             // 
             // cancelarBoton
             // 
@@ -158,7 +158,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::gestiodeprojectes_EricPeraltaSandoval.Properties.Resources.edituserbackground;
             this.ClientSize = new System.Drawing.Size(500, 401);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.contraeñaBoton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.emailEditBox);
@@ -192,6 +192,6 @@
         private System.Windows.Forms.TextBox nomEditBox;
         private System.Windows.Forms.Button aplicarBoton;
         private System.Windows.Forms.Button cancelarBoton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button contraeñaBoton;
     }
 }

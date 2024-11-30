@@ -40,7 +40,7 @@
             this.gestiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
+            this.returnButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -147,17 +147,17 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // button1
+            // returnButton
             // 
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::gestiodeprojectes_EricPeraltaSandoval.Properties.Resources.buttonbackground;
-            this.button1.Location = new System.Drawing.Point(241, 387);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(219, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "VOLVER A LA PANTALLA DE INICIO";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.returnButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnButton.Image = global::gestiodeprojectes_EricPeraltaSandoval.Properties.Resources.buttonbackground;
+            this.returnButton.Location = new System.Drawing.Point(241, 387);
+            this.returnButton.Name = "returnButton";
+            this.returnButton.Size = new System.Drawing.Size(219, 23);
+            this.returnButton.TabIndex = 7;
+            this.returnButton.Text = "VOLVER A LA PANTALLA DE INICIO";
+            this.returnButton.UseVisualStyleBackColor = true;
+            this.returnButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // jsonscreen
             // 
@@ -169,7 +169,7 @@
             this.Controls.Add(this.GuardarProjectsJson);
             this.Controls.Add(this.nomUsersJsonBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.returnButton);
             this.Controls.Add(this.nomProjectsJsonBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.menuStrip1);
@@ -197,6 +197,6 @@
         private System.Windows.Forms.ToolStripMenuItem gestiónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionDeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button returnButton;
     }
 }

@@ -12,15 +12,19 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 {
     public partial class changepasswordform : Form
     {
-
+        //Incluye al usuario a editar
         private user newUser;
 
+        //Guarda el usuario a editar en el user(newUser)
         public changepasswordform(user edituser)
         {
             InitializeComponent();
             newUser = edituser;
         }
 
+        //Al hacer clic en el button(aceptarButton), guardará la contrseña nueva del textBox(nuevaContraseñaBox), y actualizará el user(newUser).
+        //Verifica que el textBox(nuevaContraseñaBox) no esté vacio, no sea igual a la contraseña antigua y tenga 8 carácteres.
+        //Al acabar, cierra el form actual.
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -41,11 +45,6 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             MessageBox.Show("Contraseña actualizada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             this.Close();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

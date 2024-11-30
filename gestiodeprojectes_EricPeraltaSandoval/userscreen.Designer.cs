@@ -116,7 +116,6 @@
             this.surnameuserbox.Name = "surnameuserbox";
             this.surnameuserbox.Size = new System.Drawing.Size(199, 20);
             this.surnameuserbox.TabIndex = 1;
-            this.surnameuserbox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // nameuserbox
             // 
@@ -133,7 +132,6 @@
             this.userSelectBox.Name = "userSelectBox";
             this.userSelectBox.Size = new System.Drawing.Size(226, 21);
             this.userSelectBox.TabIndex = 3;
-            this.userSelectBox.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label4
             // 

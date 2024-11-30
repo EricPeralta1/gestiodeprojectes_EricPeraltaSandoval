@@ -14,9 +14,13 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 {
     public partial class userscreen : Form
     {
+        //Lista de usuarios del JSON
         List<user> userlist;
+        //Ruta del JSON de proyectos
         string rutaProjects;
 
+        //Al inicializar el form, implementa la ruta automáticamente, creando la lista de usuarios (userlist)
+        //y actualiza el tablón (dataGridUsers) para mostrar la información del JSON
         public userscreen(string userJsonPath, string projectJsonPath)
         {
             InitializeComponent();
@@ -41,11 +45,8 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        //Incluye la lógica para mostrar los forms asignados en el ToolStrip (projectScreen y jsonScreen) y ocultar el actual. Al
+        //darle a salir, se finaliza el programa.
         private void gestionDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             projectscreen projectscreen = new projectscreen(textBoxRuta.Text, rutaProjects); 
@@ -67,6 +68,12 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             this.Close();
         }
 
+
+        //Lógica que permite añadir un Usuario al JSON de Usuarios
+        //Utiliza 4 paràmetros, nombre(string), apellido(string), contraseña(string), email(string)
+        //UserId se genera automàticamente leyendo la longitud de la lista.
+        //Incluye condiciones para verificar que los campos sean correctos, no esten vacios y haya un JSON vinculado.
+        //Al finalizar, actualiza el JSON y el tablón y los usuarios a escoger en (userSelectBox)
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -142,6 +149,8 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
         }
 
+        //Permite cambiar el JSON de usuarios para modificar y trabajar con otro diferente.
+        //Al realizar la acción, cambia el tablón y los usuarios a escoger en (userSelectBox)
         private void button2_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -170,11 +179,10 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             }
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-          
-        }
-
+        //Permite editar un usuario del JSON
+        //Verifica que el comboBox(userSelectBox) no esté vacio.
+        //Recoge al usuario esogido, y lo envia al form de edición como user(selectedUser)
+        //Al terminar la edición. actualiza al objeto en la lista UserList, actualiza el JSON y el tablón y comboBox.
         private void EDITAR_Click(object sender, EventArgs e)
         {
             if (userSelectBox.SelectedItem == null)
@@ -206,6 +214,10 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
         }
 
+        //Permite borrar usuarios.
+        //Verifica que el comboBox(userSelectBox) tenga un usuario
+        //Elimina al usuario de la lista, y actualiza los indices de userId del resto para que estén en orden.
+        //Al terminar, actualiza el tablón y el comboBox.
         private void button3_Click(object sender, EventArgs e)
         {
             if (userSelectBox.SelectedItem == null)
@@ -237,11 +249,6 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             userSelectBox.DisplayMember = "Name";
 
             MessageBox.Show("Usuario eliminado.", "Operación completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
 
         }
     }
