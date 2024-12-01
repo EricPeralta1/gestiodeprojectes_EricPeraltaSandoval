@@ -20,6 +20,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         List<task> taskList;
         List<subtask> subtaskList;
         List<user> userList;
+        project selectedProject;
 
         //Al incializar, inicializa automáticamente los JSONs según las rutas.
         //Guarda los usuarios y los proyectos en las List(UserList) y List(projectList), respectivamente.
@@ -171,8 +172,14 @@ namespace gestiodeprojectes_EricPeraltaSandoval
                 return;
             }
 
-            int userIndex = projectList.IndexOf((project)projectComboBox.SelectedItem);
-            projectList.RemoveAt(userIndex);
+            int projectIndex = projectList.IndexOf((project)projectComboBox.SelectedItem);
+            projectList.RemoveAt(projectIndex);
+
+
+            for (int i = 0; i < projectList.Count; i++)
+            {
+                projectList[i].projectId = i + 1;
+            }
 
             File.WriteAllText(textBoxRuta.Text, JArray.FromObject(projectList).ToString());
 
@@ -184,6 +191,43 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             projectComboBox.DisplayMember = "Name";
 
             MessageBox.Show("Proyecto eliminado.", "Operación completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        //Permite borrar una tarea.
+        //Verfica que haya una tarea seleccionada en el comboBox(taskListComboBox).
+        //Actualiza los indices de la lista de tareas para que estén en ordenNumérico (1,2,3...). En caso de borrar un intermedio, se actualizan
+        //los indices para que no hayan vacios (evitando tener 1,2,4).
+        //Actualiza el JSON, el tablón de tareas y el comboBox de tareas.
+        private void borrarTareaButton_Click(object sender, EventArgs e)
+        {
+            if (tasksListComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor, selecciona una tarea para borrar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            int taskIndex = taskList.IndexOf((task)tasksListComboBox.SelectedItem);
+            taskList.RemoveAt(taskIndex);
+
+            for (int i = 0; i < taskList.Count; i++)
+            {
+                taskList[i].taskId = i + 1;
+            }
+
+            selectedProject.tasks = taskList;
+
+
+            File.WriteAllText(textBoxRuta.Text, JArray.FromObject(projectList).ToString());
+
+            taskGridView.DataSource = null;
+            taskGridView.DataSource = taskList;
+
+            tasksListComboBox.DataSource = null;
+            tasksListComboBox.DataSource = taskList;
+            tasksListComboBox.DisplayMember = "Name";
+
+            MessageBox.Show("Tarea eliminada.", "Operación completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
@@ -199,21 +243,17 @@ namespace gestiodeprojectes_EricPeraltaSandoval
                 return;
             }
 
-            project selectedProject = (project)projectComboBox.SelectedItem;
+            selectedProject = (project)projectComboBox.SelectedItem;
 
             taskList = selectedProject.tasks;
 
             if (selectedProject.tasks == null || selectedProject.tasks.Count == 0)
             {
                 MessageBox.Show("El proyecto seleccionado no tiene tareas asociadas. Recuerde que puede añadir tareas cuando desee.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                taskGridView.DataSource = null;
-                return;
             }
 
             taskGridView.DataSource = null;
             taskGridView.DataSource = selectedProject.tasks;
-
 
             tasksListComboBox.DataSource = null;
             tasksListComboBox.DataSource = taskList;
@@ -260,7 +300,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             task.startDate = fechaInicioTareaBox.Text;
             task.endDate = fechaFinalTareaBox.Text;
             task.description = descripcionTareaBox.Text;
-            if (taskList == null)
+            if (taskList == null || taskList.Count == 0)
             {
                 task.taskId = 1;
             }
@@ -268,8 +308,6 @@ namespace gestiodeprojectes_EricPeraltaSandoval
                 int lasttaskId = taskList.Last().taskId;
                 task.taskId = lasttaskId + 1;
             }
-
-            project selectedProject = (project)projectComboBox.SelectedItem;
 
             if (selectedProject.tasks == null) {
                 selectedProject.tasks = new List<task> { task };
@@ -279,14 +317,16 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
             File.WriteAllText(textBoxRuta.Text, JArray.FromObject(projectList).ToString());
 
+            taskList = selectedProject.tasks;
+
             taskGridView.DataSource = null;
             taskGridView.DataSource = selectedProject.tasks;
 
             tasksListComboBox.DataSource = null;
-            tasksListComboBox.DataSource = selectedProject.tasks;
+            tasksListComboBox.DataSource = taskList;
+            tasksListComboBox.DisplayMember = "Name";
 
             nombreTareaBox.Clear();
-            tareaEstadoBox.Items.Clear();
             descripcionTareaBox.Clear();
             
             proyectoElegidoLabel.Text = selectedProject.name;
@@ -420,7 +460,6 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             subtaskGridView.DataSource = selectedTask.subtasks;
 
             nombreTareaBox.Clear();
-            estadoSubtareaBox.Items.Clear();
             descripcionSubtareaBox.Clear();
 
             MessageBox.Show("La subtarea ha sido añadida correctamente a la tarea del proyecto.", "Operación realizada", MessageBoxButtons.OK, MessageBoxIcon.Information);

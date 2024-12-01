@@ -87,6 +87,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.rutaUsuariosBox = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
+            this.borrarTareaButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProjects)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.taskGridView)).BeginInit();
@@ -97,7 +98,7 @@
             // 
             this.borrarButton.BackgroundImage = global::gestiodeprojectes_EricPeraltaSandoval.Properties.Resources.buttonbackground;
             this.borrarButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.borrarButton.Location = new System.Drawing.Point(359, 385);
+            this.borrarButton.Location = new System.Drawing.Point(370, 385);
             this.borrarButton.Name = "borrarButton";
             this.borrarButton.Size = new System.Drawing.Size(111, 23);
             this.borrarButton.TabIndex = 12;
@@ -345,7 +346,8 @@
             // selectTaskButton
             // 
             this.selectTaskButton.BackgroundImage = global::gestiodeprojectes_EricPeraltaSandoval.Properties.Resources.buttonbackground;
-            this.selectTaskButton.Location = new System.Drawing.Point(250, 708);
+            this.selectTaskButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectTaskButton.Location = new System.Drawing.Point(167, 706);
             this.selectTaskButton.Name = "selectTaskButton";
             this.selectTaskButton.Size = new System.Drawing.Size(120, 23);
             this.selectTaskButton.TabIndex = 20;
@@ -532,9 +534,9 @@
             this.tareaElegidaLabel.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tareaElegidaLabel.Location = new System.Drawing.Point(356, 768);
             this.tareaElegidaLabel.Name = "tareaElegidaLabel";
-            this.tareaElegidaLabel.Size = new System.Drawing.Size(86, 14);
+            this.tareaElegidaLabel.Size = new System.Drawing.Size(11, 14);
             this.tareaElegidaLabel.TabIndex = 4;
-            this.tareaElegidaLabel.Text = "TAREAEJEMPLO";
+            this.tareaElegidaLabel.Text = "-";
             // 
             // label7
             // 
@@ -562,9 +564,9 @@
             this.proyectoElegidoLabel.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.proyectoElegidoLabel.Location = new System.Drawing.Point(337, 453);
             this.proyectoElegidoLabel.Name = "proyectoElegidoLabel";
-            this.proyectoElegidoLabel.Size = new System.Drawing.Size(108, 14);
+            this.proyectoElegidoLabel.Size = new System.Drawing.Size(11, 14);
             this.proyectoElegidoLabel.TabIndex = 5;
-            this.proyectoElegidoLabel.Text = "PROYECTOEJEMPLO";
+            this.proyectoElegidoLabel.Text = "-";
             // 
             // label6
             // 
@@ -695,12 +697,25 @@
             this.label22.TabIndex = 11;
             this.label22.Text = "RUTA DEL JSON DE USUARIOS";
             // 
+            // borrarTareaButton
+            // 
+            this.borrarTareaButton.BackgroundImage = global::gestiodeprojectes_EricPeraltaSandoval.Properties.Resources.buttonbackground;
+            this.borrarTareaButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.borrarTareaButton.Location = new System.Drawing.Point(370, 706);
+            this.borrarTareaButton.Name = "borrarTareaButton";
+            this.borrarTareaButton.Size = new System.Drawing.Size(111, 23);
+            this.borrarTareaButton.TabIndex = 35;
+            this.borrarTareaButton.Text = "BORRAR";
+            this.borrarTareaButton.UseVisualStyleBackColor = true;
+            this.borrarTareaButton.Click += new System.EventHandler(this.borrarTareaButton_Click);
+            // 
             // projectscreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::gestiodeprojectes_EricPeraltaSandoval.Properties.Resources.projectscreenbackground;
             this.ClientSize = new System.Drawing.Size(1664, 977);
+            this.Controls.Add(this.borrarTareaButton);
             this.Controls.Add(this.endDateSubtareaBox);
             this.Controls.Add(this.selectTaskButton);
             this.Controls.Add(this.startDateSubtareaBox);
@@ -830,5 +845,6 @@
         private System.Windows.Forms.DateTimePicker fechaFinalTareaBox;
         private System.Windows.Forms.DateTimePicker fechaInicioTareaBox;
         private System.Windows.Forms.DateTimePicker endDateSubtareaBox;
+        private System.Windows.Forms.Button borrarTareaButton;
     }
 }
