@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -109,7 +110,9 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             user.name  = nameuserbox.Text;
             user.surname = surnameuserbox.Text;
             user.email = emailuserbox.Text;
-            user.password = passworduserbox.Text;
+            string llaveEncriptar = "12345678";
+            user.password = EncriptarContra(passworduserbox.Text, llaveEncriptar);
+
             Console.WriteLine(userlist.Count);
             if (userlist.Count == 0)
             {
@@ -250,6 +253,29 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
             MessageBox.Show("Usuario eliminado.", "Operación completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+        }
+
+        //Este método permite encriptar la contraseña.
+        //Recibe el string(contraNoEncriptada) y el string(key), que es la llave con la que haremos la encriptación, y debe ser igual para desencriptar.
+        //Cifra el texto que pasemos, y devuelve un string de Base64 con el texto cifrado.
+        private static string EncriptarContra(string contraNoEncriptada, string key)
+        {
+            using (Aes aes = Aes.Create())
+            {
+                aes.Key = Encoding.UTF8.GetBytes(key.PadRight(32).Substring(0, 32)); 
+                aes.IV = new byte[16]; 
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    using (CryptoStream cs = new CryptoStream(ms, aes.CreateEncryptor(), CryptoStreamMode.Write))
+                    {
+                        using (StreamWriter sw = new StreamWriter(cs))
+                        {
+                            sw.Write(contraNoEncriptada);
+                        }
+                        return Convert.ToBase64String(ms.ToArray());
+                    }
+                }
+            }
         }
     }
 }
