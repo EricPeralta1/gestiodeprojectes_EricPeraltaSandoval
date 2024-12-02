@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "projectId": 1,
+    "name": "Prueba de proyecto",
+    "description": "Esta es una descripción de prueba",
+    "tasks": []
+  },
+  {
+    "projectId": 2,
+    "name": "Proyecto de app",
+    "description": "Desarrollaremos un app para android.",
+    "tasks": null
+  },
+  {
+    "projectId": 3,
+    "name": "Projecto de C#",
+    "description": "Desarrollaremos una aplicacion de escritorio.",
+    "tasks": null
+  }
+]

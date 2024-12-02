@@ -295,7 +295,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             task task = new task();
 
             task.name = nombreTareaBox.Text;
-            task.taskUser = nombreTareaBox.Text;
+            task.taskUser = usuarioTareaBox.Text;
             task.status = tareaEstadoBox.Text;
             task.startDate = fechaInicioTareaBox.Text;
             task.endDate = fechaFinalTareaBox.Text;
