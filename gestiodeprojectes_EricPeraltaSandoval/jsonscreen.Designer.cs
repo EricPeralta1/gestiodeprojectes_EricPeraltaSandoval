@@ -61,11 +61,11 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(79, 102);
+            this.label1.Location = new System.Drawing.Point(79, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 14);
+            this.label1.Size = new System.Drawing.Size(139, 28);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Introduce un nuevo nombre:";
+            this.label1.Text = "Introduce un nuevo nombre\r\n(Usuarios):";
             // 
             // nomUsersJsonBox
             // 
@@ -91,11 +91,11 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(79, 272);
+            this.label3.Location = new System.Drawing.Point(79, 267);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 14);
+            this.label3.Size = new System.Drawing.Size(139, 28);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Introduce un nuevo nombre:";
+            this.label3.Text = "Introduce un nuevo nombre\r\n(Proyectos):";
             // 
             // nomProjectsJsonBox
             // 
