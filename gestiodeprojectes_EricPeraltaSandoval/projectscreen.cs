@@ -208,7 +208,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
                 return;
             }
 
-            int taskIndex = taskList.IndexOf((task)tasksListComboBox.SelectedItem);
+            int taskIndex = taskList.IndexOf(selectedTask);
             taskList.RemoveAt(taskIndex);
 
             for (int i = 0; i < taskList.Count; i++)
@@ -374,8 +374,6 @@ namespace gestiodeprojectes_EricPeraltaSandoval
                 MessageBox.Show("Por favor, selecciona una tarea para cargar las subtareas.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            project selectedProject = (project)projectComboBox.SelectedItem;
 
             taskList = selectedProject.tasks;
 

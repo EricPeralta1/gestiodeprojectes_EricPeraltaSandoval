@@ -19,8 +19,17 @@
             "subtaskUser": "Eric",
             "startDate": "29/11/2024",
             "endDate": "03/12/2024",
-            "status": "En procés",
+            "status": "En procÃ©s",
             "description": "asdd"
+          },
+          {
+            "subtaskId": 2,
+            "name": "dsada",
+            "subtaskUser": "Eric",
+            "startDate": "29/11/2024",
+            "endDate": "03/12/2024",
+            "status": "Disponible",
+            "description": "asd"
           }
         ]
       },
@@ -32,6 +41,16 @@
         "endDate": "30/11/2024",
         "status": "Acabado",
         "description": "dasdad",
+        "subtasks": null
+      },
+      {
+        "taskId": 3,
+        "name": "dsadd",
+        "taskUser": "asdsd",
+        "startDate": "29/11/2024",
+        "endDate": "30/11/2024",
+        "status": "Disponible",
+        "description": "sdadasdadasd",
         "subtasks": null
       }
     ]
