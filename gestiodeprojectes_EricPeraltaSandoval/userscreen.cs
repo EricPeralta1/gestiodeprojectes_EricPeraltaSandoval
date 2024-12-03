@@ -100,7 +100,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         ///Lógica que permite añadir un Usuario al JSON de Usuarios
         ///Utiliza 4 paràmetros, nombre(string), apellido(string), contraseña(string), email(string)
         ///UserId se genera automàticamente leyendo la longitud de la lista.
-        ///Incluye condiciones para verificar que los campos sean correctos, no esten vacios y haya un JSON vinculado.
+        ///Incluye condiciones para verificar que los campos sean correctos, no esten vacios, y el correo esté verificado.
         ///Al finalizar, actualiza el JSON y el tablón y los usuarios a escoger en (userSelectBox)
         /// </summary>
         /// <param name="sender"></param>
@@ -131,6 +131,12 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             if (!email.Contains("@") || email.StartsWith("@") || email.EndsWith("@"))
             {
                 MessageBox.Show("El correo electrónico debe tener un formato válido (con texto antes y después de '@').","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (userlist.Any(u => u.email == email))
+            {
+                MessageBox.Show("El correo electrónico ya esta registrado. Por favor, ponga el suyo propio.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

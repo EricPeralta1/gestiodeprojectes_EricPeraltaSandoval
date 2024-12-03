@@ -346,7 +346,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             DateTime startDate = fechaInicioTareaBox.Value;
             DateTime endDate = fechaFinalTareaBox.Value;
 
-            if (endDate <= startDate)
+            if (endDate < startDate)
             {
                 MessageBox.Show("La fecha final debe ser posterior a la fecha inicial.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
