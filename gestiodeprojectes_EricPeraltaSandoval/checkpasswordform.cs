@@ -43,9 +43,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
                 changePasswordForm.ShowDialog();
 
                 this.Close();
-            }
-            else
-            {
+            } else {
                 MessageBox.Show("La contraseña no es correcta. Volviendo al menú..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }

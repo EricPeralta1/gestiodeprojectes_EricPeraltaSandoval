@@ -71,6 +71,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
 
 
@@ -86,25 +87,25 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             if (string.IsNullOrEmpty(rutaUsers))
             {
                 MessageBox.Show("Inserta un nuevo nombre para el archivo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            } else {
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.InitialDirectory = Application.StartupPath;
+                saveFileDialog.Filter = "Ficheros JSON (*.json)|*.json";
+                saveFileDialog.DefaultExt = "json";
+                saveFileDialog.FileName = nomUsersJsonBox.Text;
 
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.InitialDirectory = Application.StartupPath;
-            saveFileDialog.Filter = "Ficheros JSON (*.json)|*.json";
-            saveFileDialog.DefaultExt = "json";
-            saveFileDialog.FileName = nomUsersJsonBox.Text;
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
 
-            if (saveFileDialog.ShowDialog() == DialogResult.OK) {
-           
                     string pathSavedFolder = saveFileDialog.FileName;
                     string jsonContent = File.ReadAllText(rutaUsers);
 
                     File.WriteAllText(pathSavedFolder, jsonContent);
 
                     MessageBox.Show("Archivo guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-  
-            }
+
+                }
+            } 
         }
 
 
@@ -117,27 +118,27 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         /// <param name="e"></param>
         private void GuardarProjectsJson_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(rutaProjects)) {
-                MessageBox.Show("Inserta un nuevo nombre para el archivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; 
-            }
-
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.InitialDirectory = Application.StartupPath;
-            saveFileDialog.Filter = "Ficheros JSON (*.json)|*.json";
-            saveFileDialog.DefaultExt = "json";
-            saveFileDialog.FileName = nomProjectsJsonBox.Text;
-
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            if (string.IsNullOrEmpty(rutaProjects))
             {
+                MessageBox.Show("Inserta un nuevo nombre para el archivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } else {
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.InitialDirectory = Application.StartupPath;
+                saveFileDialog.Filter = "Ficheros JSON (*.json)|*.json";
+                saveFileDialog.DefaultExt = "json";
+                saveFileDialog.FileName = nomProjectsJsonBox.Text;
 
-                string pathSavedFolder = saveFileDialog.FileName;
-                string jsonContent = File.ReadAllText(rutaProjects);
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
 
-                File.WriteAllText(pathSavedFolder, jsonContent);
+                    string pathSavedFolder = saveFileDialog.FileName;
+                    string jsonContent = File.ReadAllText(rutaProjects);
 
-                MessageBox.Show("Archivo guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    File.WriteAllText(pathSavedFolder, jsonContent);
 
+                    MessageBox.Show("Archivo guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
             }
         }
 

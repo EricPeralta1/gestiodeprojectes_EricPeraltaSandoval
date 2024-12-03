@@ -68,6 +68,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::gestiodeprojectes_EricPeraltaSandoval.Properties.Resources.checkpasswordform;
             this.ClientSize = new System.Drawing.Size(459, 308);
+            this.ControlBox = false;
             this.Controls.Add(this.checkPasswordButton);
             this.Controls.Add(this.passwordCheckBox);
             this.Controls.Add(this.label1);

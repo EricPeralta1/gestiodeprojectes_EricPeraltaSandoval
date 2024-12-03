@@ -40,16 +40,15 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(rutaProyectosBox.Text) || string.IsNullOrEmpty(rutaUsuariosBox.Text)){
+            if (string.IsNullOrEmpty(rutaProyectosBox.Text) || string.IsNullOrEmpty(rutaUsuariosBox.Text))
+            {
                 MessageBox.Show("Selecciona los 2 JSON para poder continuar, por favor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+            } else {
+                userscreen userscreen = new userscreen(jsonUsersPath, jsonProjectsPath);
+
+                userscreen.Show();
+                this.Hide();
             }
-
-            userscreen userscreen = new userscreen(jsonUsersPath, jsonProjectsPath); 
-            
-            userscreen.Show();
-            this.Hide();
-
         }
 
 
@@ -66,13 +65,11 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             if (string.IsNullOrEmpty(rutaProyectosBox.Text) || string.IsNullOrEmpty(rutaUsuariosBox.Text))
             {
                 MessageBox.Show("Selecciona los 2 JSON para poder continuar, por favor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+            } else {
+                projectscreen projectscreen = new projectscreen(jsonUsersPath, jsonProjectsPath);
+                projectscreen.Show();
+                this.Hide();
             }
-
-            projectscreen projectscreen = new projectscreen(jsonUsersPath, jsonProjectsPath);
-            projectscreen.Show();
-            this.Hide();
-
         }
 
 
@@ -89,13 +86,11 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             if (string.IsNullOrEmpty(rutaProyectosBox.Text) || string.IsNullOrEmpty(rutaUsuariosBox.Text))
             {
                 MessageBox.Show("Selecciona los 2 JSON para poder continuar, por favor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+            } else {
+                jsonscreen jsonscreen = new jsonscreen(jsonUsersPath, jsonProjectsPath);
+                jsonscreen.Show();
+                this.Hide();
             }
-
-            jsonscreen jsonscreen = new jsonscreen(jsonUsersPath, jsonProjectsPath);   
-            jsonscreen.Show();
-            this.Hide();
-
         }
 
 

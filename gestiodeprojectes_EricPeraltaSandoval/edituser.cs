@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace gestiodeprojectes_EricPeraltaSandoval
 {
@@ -56,23 +57,45 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         /// <param name="e"></param>
         private void aplicarBoton_Click(object sender, EventArgs e)
         {
-            editedUser.name = nomEditBox.Text;
-            editedUser.surname = apellidoEditBox.Text;
-            editedUser.email = emailEditBox.Text;
 
+            string email = emailEditBox.Text;
             JArray jarrayusers = JArray.Parse(File.ReadAllText(jsonfilepath, Encoding.Default));
             userlist = jarrayusers.ToObject<List<user>>();
-            user usertoedit = userlist.First((u => u.userId == editedUser.userId));
 
-            usertoedit.name = editedUser.name;
-            usertoedit.surname = editedUser.surname;
-            usertoedit.password = editedUser.password;
+            if (string.IsNullOrWhiteSpace(nomEditBox.Text) || string.IsNullOrWhiteSpace(apellidoEditBox.Text) || string.IsNullOrWhiteSpace(emailEditBox.Text))
+            {
+                MessageBox.Show("Por favor, completa todos los campos antes de crear un usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (nomEditBox.Text.Any(char.IsDigit) || apellidoEditBox.Text.Any(char.IsDigit))
+            {
+                MessageBox.Show("Ni el nombre ni el apellido pueden contener numeros.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!email.Contains("@") || email.StartsWith("@") || email.EndsWith("@"))
+            {
+                MessageBox.Show("El correo electrónico debe tener un formato válido (con texto antes y después de '@').", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (userlist.Any(u => u.email == email))
+            {
+                MessageBox.Show("El correo electrónico ya esta registrado. Por favor, ponga el suyo propio.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            File.WriteAllText(jsonfilepath, JArray.FromObject(userlist).ToString());
+            } else {
+                editedUser.name = nomEditBox.Text;
+                editedUser.surname = apellidoEditBox.Text;
+                editedUser.email = emailEditBox.Text;
 
-            MessageBox.Show("El usuario ha sido actualizado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            this.Close();
+                user usertoedit = userlist.First((u => u.userId == editedUser.userId));
+
+                usertoedit.name = editedUser.name;
+                usertoedit.surname = editedUser.surname;
+                usertoedit.password = editedUser.password;
+
+                File.WriteAllText(jsonfilepath, JArray.FromObject(userlist).ToString());
+
+                MessageBox.Show("El usuario ha sido actualizado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.Close();
+            }
         }
 
 

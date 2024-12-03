@@ -67,6 +67,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::gestiodeprojectes_EricPeraltaSandoval.Properties.Resources.changepasswordformbackground;
             this.ClientSize = new System.Drawing.Size(455, 302);
+            this.ControlBox = false;
             this.Controls.Add(this.aceptarButton);
             this.Controls.Add(this.nuevaContraseñaBox);
             this.Controls.Add(this.label1);

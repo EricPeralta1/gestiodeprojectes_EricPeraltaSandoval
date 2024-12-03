@@ -140,6 +140,7 @@
             this.BackgroundImage = global::gestiodeprojectes_EricPeraltaSandoval.Properties.Resources.userimportjsonbackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1244, 611);
+            this.ControlBox = false;
             this.Controls.Add(this.jsonProjectsButton);
             this.Controls.Add(this.rutaProyectosBox);
             this.Controls.Add(this.label2);

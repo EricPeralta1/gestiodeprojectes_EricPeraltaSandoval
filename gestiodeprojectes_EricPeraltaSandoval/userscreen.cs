@@ -40,6 +40,8 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             JArray jarrayusers = JArray.Parse(File.ReadAllText(textBoxRuta.Text, Encoding.Default));
             userlist = jarrayusers.ToObject<List<user>>();
 
+
+
             dataGridUsers.DataSource = null;
             dataGridUsers.DataSource = userlist;
 
@@ -64,7 +66,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         /// <param name="e"></param>
         private void gestionDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            projectscreen projectscreen = new projectscreen(textBoxRuta.Text, rutaProjects); 
+            projectscreen projectscreen = new projectscreen(textBoxRuta.Text, rutaProjects);
 
             projectscreen.Show();
             this.Hide();
@@ -92,6 +94,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
 
 
@@ -107,86 +110,80 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
+            string email = emailuserbox.Text;
 
             if (string.IsNullOrEmpty(textBoxRuta.Text))
             {
                 MessageBox.Show("Selecciona un JSON de usuarios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
             }
-
-
-            if (string.IsNullOrWhiteSpace(nameuserbox.Text) || string.IsNullOrWhiteSpace(surnameuserbox.Text) || string.IsNullOrWhiteSpace(emailuserbox.Text) || string.IsNullOrWhiteSpace(passworduserbox.Text))
+            else if (string.IsNullOrWhiteSpace(nameuserbox.Text) || string.IsNullOrWhiteSpace(surnameuserbox.Text) || string.IsNullOrWhiteSpace(emailuserbox.Text) || string.IsNullOrWhiteSpace(passworduserbox.Text))
             {
-                MessageBox.Show("Por favor, completa todos los campos antes de crear un usuario.","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                MessageBox.Show("Por favor, completa todos los campos antes de crear un usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            if (nameuserbox.Text.Any(char.IsDigit) || surnameuserbox.Text.Any(char.IsDigit))
+            else if (nameuserbox.Text.Any(char.IsDigit) || surnameuserbox.Text.Any(char.IsDigit))
             {
-                MessageBox.Show("Ni el nombre ni el apellido pueden contener numeros.","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                MessageBox.Show("Ni el nombre ni el apellido pueden contener numeros.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            string email = emailuserbox.Text;
-            if (!email.Contains("@") || email.StartsWith("@") || email.EndsWith("@"))
+            else if (!email.Contains("@") || email.StartsWith("@") || email.EndsWith("@"))
             {
-                MessageBox.Show("El correo electrónico debe tener un formato válido (con texto antes y después de '@').","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                MessageBox.Show("El correo electrónico debe tener un formato válido (con texto antes y después de '@').", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            if (userlist.Any(u => u.email == email))
+            else if (userlist.Any(u => u.email == email))
             {
                 MessageBox.Show("El correo electrónico ya esta registrado. Por favor, ponga el suyo propio.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+            } else if (passworduserbox.Text.Length < 8){
+                MessageBox.Show("La contraseña debe tener 8 carácteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            } else {
+                user user = new user();
+
+                user.name = nameuserbox.Text;
+                user.surname = surnameuserbox.Text;
+                user.email = emailuserbox.Text;
+                string llaveEncriptar = "12345678";
+                user.password = EncriptarContra(passworduserbox.Text, llaveEncriptar);
+
+                Console.WriteLine(userlist.Count);
+                if (userlist.Count == 0)
+                {
+                    user.userId = 1;
+                }
+                else
+                {
+                    int lasttaskId = userlist.Last().userId;
+                    user.userId = lasttaskId + 1;
+                }
+
+
+                userlist.Add(user);
+
+                File.WriteAllText(textBoxRuta.Text, JArray.FromObject(userlist).ToString());
+
+                string jsonContent = File.ReadAllText(textBoxRuta.Text);
+                userlist = JArray.Parse(jsonContent).ToObject<List<user>>();
+
+                dataGridUsers.DataSource = null;
+                dataGridUsers.DataSource = userlist;
+
+                if (dataGridUsers.Columns.Contains("password"))
+                {
+                    dataGridUsers.Columns["password"].Visible = false;
+                }
+
+                nameuserbox.Clear();
+                surnameuserbox.Clear();
+                emailuserbox.Clear();
+                passworduserbox.Clear();
+
+                userSelectBox.DataSource = null;
+                userSelectBox.DataSource = userlist;
+                userSelectBox.DisplayMember = "Name";
+
+                MessageBox.Show("El usuario se ha creado. La información se ha actualizado", "Operación realizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
             }
-
-
-            user user = new user();
-
-            user.name  = nameuserbox.Text;
-            user.surname = surnameuserbox.Text;
-            user.email = emailuserbox.Text;
-            string llaveEncriptar = "12345678";
-            user.password = EncriptarContra(passworduserbox.Text, llaveEncriptar);
-
-            Console.WriteLine(userlist.Count);
-            if (userlist.Count == 0)
-            {
-                user.userId = 1;
-            }
-            else
-            {
-                int lasttaskId = userlist.Last().userId;
-                user.userId = lasttaskId + 1;
-            }
-
-
-            userlist.Add(user);
-           
-            File.WriteAllText(textBoxRuta.Text, JArray.FromObject(userlist).ToString());
-
-            dataGridUsers.DataSource = null;
-            dataGridUsers.DataSource = userlist;
-
-            if (dataGridUsers.Columns.Contains("password"))
-            {
-                dataGridUsers.Columns["password"].Visible = false;
-            }
-                
-            nameuserbox.Clear();
-            surnameuserbox.Clear();
-            emailuserbox.Clear();
-            passworduserbox.Clear();
-
-            userSelectBox.DataSource = null;
-            userSelectBox.DataSource = userlist;
-            userSelectBox.DisplayMember = "Name";
-
-            MessageBox.Show("El usuario se ha creado. La información se ha actualizado", "Operación realizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-
         }
+                       
 
 
         /// <summary>
@@ -237,30 +234,27 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             if (userSelectBox.SelectedItem == null)
             {
                 MessageBox.Show("Por favor, selecciona un usuario para editar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            } else {
+                user selectedUser = (user)userSelectBox.SelectedItem;
 
-            user selectedUser = (user)userSelectBox.SelectedItem;
-
-            edituser edituser = new edituser(selectedUser, textBoxRuta.Text);
-            edituser.ShowDialog();
-
-            if (!string.IsNullOrEmpty(textBoxRuta.Text))
-            {
-                userlist = JArray.Parse(File.ReadAllText(textBoxRuta.Text)).ToObject<List<user>>();
-                dataGridUsers.DataSource = null;
-                dataGridUsers.DataSource = userlist;
-
-                if (dataGridUsers.Columns.Contains("password"))
+                edituser edituser = new edituser(selectedUser, textBoxRuta.Text);
+                edituser.ShowDialog();
+                if (!string.IsNullOrEmpty(textBoxRuta.Text))
                 {
-                    dataGridUsers.Columns["password"].Visible = false;
+                    userlist = JArray.Parse(File.ReadAllText(textBoxRuta.Text)).ToObject<List<user>>();
+                    dataGridUsers.DataSource = null;
+                    dataGridUsers.DataSource = userlist;
+
+                    if (dataGridUsers.Columns.Contains("password"))
+                    {
+                        dataGridUsers.Columns["password"].Visible = false;
+                    }
+
+                    userSelectBox.DataSource = null;
+                    userSelectBox.DataSource = userlist;
+                    userSelectBox.DisplayMember = "Name";
                 }
-
-                userSelectBox.DataSource = null;
-                userSelectBox.DataSource = userlist;
-                userSelectBox.DisplayMember = "Name";
             }
-
         }
 
 
@@ -277,33 +271,33 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             if (userSelectBox.SelectedItem == null)
             {
                 MessageBox.Show("Por favor, selecciona un usuario para borrar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+            } else {
+
+                int userIndex = userlist.IndexOf((user)userSelectBox.SelectedItem);
+                userlist.RemoveAt(userIndex);
+
+                for (int i = 0; i < userlist.Count; i++)
+                {
+                    userlist[i].userId = i + 1;
+                }
+
+                File.WriteAllText(textBoxRuta.Text, JArray.FromObject(userlist).ToString());
+
+                dataGridUsers.DataSource = null;
+                dataGridUsers.DataSource = userlist;
+
+                if (dataGridUsers.Columns.Contains("password"))
+                {
+                    dataGridUsers.Columns["password"].Visible = false;
+                }
+
+                userSelectBox.DataSource = null;
+                userSelectBox.DataSource = userlist;
+                userSelectBox.DisplayMember = "Name";
+
+                MessageBox.Show("Usuario eliminado.", "Operación completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
-
-            int userIndex = userlist.IndexOf((user)userSelectBox.SelectedItem);
-            userlist.RemoveAt(userIndex);
-
-            for (int i = 0; i < userlist.Count; i++)
-            {
-                userlist[i].userId = i + 1; 
-            }
-
-            File.WriteAllText(textBoxRuta.Text, JArray.FromObject(userlist).ToString());
-
-            dataGridUsers.DataSource = null;
-            dataGridUsers.DataSource = userlist;
-
-            if (dataGridUsers.Columns.Contains("password"))
-            {
-                dataGridUsers.Columns["password"].Visible = false;
-            }
-
-            userSelectBox.DataSource = null;
-            userSelectBox.DataSource = userlist;
-            userSelectBox.DisplayMember = "Name";
-
-            MessageBox.Show("Usuario eliminado.", "Operación completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
         }
 
 

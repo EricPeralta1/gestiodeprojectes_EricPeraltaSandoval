@@ -552,7 +552,9 @@
             // dataGridProjects
             // 
             this.dataGridProjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridProjects.Enabled = false;
             this.dataGridProjects.Location = new System.Drawing.Point(701, 159);
+            this.dataGridProjects.MultiSelect = false;
             this.dataGridProjects.Name = "dataGridProjects";
             this.dataGridProjects.Size = new System.Drawing.Size(914, 249);
             this.dataGridProjects.TabIndex = 0;
@@ -715,6 +717,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::gestiodeprojectes_EricPeraltaSandoval.Properties.Resources.projectscreenbackground;
             this.ClientSize = new System.Drawing.Size(1664, 977);
+            this.ControlBox = false;
             this.Controls.Add(this.borrarTareaButton);
             this.Controls.Add(this.endDateSubtareaBox);
             this.Controls.Add(this.selectTaskButton);

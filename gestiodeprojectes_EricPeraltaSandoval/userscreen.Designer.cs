@@ -262,6 +262,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::gestiodeprojectes_EricPeraltaSandoval.Properties.Resources.userscreenbackground;
             this.ClientSize = new System.Drawing.Size(1249, 730);
+            this.ControlBox = false;
             this.Controls.Add(this.userSelectBox);
             this.Controls.Add(this.eliminarButton);
             this.Controls.Add(this.dataGridUsers);

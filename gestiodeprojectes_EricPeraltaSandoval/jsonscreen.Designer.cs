@@ -165,6 +165,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::gestiodeprojectes_EricPeraltaSandoval.Properties.Resources.jsonscreenbackground;
             this.ClientSize = new System.Drawing.Size(698, 422);
+            this.ControlBox = false;
             this.Controls.Add(this.GuardarUsersJson);
             this.Controls.Add(this.GuardarProjectsJson);
             this.Controls.Add(this.nomUsersJsonBox);

@@ -45,24 +45,26 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             string llaveEncriptar = "12345678";
             string contraVieja = DesencriptarContra(newUser.password, llaveEncriptar);
 
-            if (string.IsNullOrWhiteSpace(nuevaContraseñaBox.Text)) {
+            if (string.IsNullOrWhiteSpace(nuevaContraseñaBox.Text))
+            {
                 MessageBox.Show("Por favor, ingresa una contraseña.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            } else if (contraVieja ==  nuevaContraseñaBox.Text) {
+            }
+            else if (contraVieja == nuevaContraseñaBox.Text)
+            {
                 MessageBox.Show("Por favor, ingresa una contraseña nueva.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-
-            } else if (nuevaContraseñaBox.Text.Length < 8) {
+            }
+            else if (nuevaContraseñaBox.Text.Length < 8)
+            {
                 MessageBox.Show("La contraseña debe tener 8 carácteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+            } else {
+                newUser.password = EncriptarContra(nuevaContraseñaBox.Text, llaveEncriptar);
+
+                MessageBox.Show("Contraseña actualizada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.Close();
             }
 
-            newUser.password = EncriptarContra(nuevaContraseñaBox.Text, llaveEncriptar);
-
-
-            MessageBox.Show("Contraseña actualizada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            this.Close();
+            
         }
 
 

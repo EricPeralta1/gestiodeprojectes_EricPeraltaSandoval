@@ -158,6 +158,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::gestiodeprojectes_EricPeraltaSandoval.Properties.Resources.edituserbackground;
             this.ClientSize = new System.Drawing.Size(500, 401);
+            this.ControlBox = false;
             this.Controls.Add(this.contraeñaBoton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
