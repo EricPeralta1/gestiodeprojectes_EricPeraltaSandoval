@@ -15,12 +15,13 @@ namespace gestiodeprojectes_EricPeraltaSandoval
     public partial class projectscreen : Form
     {
 
-        //Incluye las listas de proyectos, tareas, subtareas y usuarios.
+        //Incluye las listas de proyectos, tareas, subtareas y usuarios, asi como el proyecto elegido y tarea elegido para su edición.
         List<project> projectList;
         List<task> taskList;
         List<subtask> subtaskList;
         List<user> userList;
         project selectedProject;
+        task selectedTask;
 
         //Al incializar, inicializa automáticamente los JSONs según las rutas.
         //Guarda los usuarios y los proyectos en las List(UserList) y List(projectList), respectivamente.
@@ -271,7 +272,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         //Indica el proyecto que está siendo modificado en el label()
         private void crearTareaButton_Click(object sender, EventArgs e)
         {
-            if (projectComboBox.SelectedItem == null)
+            if (projectComboBox.SelectedItem == null || selectedProject == null)
             {
                 MessageBox.Show("Por favor, selecciona un proyecto en el que agregar la tarea.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -386,7 +387,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
                 return;
             }
 
-            task selectedTask = (task)tasksListComboBox.SelectedItem;
+            selectedTask = (task)tasksListComboBox.SelectedItem;
 
             subtaskList = selectedTask.subtasks;
 
@@ -404,7 +405,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         //Actualiza el tablón de subtareas.
         private void crearSubtareaBox_Click(object sender, EventArgs e)
         {
-            if (tasksListComboBox.SelectedItem == null)
+            if (tasksListComboBox.SelectedItem == null || selectedTask == null)
             {
                 MessageBox.Show("Por favor, selecciona una subtarea para empezar. Recuerda también tener un proyecto seleccionado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -442,9 +443,6 @@ namespace gestiodeprojectes_EricPeraltaSandoval
                 subtarea.subtaskId = lastSubtaskId + 1;
             }
 
-            project selectedProject = (project)projectComboBox.SelectedItem;
-
-            task selectedTask = (task)tasksListComboBox.SelectedItem;
             if (selectedTask.subtasks == null)
             {
                 selectedTask.subtasks = new List<subtask> { subtarea };

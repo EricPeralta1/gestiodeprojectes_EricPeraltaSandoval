@@ -3,7 +3,38 @@
     "projectId": 1,
     "name": "Prueba de gestion de proyectos",
     "description": "Vamos a probar si funciona",
-    "tasks": []
+    "tasks": [
+      {
+        "taskId": 1,
+        "name": "sadsa",
+        "taskUser": "Eric",
+        "startDate": "29/11/2024",
+        "endDate": "30/11/2024",
+        "status": "Disponible",
+        "description": "asdad",
+        "subtasks": [
+          {
+            "subtaskId": 1,
+            "name": "sdas",
+            "subtaskUser": "Eric",
+            "startDate": "29/11/2024",
+            "endDate": "03/12/2024",
+            "status": "En procés",
+            "description": "asdd"
+          }
+        ]
+      },
+      {
+        "taskId": 2,
+        "name": "sadad",
+        "taskUser": "Eric",
+        "startDate": "29/11/2024",
+        "endDate": "30/11/2024",
+        "status": "Acabado",
+        "description": "dasdad",
+        "subtasks": null
+      }
+    ]
   },
   {
     "projectId": 2,
