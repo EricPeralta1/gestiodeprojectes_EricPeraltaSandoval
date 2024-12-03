@@ -19,7 +19,7 @@
             "subtaskUser": "Eric",
             "startDate": "29/11/2024",
             "endDate": "03/12/2024",
-            "status": "En procÃ©s",
+            "status": "En procÃƒÆ’Ã‚Â©s",
             "description": "asdd"
           },
           {
@@ -97,7 +97,35 @@
         "endDate": "30/11/2024",
         "status": "Disponible",
         "description": "dasdsada",
-        "subtasks": null
+        "subtasks": [
+          {
+            "subtaskId": 1,
+            "name": "dfsfs",
+            "subtaskUser": "Eric",
+            "startDate": "29/11/2024",
+            "endDate": "03/12/2024",
+            "status": "En procÃ©s",
+            "description": "sdf"
+          },
+          {
+            "subtaskId": 2,
+            "name": "dsas",
+            "subtaskUser": "Eric",
+            "startDate": "29/11/2024",
+            "endDate": "03/12/2024",
+            "status": "En procÃ©s",
+            "description": "dsad"
+          },
+          {
+            "subtaskId": 3,
+            "name": "asdsad",
+            "subtaskUser": "asdsd",
+            "startDate": "29/11/2024",
+            "endDate": "03/12/2024",
+            "status": "Disponible",
+            "description": "asda"
+          }
+        ]
       }
     ]
   },

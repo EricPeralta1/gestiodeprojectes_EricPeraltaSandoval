@@ -263,6 +263,10 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             subtaskGridView.DataSource = null;
 
             proyectoElegidoLabel.Text = selectedProject.name;
+            tareaElegidaLabel.Text = "";
+
+            selectedTask = null;
+            
         }
 
         //Permite crear tareas.
@@ -405,7 +409,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         {
             if (tasksListComboBox.SelectedItem == null || selectedTask == null)
             {
-                MessageBox.Show("Por favor, selecciona una subtarea para empezar. Recuerda también tener un proyecto seleccionado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor, selecciona una tarea para empezar. Recuerda también tener un proyecto seleccionado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
