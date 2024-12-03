@@ -9,13 +9,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace gestiodeprojectes_EricPeraltaSandoval
 {
     public partial class projectscreen : Form
     {
 
-        //Incluye las listas de proyectos, tareas, subtareas y usuarios, asi como el proyecto elegido y tarea elegido para su edición.
+        /// <summary>
+        ///Incluye las listas de proyectos, tareas, subtareas y usuarios, asi como el proyecto elegido y tarea elegido para su edición.
+        /// </summary>
         List<project> projectList;
         List<task> taskList;
         List<subtask> subtaskList;
@@ -23,10 +26,16 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         project selectedProject;
         task selectedTask;
 
-        //Al incializar, inicializa automáticamente los JSONs según las rutas.
-        //Guarda los usuarios y los proyectos en las List(UserList) y List(projectList), respectivamente.
-        //Muestra en el dataGridView(dataGridProyects) los proyectos de projectList, en las comboBox de usuarios y proyectos
-        //cada instancia de userList y projectList.
+
+
+        /// <summary>
+        /// Al incializar,  automáticamente los JSONs según las rutas.
+        /// Guarda los usuarios y los proyectos en las List(UserList) y List(projectList), respectivamente.
+        ///Muestra en el dataGridView(dataGridProyects) los proyectos de projectList, en las comboBox de usuarios y proyectos
+        ///cada instancia de userList y projectList.
+        /// </summary>
+        /// <param name="jsonUsersPath"></param>
+        /// <param name="jsonProjectsPath"></param>
         public projectscreen(string jsonUsersPath, string jsonProjectsPath)
         {
             InitializeComponent();
@@ -58,8 +67,14 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
         }
 
-        //Permite cambiar al form(userScreen), y oculta el actual.
-        //Envia las rutas de los JSON de usuarios y proyectos para su automatización.
+
+
+        /// <summary>
+        ///Permite cambiar al form(userScreen), y oculta el actual.
+        ///Envia las rutas de los JSON de usuarios y proyectos para su automatización.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void gestiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
             userscreen userscreen = new userscreen(rutaUsuariosBox.Text, textBoxRuta.Text);
@@ -68,8 +83,13 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             this.Hide();
         }
 
-        //Permite cambiar al form(jsonScreen), y oculta el actual.
-        //Envia las rutas de los JSON de usuarios y proyectos para su automatización.
+
+        /// <summary>
+        ///Permite cambiar al form(jsonScreen), y oculta el actual.
+        ///Envia las rutas de los JSON de usuarios y proyectos para su automatización.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void gestiónDelJSONToolStripMenuItem_Click(object sender, EventArgs e)
         {
             jsonscreen jsonscreen = new jsonscreen(rutaUsuariosBox.Text, textBoxRuta.Text);
@@ -79,14 +99,23 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
         }
 
-        //Cierra el programa.
+        /// <summary>
+        ///Cierra el programa.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        //Permite cambiar el form de usuarios, mediante OpenFileDialog, pudiendo escoger el archivo JSON.
-        //Actualiza la información del dataGridView(dataGridProyects) y del comboBox(projectComboBox)
+
+        /// <summary>
+        ///Permite cambiar el form de usuarios, mediante OpenFileDialog, pudiendo escoger el archivo JSON.
+        ///Actualiza la información del dataGridView(dataGridProyects) y del comboBox(projectComboBox)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button6_Click(object sender, EventArgs e)
         {
 
@@ -110,10 +139,16 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             }
         }
 
-        //Permite crear un proyecto.
-        //Verifica que el JSON de proyectos esté vinculado, y que los campos no estén vacios.
-        //Crea el project(newProject), con los atributos de las textBox correspondientes (projectNameBox, projectDescriptionBox).
-        //Actualiza el JSON, el tablón de proyectos y el comboBox de proyectos.
+
+
+        /// <summary>
+        /// Permite crear un proyecto.
+        ///Verifica que el JSON de proyectos esté vinculado, y que los campos no estén vacios.
+        /// Crea el project(newProject), con los atributos de las textBox correspondientes (projectNameBox, projectDescriptionBox).
+        ///Actualiza el JSON, el tablón de proyectos y el comboBox de proyectos.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void createProjectButton_Click(object sender, EventArgs e)
         {
 
@@ -160,11 +195,16 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             MessageBox.Show("El proyecto se ha creado y añadido satisfactoriamente.", "Operación realizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        //Permite borrar un proyecto.
-        //Verfica que haya un proyecto seleccionado en el comboBox(projectComboBox).
-        //Actualiza los indices de la lista de proyectos para que estén en ordenNumérico (1,2,3...). En caso de borrar un intermedio, se actualizan
-        //los indices para que no hayan vacios (evitando tener 1,2,4).
-        //Actualiza el JSON, el tablón de proyectos y el comboBox de proyectos.
+
+        /// <summary>
+        ///Permite borrar un proyecto.
+        ///Verfica que haya un proyecto seleccionado en el comboBox(projectComboBox).
+        ///Actualiza los indices de la lista de proyectos para que estén en ordenNumérico(1,2,3...). En caso de borrar un intermedio, se actualizan
+        ///los indices para que no hayan vacios(evitando tener 1,2,4).
+        ///Actualiza el JSON, el tablón de proyectos y el comboBox de proyectos.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void borrarButton_Click(object sender, EventArgs e)
         {
             if (projectComboBox.SelectedItem == null)
@@ -195,11 +235,16 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
         }
 
-        //Permite borrar una tarea.
-        //Verfica que haya una tarea seleccionada en el comboBox(taskListComboBox).
-        //Actualiza los indices de la lista de tareas para que estén en ordenNumérico (1,2,3...). En caso de borrar un intermedio, se actualizan
-        //los indices para que no hayan vacios (evitando tener 1,2,4).
-        //Actualiza el JSON, el tablón de tareas y el comboBox de tareas.
+
+        /// <summary>
+        ///Permite borrar una tarea.
+        ///Verfica que haya una tarea seleccionada en el comboBox(taskListComboBox).
+        ///Actualiza los indices de la lista de tareas para que estén en ordenNumérico (1,2,3...). En caso de borrar un intermedio, se actualizan
+        ///los indices para que no hayan vacios (evitando tener 1,2,4).
+        ///Actualiza el JSON, el tablón de tareas y el comboBox de tareas.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void borrarTareaButton_Click(object sender, EventArgs e)
         {
             if (tasksListComboBox.SelectedItem == null)
@@ -232,10 +277,15 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
         }
 
-        //Permite cargar las tareas de un proyecto.
-        //Verifica el comboBox(projectSelectedItem) tenga un proyecto elegido.
-        //Al realizar la acción, comprueba si tiene tareas. En caso contrario, se le dice al usuario.
-        //Actualiza el dataGridView(taskGridView) y el comboBox(taskListComboBox)
+
+        /// <summary>
+        ///Permite cargar las tareas de un proyecto.
+        ///Verifica el comboBox(projectSelectedItem) tenga un proyecto elegido.
+        ///Al realizar la acción, comprueba si tiene tareas. En caso contrario, se le dice al usuario.
+        ///Actualiza el dataGridView(taskGridView) y el comboBox(taskListComboBox)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void elegirProyectoButton_Click(object sender, EventArgs e)
         {
             if (projectComboBox.SelectedItem == null)
@@ -269,11 +319,16 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             
         }
 
-        //Permite crear tareas.
-        //Verfica que haya un proyecto elegido, que los campos estén enteros y que la fecha final no sea anterior a la inicial.
-        //En caso de que el proyecto no tenga lista de tareas, crea una vacia, la vincula y añade la tarea nueva.
-        //Al finalizar, actualiza el tablón de tareasy el comboBox(taskListComboBox), que permite seleccionar una tarea.
-        //Indica el proyecto que está siendo modificado en el label()
+
+        /// <summary>
+        ///Permite crear tareas.
+        ///Verfica que haya un proyecto elegido, que los campos estén enteros y que la fecha final no sea anterior a la inicial.
+        ///En caso de que el proyecto no tenga lista de tareas, crea una vacia, la vincula y añade la tarea nueva.
+        ///Al finalizar, actualiza el tablón de tareasy el comboBox(taskListComboBox), que permite seleccionar una tarea.
+        ///Indica el proyecto que está siendo modificado en el label()
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void crearTareaButton_Click(object sender, EventArgs e)
         {
             if (projectComboBox.SelectedItem == null || selectedProject == null)
@@ -339,8 +394,13 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             MessageBox.Show("La tarea ha sido añadida correctamente al proyecto.", "Operación realizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        //Permite cambiar el JSON de usuarios, mediante OpenFileDialog, permitiendo la selección del archivo.
-        //Actualiza las comboBox de usuarios.
+
+        /// <summary>
+        /// Permite cambiar el JSON de usuarios, mediante OpenFileDialog, permitiendo la selección del archivo.
+        /// Actualiza las comboBox de usuarios.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
 
@@ -365,11 +425,17 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             }
         }
 
-        //Permite seleccionar una tarea y mostrar su lista de subtareas,
-        //Verifica que la comboBox(taskListComboBox) tenga una tarea.
-        //En caso de que la tarea elegida no tenga subtareas, se le comunica al usuario.
-        //Actualiza el dataGridView(subtaskGridView)
-        //Indica la tarea que está siendo modificada en el label(tareaElegidaLabel).
+
+
+        /// <summary>
+        ///Permite seleccionar una tarea y mostrar su lista de subtareas,
+        ///Verifica que la comboBox(taskListComboBox) tenga una tarea.
+        ///En caso de que la tarea elegida no tenga subtareas, se le comunica al usuario.
+        ///Actualiza el dataGridView(subtaskGridView)
+        ///Indica la tarea que está siendo modificada en el label(tareaElegidaLabel).
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void selectTaskButton_Click(object sender, EventArgs e)
         {
 
@@ -399,12 +465,18 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             tareaElegidaLabel.Text = selectedTask.name;
         }
 
-        //Permite crear subtareas.
-        //Verifica que el comboBox(taskListComboBox) tenga una tarea, que todos los campos estén completos y que la fecha de final no sea
-        //anterior a la inicial.
-        //Al finalizar, incluye la subtarea a la lista de subtareas de la tarea a modificar. En caso de que no tenga, se crea una nueva, se inicializa
-        //y se incluye la nueva subtarea.
-        //Actualiza el tablón de subtareas.
+
+
+        /// <summary>
+        ///Permite crear subtareas.
+        ///Verifica que el comboBox(taskListComboBox) tenga una tarea, que todos los campos estén completos y que la fecha de final no sea
+        ///anterior a la inicial.
+        ///Al finalizar, incluye la subtarea a la lista de subtareas de la tarea a modificar. En caso de que no tenga, se crea una nueva, se inicializa
+        ///y se incluye la nueva subtarea.
+        ///Actualiza el tablón de subtareas.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void crearSubtareaBox_Click(object sender, EventArgs e)
         {
             if (tasksListComboBox.SelectedItem == null || selectedTask == null)

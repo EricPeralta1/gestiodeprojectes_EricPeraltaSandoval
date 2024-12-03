@@ -13,11 +13,19 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 {
     public partial class jsonscreen : Form
     {
-        //Incluye las rutas del JSON de usuarios y proyectos.
+
+        /// <summary>
+        ///Incluye las rutas del JSON de usuarios y proyectos.
+        /// </summary>
         string rutaUsers;
         string rutaProjects;
 
-        //Al inicializar, guarda las rutas de los JSON utilizados en rutaUsers i rutaProjects respectivamente.
+
+        /// <summary>
+        ///Al inicializar, guarda las rutas de los JSON utilizados en rutaUsers i rutaProjects respectivamente.
+        /// </summary>
+        /// <param name="jsonUsersPath"></param>
+        /// <param name="jsonProjectsPath"></param>
         public jsonscreen(string jsonUsersPath, string jsonProjectsPath)
         {
             InitializeComponent();
@@ -26,8 +34,12 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             rutaProjects = jsonProjectsPath;   
         }
 
-        //Permite cambiar al form(userScreen), pasandoles las rutas de los JSONs.
-        //Oculta el form acutal.
+        /// <summary> 
+        ///Permite cambiar al form(userScreen), pasandoles las rutas de los JSONs.
+        ///Oculta el form acutal.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void gestiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
             userscreen userscreen = new userscreen(rutaUsers, rutaProjects);
@@ -36,8 +48,13 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             this.Hide();
         }
 
-        //Permite cambiar al form(projectScreen) pasandoles las rutas de los JSONs.
-        //Oculta el form acutal.
+
+        /// <summary>
+        ///Permite cambiar al form(projectScreen) pasandoles las rutas de los JSONs.
+        ///Oculta el form acutal.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void gestionDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             projectscreen projectscreen = new projectscreen(rutaUsers, rutaProjects);
@@ -46,15 +63,24 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             this.Hide();
         }
 
-        //Finaliza el proceso.
+        /// <summary>
+        /// Finaliza el proceso.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        //Permite guardar el JSON de usuarios que utilizamos en un archivo JSON aparte.
-        //Esto es debido al uso del SaveFileDialog que permite guardar archivos.
-        //Le especificamos que queremos guardar un json, y el nombre de este será el incluido en el textBox(rutaUsers)
+
+        /// <summary>
+        /// Permite guardar el JSON de usuarios que utilizamos en un archivo JSON aparte.
+        /// Esto es debido al uso del SaveFileDialog que permite guardar archivos.
+        /// Le especificamos que queremos guardar un json, y el nombre de este será el incluido en el textBox(rutaUsers)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GuardarUsersJson_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(rutaUsers))
@@ -81,9 +107,14 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             }
         }
 
-        //Permite guardar el JSON de proyectos que utilizamos en un JSON aparte.
-        //Esto es debido al uso del SaveFileDialog que permite guardar archivos.
-        //Le especificamos que queremos guardar un json, y el nombre de este será el incluido en el textBox(rutaProjects)
+
+        /// <summary>
+        /// Permite guardar el JSON de proyectos que utilizamos en un JSON aparte.
+        /// Esto es debido al uso del SaveFileDialog que permite guardar archivos.
+        /// Le especificamos que queremos guardar un json, y el nombre de este será el incluido en el textBox(rutaProjects)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GuardarProjectsJson_Click(object sender, EventArgs e)
         {
             if(string.IsNullOrEmpty(rutaProjects)) {
@@ -110,8 +141,13 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             }
         }
 
-        //Al hacer clic en el button(returnButton), permite volver a la pantalla de inicio del programa.
-        //Cierra la ventana actual, inicializa el form(initialscreen)
+
+        /// <summary>
+        /// Al hacer clic en el button(returnButton), permite volver a la pantalla de inicio del programa.
+        /// Cierra la ventana actual, inicializa el form(initialscreen)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             inicialscreen inicialscreen = new inicialscreen();

@@ -1,1 +1,56 @@
-[]
+[
+  {
+    "projectId": 1,
+    "name": "dasda",
+    "description": "dasdad",
+    "tasks": [
+      {
+        "taskId": 1,
+        "name": "asdda",
+        "taskUser": "adsd",
+        "startDate": "29/11/2024",
+        "endDate": "30/11/2024",
+        "status": "Disponible",
+        "description": "asdad",
+        "subtasks": [
+          {
+            "subtaskId": 1,
+            "name": "dasda",
+            "subtaskUser": "adsd",
+            "startDate": "29/11/2024",
+            "endDate": "03/12/2024",
+            "status": "Disponible",
+            "description": "asdda"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "projectId": 2,
+    "name": "dasdad",
+    "description": "adsdas",
+    "tasks": [
+      {
+        "taskId": 1,
+        "name": "dasdasd",
+        "taskUser": "adsd",
+        "startDate": "29/11/2024",
+        "endDate": "30/11/2024",
+        "status": "Disponible",
+        "description": "asdad",
+        "subtasks": [
+          {
+            "subtaskId": 1,
+            "name": "dasda",
+            "subtaskUser": "adsd",
+            "startDate": "29/11/2024",
+            "endDate": "03/12/2024",
+            "status": "Disponible",
+            "description": "asdad"
+          }
+        ]
+      }
+    ]
+  }
+]

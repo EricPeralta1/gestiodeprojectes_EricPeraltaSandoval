@@ -14,10 +14,15 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 {
     public partial class changepasswordform : Form
     {
-        //Incluye al usuario a editar
+        /// <summary>
+        /// Incluye al usuario a editar
+        /// </summary>
         private user newUser;
 
-        //Guarda el usuario a editar en el user(newUser)
+        /// <summary>
+        /// Guarda el usuario a editar en el user(newUser)
+        /// </summary>
+        /// <param name="edituser"></param>
         public changepasswordform(user edituser)
         {
             InitializeComponent();
@@ -27,9 +32,14 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             nuevaContraseñaBox.Text = DesencriptarContra(newUser.password, llaveEncriptar);
         }
 
-        //Al hacer clic en el button(aceptarButton), guardará la contrseña nueva del textBox(nuevaContraseñaBox), y actualizará el user(newUser).
-        //Verifica que el textBox(nuevaContraseñaBox) no esté vacio, no sea igual a la contraseña antigua y tenga 8 carácteres.
-        //Al acabar, cierra el form actual.
+
+        /// <summary>
+        /// Al hacer clic en el button(aceptarButton), guardará la contrseña nueva del textBox(nuevaContraseñaBox), y actualizará el user(newUser).
+        /// Verifica que el textBox(nuevaContraseñaBox) no esté vacio, no sea igual a la contraseña antigua y tenga 8 carácteres.
+        /// Al acabar, cierra el form actual.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             string llaveEncriptar = "12345678";
@@ -55,9 +65,15 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             this.Close();
         }
 
-        //Este método permite encriptar la contraseña.
-        //Recibe el string(contraNoEncriptada) y el string(key), que es la llave con la que haremos la encriptación, y debe ser igual para desencriptar.
-        //Cifra el texto que pasemos, y devuelve un string de Base64 con el texto cifrado.
+
+        /// <summary>
+        /// Este método permite encriptar la contraseña.
+        /// Recibe el string(contraNoEncriptada) y el string(key), que es la llave con la que haremos la encriptación, y debe ser igual para desencriptar.
+        /// Cifra el texto que pasemos, y devuelve un string de Base64 con el texto cifrado.
+        /// </summary>
+        /// <param name="contraNoEncriptada"></param>
+        /// <param name="key"></param>
+        /// <returns></returns>
         private static string EncriptarContra(string contraNoEncriptada, string key)
         {
             using (Aes aes = Aes.Create())
@@ -78,9 +94,15 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             }
         }
 
-        //Permite desencriptar la contraseña.
-        //Recibe la contraseñaEncriptada del usuario, asi como la llave con la que se encriptó.
-        //Devuelve un string con la contraseña original.
+        /// <summary>
+        /// Permite desencriptar la contraseña.
+        /// Recibe la contraseñaEncriptada del usuario, asi como la llave con la que se encriptó.
+        /// Devuelve un string con la contraseña original.
+        /// </summary>
+        /// <param name="contraEncriptada"></param>
+        /// <param name="key"></param>
+        /// <returns></returns>
+
         private static string DesencriptarContra(string contraEncriptada, string key)
         {
             using (Aes aes = Aes.Create())

@@ -13,20 +13,27 @@ namespace gestiodeprojectes_EricPeraltaSandoval
     public partial class checkpasswordform : Form
     {
 
-        //Incluye el usuario a editar.
+        /// <summary>
+        /// Incluye el usuario a editar.
+        /// </summary>
         user editeduser;
 
-        //Inicializa el form y guarda del usuario a editar en user(editedUser)
+        /// <summary>
+        /// Inicializa el form y guarda del usuario a editar en user(editedUser)
+        /// </summary>
+        /// <param name="edituser"></param>
         public checkpasswordform(user edituser)
         {
              editeduser = edituser;
             InitializeComponent();
         }
 
-        //Comprueba que el usuario sea un admin mediante una contraseña.
-        //La contraseña debe ser "admin1234", pues la que permite el acceso de administrador. 
-        //Si se pone de forma correcta, se inicializará el form de cambio de contraseña, y se cerrará el actual.
-        //En caso contrario, mostrará un mensaje de error y se cerrará el form actual, volviendo al menú anterior.
+
+        /// <summary>
+        /// Inicializa el form y guarda del usuario a editar en user(editedUser)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void checkPasswordButton_Click(object sender, EventArgs e)
         {
             if (passwordCheckBox.Text == "admin1234")
