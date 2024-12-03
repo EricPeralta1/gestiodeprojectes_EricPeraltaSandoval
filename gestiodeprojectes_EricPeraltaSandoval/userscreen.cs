@@ -116,7 +116,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             {
                 MessageBox.Show("Selecciona un JSON de usuarios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (string.IsNullOrWhiteSpace(nameuserbox.Text) || string.IsNullOrWhiteSpace(surnameuserbox.Text) || string.IsNullOrWhiteSpace(emailuserbox.Text) || string.IsNullOrWhiteSpace(passworduserbox.Text))
+            else if (string.IsNullOrEmpty(nameuserbox.Text) || string.IsNullOrEmpty(surnameuserbox.Text) || string.IsNullOrEmpty(emailuserbox.Text) || string.IsNullOrEmpty(passworduserbox.Text))
             {
                 MessageBox.Show("Por favor, completa todos los campos antes de crear un usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

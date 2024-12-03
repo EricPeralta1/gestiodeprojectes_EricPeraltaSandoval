@@ -62,7 +62,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             JArray jarrayusers = JArray.Parse(File.ReadAllText(jsonfilepath, Encoding.Default));
             userlist = jarrayusers.ToObject<List<user>>();
 
-            if (string.IsNullOrWhiteSpace(nomEditBox.Text) || string.IsNullOrWhiteSpace(apellidoEditBox.Text) || string.IsNullOrWhiteSpace(emailEditBox.Text))
+            if (string.IsNullOrEmpty(nomEditBox.Text) || string.IsNullOrEmpty(apellidoEditBox.Text) || string.IsNullOrEmpty(emailEditBox.Text))
             {
                 MessageBox.Show("Por favor, completa todos los campos antes de crear un usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
