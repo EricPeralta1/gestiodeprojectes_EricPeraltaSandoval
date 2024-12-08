@@ -1,37 +1,37 @@
 [
-  {
-    "name": "Eric",
-    "surname": "Peralta",
-    "email": "eperaltas2324@politecnics.barcelona",
-    "password": "prova1234",
-    "userId": 1
-  },
-  {
-    "name": "Matias",
-    "surname": "Prats",
-    "email": "m38matias@gmail.com",
-    "password": "contranueva1234",
-    "userId": 2
-  },
-  {
-    "name": "asdsd",
-    "surname": "asdasdsa",
-    "email": "dasdad@gmail.com",
-    "password": "asdasdsadsadsadas",
-    "userId": 3
-  },
-  {
-    "name": "asdasd",
-    "surname": "asdasd",
-    "email": "eperaltas2324@gmail.com",
-    "password": "1xfxgFDjKZ92/TJ6sWA52Q==",
-    "userId": 4
-  },
-  {
-    "name": "asdad",
-    "surname": "asdasd",
-    "email": "asdasda@as",
-    "password": "jCBnR2f0z5xkftciIvt7HQ==",
-    "userId": 5
-  }
+    {
+        "userId": 1,
+        "name": "Eric",
+        "surname": "Peralta",
+        "email": "eperaltas2324@politecnics.barcelona",
+        "password": "prova1234"
+    },
+    {
+        "userId": 2,
+        "name": "Matias",
+        "surname": "Prats",
+        "email": "m38matias@gmail.com",
+        "password": "contranueva1234"
+    },
+    {
+        "userId": 3,
+        "name": "asdsd",
+        "surname": "asdasdsa",
+        "email": "dasdad@gmail.com",
+        "password": "asdasdsadsadsadas"
+    },
+    {
+        "userId": 4,
+        "name": "asdasd",
+        "surname": "asdasd",
+        "email": "eperaltas2324@gmail.com",
+        "password": "1xfxgFDjKZ92/TJ6sWA52Q=="
+    },
+    {
+        "userId": 5,
+        "name": "asdad",
+        "surname": "asdasd",
+        "email": "asdasda@as",
+        "password": "jCBnR2f0z5xkftciIvt7HQ=="
+    }
 ]

@@ -1,14 +1,10 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace gestiodeprojectes_EricPeraltaSandoval
@@ -272,30 +268,38 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             {
                 MessageBox.Show("Por favor, selecciona un usuario para borrar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } else {
+                DialogResult confirmErase = MessageBox.Show("Estás seguro de querer eliminarlo? ¡Se perderá para siempre!", "Confirmación", MessageBoxButtons.YesNo);
 
-                int userIndex = userlist.IndexOf((user)userSelectBox.SelectedItem);
-                userlist.RemoveAt(userIndex);
+                if (confirmErase == DialogResult.Yes) {
+                    int userIndex = userlist.IndexOf((user)userSelectBox.SelectedItem);
+                    userlist.RemoveAt(userIndex);
 
-                for (int i = 0; i < userlist.Count; i++)
+                    for (int i = 0; i < userlist.Count; i++)
+                    {
+                        userlist[i].userId = i + 1;
+                    }
+
+                    File.WriteAllText(textBoxRuta.Text, JArray.FromObject(userlist).ToString());
+
+                    dataGridUsers.DataSource = null;
+                    dataGridUsers.DataSource = userlist;
+
+                    if (dataGridUsers.Columns.Contains("password"))
+                    {
+                        dataGridUsers.Columns["password"].Visible = false;
+                    }
+
+                    userSelectBox.DataSource = null;
+                    userSelectBox.DataSource = userlist;
+                    userSelectBox.DisplayMember = "Name";
+
+                    MessageBox.Show("Usuario eliminado.", "Operación completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                } else if (confirmErase == DialogResult.No)
                 {
-                    userlist[i].userId = i + 1;
+                    MessageBox.Show("Eliminación cancelada.", "Operación completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 }
 
-                File.WriteAllText(textBoxRuta.Text, JArray.FromObject(userlist).ToString());
-
-                dataGridUsers.DataSource = null;
-                dataGridUsers.DataSource = userlist;
-
-                if (dataGridUsers.Columns.Contains("password"))
-                {
-                    dataGridUsers.Columns["password"].Visible = false;
-                }
-
-                userSelectBox.DataSource = null;
-                userSelectBox.DataSource = userlist;
-                userSelectBox.DisplayMember = "Name";
-
-                MessageBox.Show("Usuario eliminado.", "Operación completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
         }

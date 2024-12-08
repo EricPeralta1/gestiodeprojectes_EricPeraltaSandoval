@@ -38,7 +38,7 @@
             this.nuevaContraseñaBox.Location = new System.Drawing.Point(259, 145);
             this.nuevaContraseñaBox.Name = "nuevaContraseñaBox";
             this.nuevaContraseñaBox.Size = new System.Drawing.Size(150, 20);
-            this.nuevaContraseñaBox.TabIndex = 0;
+            this.nuevaContraseñaBox.TabIndex = 1;
             // 
             // aceptarButton
             // 
@@ -46,7 +46,7 @@
             this.aceptarButton.Location = new System.Drawing.Point(295, 202);
             this.aceptarButton.Name = "aceptarButton";
             this.aceptarButton.Size = new System.Drawing.Size(75, 23);
-            this.aceptarButton.TabIndex = 1;
+            this.aceptarButton.TabIndex = 2;
             this.aceptarButton.Text = "ACEPTAR";
             this.aceptarButton.UseVisualStyleBackColor = true;
             this.aceptarButton.Click += new System.EventHandler(this.button1_Click);
@@ -58,7 +58,7 @@
             this.label1.Location = new System.Drawing.Point(128, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(210, 13);
-            this.label1.TabIndex = 2;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Introduce una nueva contraseña al usuario";
             // 
             // changepasswordform

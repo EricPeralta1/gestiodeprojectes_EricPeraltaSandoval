@@ -101,7 +101,7 @@
             this.borrarButton.Location = new System.Drawing.Point(370, 385);
             this.borrarButton.Name = "borrarButton";
             this.borrarButton.Size = new System.Drawing.Size(111, 23);
-            this.borrarButton.TabIndex = 12;
+            this.borrarButton.TabIndex = 16;
             this.borrarButton.Text = "BORRAR";
             this.borrarButton.UseVisualStyleBackColor = true;
             this.borrarButton.Click += new System.EventHandler(this.borrarButton_Click);
@@ -115,7 +115,7 @@
             this.label5.Location = new System.Drawing.Point(109, 344);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(112, 16);
-            this.label5.TabIndex = 11;
+            this.label5.TabIndex = 13;
             this.label5.Text = "Elige un proyecto:";
             // 
             // projectComboBox
@@ -125,7 +125,7 @@
             this.projectComboBox.Location = new System.Drawing.Point(227, 344);
             this.projectComboBox.Name = "projectComboBox";
             this.projectComboBox.Size = new System.Drawing.Size(329, 21);
-            this.projectComboBox.TabIndex = 10;
+            this.projectComboBox.TabIndex = 14;
             // 
             // elegirProyectoButton
             // 
@@ -134,7 +134,7 @@
             this.elegirProyectoButton.Location = new System.Drawing.Point(167, 385);
             this.elegirProyectoButton.Name = "elegirProyectoButton";
             this.elegirProyectoButton.Size = new System.Drawing.Size(111, 23);
-            this.elegirProyectoButton.TabIndex = 9;
+            this.elegirProyectoButton.TabIndex = 15;
             this.elegirProyectoButton.Text = "SELECCIONAR";
             this.elegirProyectoButton.UseVisualStyleBackColor = true;
             this.elegirProyectoButton.Click += new System.EventHandler(this.elegirProyectoButton_Click);
@@ -147,7 +147,7 @@
             this.label2.Location = new System.Drawing.Point(168, 311);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(285, 14);
-            this.label2.TabIndex = 3;
+            this.label2.TabIndex = 12;
             this.label2.Text = "MOSTRAR TAREAS DEL PROYECTO | ELEGIR PROYECTO";
             // 
             // createProjectButton
@@ -157,7 +157,7 @@
             this.createProjectButton.Location = new System.Drawing.Point(235, 267);
             this.createProjectButton.Name = "createProjectButton";
             this.createProjectButton.Size = new System.Drawing.Size(134, 23);
-            this.createProjectButton.TabIndex = 8;
+            this.createProjectButton.TabIndex = 11;
             this.createProjectButton.Text = "CREAR";
             this.createProjectButton.UseVisualStyleBackColor = true;
             this.createProjectButton.Click += new System.EventHandler(this.createProjectButton_Click);
@@ -167,7 +167,7 @@
             this.projectDescriptionBox.Location = new System.Drawing.Point(268, 230);
             this.projectDescriptionBox.Name = "projectDescriptionBox";
             this.projectDescriptionBox.Size = new System.Drawing.Size(288, 20);
-            this.projectDescriptionBox.TabIndex = 7;
+            this.projectDescriptionBox.TabIndex = 10;
             // 
             // label4
             // 
@@ -177,7 +177,7 @@
             this.label4.Location = new System.Drawing.Point(109, 230);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 14);
-            this.label4.TabIndex = 6;
+            this.label4.TabIndex = 9;
             this.label4.Text = "Descripción del proyecto:";
             // 
             // projectNameBox
@@ -185,7 +185,7 @@
             this.projectNameBox.Location = new System.Drawing.Point(268, 193);
             this.projectNameBox.Name = "projectNameBox";
             this.projectNameBox.Size = new System.Drawing.Size(288, 20);
-            this.projectNameBox.TabIndex = 5;
+            this.projectNameBox.TabIndex = 8;
             // 
             // label3
             // 
@@ -195,7 +195,7 @@
             this.label3.Location = new System.Drawing.Point(133, 197);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 14);
-            this.label3.TabIndex = 4;
+            this.label3.TabIndex = 7;
             this.label3.Text = "Nombre del proyecto:";
             // 
             // label1
@@ -206,7 +206,7 @@
             this.label1.Location = new System.Drawing.Point(265, 164);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 14);
-            this.label1.TabIndex = 2;
+            this.label1.TabIndex = 6;
             this.label1.Text = "CREAR PROYECTO";
             // 
             // fechaFinalTareaBox
@@ -215,7 +215,7 @@
             this.fechaFinalTareaBox.Location = new System.Drawing.Point(165, 599);
             this.fechaFinalTareaBox.Name = "fechaFinalTareaBox";
             this.fechaFinalTareaBox.Size = new System.Drawing.Size(200, 20);
-            this.fechaFinalTareaBox.TabIndex = 22;
+            this.fechaFinalTareaBox.TabIndex = 29;
             this.fechaFinalTareaBox.Value = new System.DateTime(2024, 11, 29, 0, 0, 0, 0);
             // 
             // fechaInicioTareaBox
@@ -224,7 +224,7 @@
             this.fechaInicioTareaBox.Location = new System.Drawing.Point(164, 573);
             this.fechaInicioTareaBox.Name = "fechaInicioTareaBox";
             this.fechaInicioTareaBox.Size = new System.Drawing.Size(200, 20);
-            this.fechaInicioTareaBox.TabIndex = 21;
+            this.fechaInicioTareaBox.TabIndex = 27;
             this.fechaInicioTareaBox.Value = new System.DateTime(2024, 11, 29, 0, 0, 0, 0);
             // 
             // tareaEstadoBox
@@ -238,7 +238,7 @@
             this.tareaEstadoBox.Location = new System.Drawing.Point(166, 546);
             this.tareaEstadoBox.Name = "tareaEstadoBox";
             this.tareaEstadoBox.Size = new System.Drawing.Size(198, 21);
-            this.tareaEstadoBox.TabIndex = 20;
+            this.tareaEstadoBox.TabIndex = 25;
             // 
             // usuarioTareaBox
             // 
@@ -247,7 +247,7 @@
             this.usuarioTareaBox.Location = new System.Drawing.Point(166, 518);
             this.usuarioTareaBox.Name = "usuarioTareaBox";
             this.usuarioTareaBox.Size = new System.Drawing.Size(198, 21);
-            this.usuarioTareaBox.TabIndex = 13;
+            this.usuarioTareaBox.TabIndex = 23;
             // 
             // crearTareaButton
             // 
@@ -256,7 +256,7 @@
             this.crearTareaButton.Location = new System.Drawing.Point(422, 542);
             this.crearTareaButton.Name = "crearTareaButton";
             this.crearTareaButton.Size = new System.Drawing.Size(124, 47);
-            this.crearTareaButton.TabIndex = 5;
+            this.crearTareaButton.TabIndex = 32;
             this.crearTareaButton.Text = "CREAR";
             this.crearTareaButton.UseVisualStyleBackColor = true;
             this.crearTareaButton.Click += new System.EventHandler(this.crearTareaButton_Click);
@@ -266,14 +266,14 @@
             this.descripcionTareaBox.Location = new System.Drawing.Point(387, 501);
             this.descripcionTareaBox.Name = "descripcionTareaBox";
             this.descripcionTareaBox.Size = new System.Drawing.Size(199, 20);
-            this.descripcionTareaBox.TabIndex = 19;
+            this.descripcionTareaBox.TabIndex = 31;
             // 
             // nombreTareaBox
             // 
             this.nombreTareaBox.Location = new System.Drawing.Point(166, 489);
             this.nombreTareaBox.Name = "nombreTareaBox";
             this.nombreTareaBox.Size = new System.Drawing.Size(199, 20);
-            this.nombreTareaBox.TabIndex = 9;
+            this.nombreTareaBox.TabIndex = 21;
             // 
             // label13
             // 
@@ -284,7 +284,7 @@
             this.label13.Name = "label13";
             this.label13.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label13.Size = new System.Drawing.Size(121, 14);
-            this.label13.TabIndex = 14;
+            this.label13.TabIndex = 30;
             this.label13.Text = "Descripción de la tarea:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
@@ -296,7 +296,7 @@
             this.label12.Location = new System.Drawing.Point(79, 602);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(78, 14);
-            this.label12.TabIndex = 13;
+            this.label12.TabIndex = 28;
             this.label12.Text = "Fecha de final:";
             // 
             // label11
@@ -307,7 +307,7 @@
             this.label11.Location = new System.Drawing.Point(71, 576);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(82, 14);
-            this.label11.TabIndex = 12;
+            this.label11.TabIndex = 26;
             this.label11.Text = "Fecha de inicio:";
             // 
             // label10
@@ -318,7 +318,7 @@
             this.label10.Location = new System.Drawing.Point(57, 550);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(97, 14);
-            this.label10.TabIndex = 11;
+            this.label10.TabIndex = 24;
             this.label10.Text = "Estado de la tarea:";
             // 
             // label9
@@ -329,7 +329,7 @@
             this.label9.Location = new System.Drawing.Point(65, 520);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(94, 14);
-            this.label9.TabIndex = 10;
+            this.label9.TabIndex = 22;
             this.label9.Text = "Usuario asignado:";
             // 
             // label8
@@ -340,7 +340,7 @@
             this.label8.Location = new System.Drawing.Point(58, 492);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(101, 14);
-            this.label8.TabIndex = 9;
+            this.label8.TabIndex = 20;
             this.label8.Text = "Nombre de la tarea:";
             // 
             // selectTaskButton
@@ -350,7 +350,7 @@
             this.selectTaskButton.Location = new System.Drawing.Point(167, 706);
             this.selectTaskButton.Name = "selectTaskButton";
             this.selectTaskButton.Size = new System.Drawing.Size(120, 23);
-            this.selectTaskButton.TabIndex = 20;
+            this.selectTaskButton.TabIndex = 37;
             this.selectTaskButton.Text = "SELECCIONAR";
             this.selectTaskButton.UseVisualStyleBackColor = true;
             this.selectTaskButton.Click += new System.EventHandler(this.selectTaskButton_Click);
@@ -364,7 +364,7 @@
             this.label20.Location = new System.Drawing.Point(145, 682);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(78, 14);
-            this.label20.TabIndex = 11;
+            this.label20.TabIndex = 35;
             this.label20.Text = "Elige una tarea";
             // 
             // tasksListComboBox
@@ -374,7 +374,7 @@
             this.tasksListComboBox.Location = new System.Drawing.Point(244, 679);
             this.tasksListComboBox.Name = "tasksListComboBox";
             this.tasksListComboBox.Size = new System.Drawing.Size(261, 21);
-            this.tasksListComboBox.TabIndex = 10;
+            this.tasksListComboBox.TabIndex = 36;
             // 
             // label21
             // 
@@ -384,7 +384,7 @@
             this.label21.Location = new System.Drawing.Point(217, 647);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(188, 15);
-            this.label21.TabIndex = 3;
+            this.label21.TabIndex = 34;
             this.label21.Text = "ELEGIR TAREA | MOSTRAR SUBTAREAS";
             // 
             // endDateSubtareaBox
@@ -393,7 +393,7 @@
             this.endDateSubtareaBox.Location = new System.Drawing.Point(163, 930);
             this.endDateSubtareaBox.Name = "endDateSubtareaBox";
             this.endDateSubtareaBox.Size = new System.Drawing.Size(200, 20);
-            this.endDateSubtareaBox.TabIndex = 34;
+            this.endDateSubtareaBox.TabIndex = 50;
             // 
             // startDateSubtareaBox
             // 
@@ -402,7 +402,7 @@
             this.startDateSubtareaBox.MinDate = new System.DateTime(2024, 11, 29, 0, 0, 0, 0);
             this.startDateSubtareaBox.Name = "startDateSubtareaBox";
             this.startDateSubtareaBox.Size = new System.Drawing.Size(200, 20);
-            this.startDateSubtareaBox.TabIndex = 33;
+            this.startDateSubtareaBox.TabIndex = 48;
             this.startDateSubtareaBox.Value = new System.DateTime(2024, 11, 29, 0, 0, 0, 0);
             // 
             // estadoSubtareaBox
@@ -416,7 +416,7 @@
             this.estadoSubtareaBox.Location = new System.Drawing.Point(163, 862);
             this.estadoSubtareaBox.Name = "estadoSubtareaBox";
             this.estadoSubtareaBox.Size = new System.Drawing.Size(198, 21);
-            this.estadoSubtareaBox.TabIndex = 22;
+            this.estadoSubtareaBox.TabIndex = 46;
             // 
             // crearSubtareaBox
             // 
@@ -425,7 +425,7 @@
             this.crearSubtareaBox.Location = new System.Drawing.Point(422, 850);
             this.crearSubtareaBox.Name = "crearSubtareaBox";
             this.crearSubtareaBox.Size = new System.Drawing.Size(124, 47);
-            this.crearSubtareaBox.TabIndex = 20;
+            this.crearSubtareaBox.TabIndex = 53;
             this.crearSubtareaBox.Text = "CREAR";
             this.crearSubtareaBox.UseVisualStyleBackColor = true;
             this.crearSubtareaBox.Click += new System.EventHandler(this.crearSubtareaBox_Click);
@@ -437,14 +437,14 @@
             this.subtareaUsuarioBox.Location = new System.Drawing.Point(163, 832);
             this.subtareaUsuarioBox.Name = "subtareaUsuarioBox";
             this.subtareaUsuarioBox.Size = new System.Drawing.Size(198, 21);
-            this.subtareaUsuarioBox.TabIndex = 21;
+            this.subtareaUsuarioBox.TabIndex = 44;
             // 
             // descripcionSubtareaBox
             // 
             this.descripcionSubtareaBox.Location = new System.Drawing.Point(383, 815);
             this.descripcionSubtareaBox.Name = "descripcionSubtareaBox";
             this.descripcionSubtareaBox.Size = new System.Drawing.Size(199, 20);
-            this.descripcionSubtareaBox.TabIndex = 32;
+            this.descripcionSubtareaBox.TabIndex = 52;
             // 
             // label19
             // 
@@ -455,7 +455,7 @@
             this.label19.Location = new System.Drawing.Point(57, 805);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(101, 14);
-            this.label19.TabIndex = 22;
+            this.label19.TabIndex = 41;
             this.label19.Text = "Nombre de la tarea:";
             // 
             // label18
@@ -467,7 +467,7 @@
             this.label18.Location = new System.Drawing.Point(65, 834);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(94, 14);
-            this.label18.TabIndex = 23;
+            this.label18.TabIndex = 43;
             this.label18.Text = "Usuario asignado:";
             // 
             // label17
@@ -479,7 +479,7 @@
             this.label17.Location = new System.Drawing.Point(61, 866);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(97, 14);
-            this.label17.TabIndex = 24;
+            this.label17.TabIndex = 45;
             this.label17.Text = "Estado de la tarea:";
             // 
             // label16
@@ -491,7 +491,7 @@
             this.label16.Location = new System.Drawing.Point(75, 898);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(82, 14);
-            this.label16.TabIndex = 25;
+            this.label16.TabIndex = 47;
             this.label16.Text = "Fecha de inicio:";
             // 
             // label15
@@ -503,7 +503,7 @@
             this.label15.Location = new System.Drawing.Point(80, 932);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(78, 14);
-            this.label15.TabIndex = 26;
+            this.label15.TabIndex = 49;
             this.label15.Text = "Fecha de final:";
             // 
             // subtareaNombreBox
@@ -511,7 +511,7 @@
             this.subtareaNombreBox.Location = new System.Drawing.Point(163, 802);
             this.subtareaNombreBox.Name = "subtareaNombreBox";
             this.subtareaNombreBox.Size = new System.Drawing.Size(199, 20);
-            this.subtareaNombreBox.TabIndex = 21;
+            this.subtareaNombreBox.TabIndex = 42;
             // 
             // label14
             // 
@@ -523,7 +523,7 @@
             this.label14.Name = "label14";
             this.label14.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label14.Size = new System.Drawing.Size(121, 14);
-            this.label14.TabIndex = 27;
+            this.label14.TabIndex = 51;
             this.label14.Text = "Descripción de la tarea:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
@@ -535,7 +535,7 @@
             this.tareaElegidaLabel.Location = new System.Drawing.Point(356, 768);
             this.tareaElegidaLabel.Name = "tareaElegidaLabel";
             this.tareaElegidaLabel.Size = new System.Drawing.Size(11, 14);
-            this.tareaElegidaLabel.TabIndex = 4;
+            this.tareaElegidaLabel.TabIndex = 40;
             this.tareaElegidaLabel.Text = "-";
             // 
             // label7
@@ -546,7 +546,7 @@
             this.label7.Location = new System.Drawing.Point(198, 768);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(141, 14);
-            this.label7.TabIndex = 2;
+            this.label7.TabIndex = 39;
             this.label7.Text = "CREANDO SUBTAREAS DE:";
             // 
             // dataGridProjects
@@ -557,7 +557,7 @@
             this.dataGridProjects.MultiSelect = false;
             this.dataGridProjects.Name = "dataGridProjects";
             this.dataGridProjects.Size = new System.Drawing.Size(914, 249);
-            this.dataGridProjects.TabIndex = 0;
+            this.dataGridProjects.TabIndex = 17;
             // 
             // proyectoElegidoLabel
             // 
@@ -567,7 +567,7 @@
             this.proyectoElegidoLabel.Location = new System.Drawing.Point(337, 453);
             this.proyectoElegidoLabel.Name = "proyectoElegidoLabel";
             this.proyectoElegidoLabel.Size = new System.Drawing.Size(11, 14);
-            this.proyectoElegidoLabel.TabIndex = 5;
+            this.proyectoElegidoLabel.TabIndex = 19;
             this.proyectoElegidoLabel.Text = "-";
             // 
             // label6
@@ -578,7 +578,7 @@
             this.label6.Location = new System.Drawing.Point(198, 454);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(126, 14);
-            this.label6.TabIndex = 2;
+            this.label6.TabIndex = 18;
             this.label6.Text = "AÑADIENDO TAREAS A :";
             // 
             // menuStrip1
@@ -590,7 +590,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1664, 24);
-            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.TabIndex = 55;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // oPCIONESToolStripMenuItem
@@ -631,7 +631,7 @@
             this.taskGridView.Location = new System.Drawing.Point(699, 455);
             this.taskGridView.Name = "taskGridView";
             this.taskGridView.Size = new System.Drawing.Size(914, 269);
-            this.taskGridView.TabIndex = 6;
+            this.taskGridView.TabIndex = 33;
             // 
             // subtaskGridView
             // 
@@ -639,7 +639,7 @@
             this.subtaskGridView.Location = new System.Drawing.Point(701, 765);
             this.subtaskGridView.Name = "subtaskGridView";
             this.subtaskGridView.Size = new System.Drawing.Size(914, 185);
-            this.subtaskGridView.TabIndex = 7;
+            this.subtaskGridView.TabIndex = 54;
             // 
             // label24
             // 
@@ -649,7 +649,7 @@
             this.label24.Location = new System.Drawing.Point(235, 43);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(213, 16);
-            this.label24.TabIndex = 8;
+            this.label24.TabIndex = 0;
             this.label24.Text = "RUTA DEL JSON DE PROYECTOS";
             // 
             // textBoxRuta
@@ -658,14 +658,14 @@
             this.textBoxRuta.Location = new System.Drawing.Point(459, 43);
             this.textBoxRuta.Name = "textBoxRuta";
             this.textBoxRuta.Size = new System.Drawing.Size(863, 20);
-            this.textBoxRuta.TabIndex = 9;
+            this.textBoxRuta.TabIndex = 1;
             // 
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(1344, 41);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(111, 23);
-            this.button6.TabIndex = 10;
+            this.button6.TabIndex = 2;
             this.button6.Text = "...";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -675,7 +675,7 @@
             this.button2.Location = new System.Drawing.Point(1344, 81);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(111, 23);
-            this.button2.TabIndex = 13;
+            this.button2.TabIndex = 5;
             this.button2.Text = "...";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -686,7 +686,7 @@
             this.rutaUsuariosBox.Location = new System.Drawing.Point(459, 83);
             this.rutaUsuariosBox.Name = "rutaUsuariosBox";
             this.rutaUsuariosBox.Size = new System.Drawing.Size(863, 20);
-            this.rutaUsuariosBox.TabIndex = 12;
+            this.rutaUsuariosBox.TabIndex = 4;
             // 
             // label22
             // 
@@ -696,7 +696,7 @@
             this.label22.Location = new System.Drawing.Point(247, 81);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(199, 16);
-            this.label22.TabIndex = 11;
+            this.label22.TabIndex = 3;
             this.label22.Text = "RUTA DEL JSON DE USUARIOS";
             // 
             // borrarTareaButton
@@ -706,7 +706,7 @@
             this.borrarTareaButton.Location = new System.Drawing.Point(370, 706);
             this.borrarTareaButton.Name = "borrarTareaButton";
             this.borrarTareaButton.Size = new System.Drawing.Size(111, 23);
-            this.borrarTareaButton.TabIndex = 35;
+            this.borrarTareaButton.TabIndex = 38;
             this.borrarTareaButton.Text = "BORRAR";
             this.borrarTareaButton.UseVisualStyleBackColor = true;
             this.borrarTareaButton.Click += new System.EventHandler(this.borrarTareaButton_Click);
@@ -715,6 +715,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackgroundImage = global::gestiodeprojectes_EricPeraltaSandoval.Properties.Resources.projectscreenbackground;
             this.ClientSize = new System.Drawing.Size(1664, 977);
             this.ControlBox = false;

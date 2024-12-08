@@ -45,7 +45,7 @@
             this.createJSONButton.Location = new System.Drawing.Point(656, 426);
             this.createJSONButton.Name = "createJSONButton";
             this.createJSONButton.Size = new System.Drawing.Size(350, 100);
-            this.createJSONButton.TabIndex = 1;
+            this.createJSONButton.TabIndex = 2;
             this.createJSONButton.Text = "CREAR JSON";
             this.createJSONButton.UseVisualStyleBackColor = true;
             this.createJSONButton.Click += new System.EventHandler(this.button1_Click);
@@ -58,7 +58,7 @@
             this.importJSONButton.Location = new System.Drawing.Point(277, 426);
             this.importJSONButton.Name = "importJSONButton";
             this.importJSONButton.Size = new System.Drawing.Size(350, 100);
-            this.importJSONButton.TabIndex = 2;
+            this.importJSONButton.TabIndex = 1;
             this.importJSONButton.Text = "IMPORTAR JSON";
             this.importJSONButton.UseVisualStyleBackColor = false;
             this.importJSONButton.Click += new System.EventHandler(this.button2_Click);

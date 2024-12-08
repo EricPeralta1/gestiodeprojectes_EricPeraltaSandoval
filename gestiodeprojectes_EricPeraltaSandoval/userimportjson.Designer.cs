@@ -46,7 +46,7 @@
             this.button1.Location = new System.Drawing.Point(111, 395);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(338, 100);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 6;
             this.button1.Text = "GESTIÓ D\'USUARIS";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -58,7 +58,7 @@
             this.button2.Location = new System.Drawing.Point(837, 395);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(310, 100);
-            this.button2.TabIndex = 1;
+            this.button2.TabIndex = 8;
             this.button2.Text = "GESTIÓ DE PROJECTES";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -70,7 +70,7 @@
             this.button3.Location = new System.Drawing.Point(493, 395);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(313, 100);
-            this.button3.TabIndex = 2;
+            this.button3.TabIndex = 7;
             this.button3.Text = "GESTIÓ DEL JSON";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -83,7 +83,7 @@
             this.label1.Location = new System.Drawing.Point(123, 114);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(204, 20);
-            this.label1.TabIndex = 3;
+            this.label1.TabIndex = 0;
             this.label1.Text = "RUTA DEL JSON DE USUARIOS";
             // 
             // rutaUsuariosBox
@@ -92,14 +92,14 @@
             this.rutaUsuariosBox.Location = new System.Drawing.Point(351, 116);
             this.rutaUsuariosBox.Name = "rutaUsuariosBox";
             this.rutaUsuariosBox.Size = new System.Drawing.Size(640, 20);
-            this.rutaUsuariosBox.TabIndex = 4;
+            this.rutaUsuariosBox.TabIndex = 1;
             // 
             // jsonUsersButton
             // 
             this.jsonUsersButton.Location = new System.Drawing.Point(1025, 114);
             this.jsonUsersButton.Name = "jsonUsersButton";
             this.jsonUsersButton.Size = new System.Drawing.Size(90, 23);
-            this.jsonUsersButton.TabIndex = 5;
+            this.jsonUsersButton.TabIndex = 2;
             this.jsonUsersButton.Text = "...";
             this.jsonUsersButton.UseVisualStyleBackColor = true;
             this.jsonUsersButton.Click += new System.EventHandler(this.button4_Click);
@@ -112,7 +112,7 @@
             this.label2.Location = new System.Drawing.Point(118, 205);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(218, 20);
-            this.label2.TabIndex = 6;
+            this.label2.TabIndex = 3;
             this.label2.Text = "RUTA DEL JSON DE PROYECTOS";
             // 
             // rutaProyectosBox
@@ -121,14 +121,14 @@
             this.rutaProyectosBox.Location = new System.Drawing.Point(351, 205);
             this.rutaProyectosBox.Name = "rutaProyectosBox";
             this.rutaProyectosBox.Size = new System.Drawing.Size(640, 20);
-            this.rutaProyectosBox.TabIndex = 7;
+            this.rutaProyectosBox.TabIndex = 4;
             // 
             // jsonProjectsButton
             // 
             this.jsonProjectsButton.Location = new System.Drawing.Point(1025, 202);
             this.jsonProjectsButton.Name = "jsonProjectsButton";
             this.jsonProjectsButton.Size = new System.Drawing.Size(90, 23);
-            this.jsonProjectsButton.TabIndex = 8;
+            this.jsonProjectsButton.TabIndex = 5;
             this.jsonProjectsButton.Text = "...";
             this.jsonProjectsButton.UseVisualStyleBackColor = true;
             this.jsonProjectsButton.Click += new System.EventHandler(this.jsonProjectsButton_Click);

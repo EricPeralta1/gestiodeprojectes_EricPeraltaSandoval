@@ -62,7 +62,7 @@
             this.label8.Location = new System.Drawing.Point(148, 246);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 13);
-            this.label8.TabIndex = 6;
+            this.label8.TabIndex = 5;
             this.label8.Text = "Apellido:";
             // 
             // label7
@@ -72,7 +72,7 @@
             this.label7.Location = new System.Drawing.Point(131, 329);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 13);
-            this.label7.TabIndex = 5;
+            this.label7.TabIndex = 9;
             this.label7.Text = "Contraseña:";
             // 
             // label6
@@ -82,7 +82,7 @@
             this.label6.Location = new System.Drawing.Point(160, 287);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 4;
+            this.label6.TabIndex = 7;
             this.label6.Text = "Email:";
             // 
             // label5
@@ -92,7 +92,7 @@
             this.label5.Location = new System.Drawing.Point(148, 206);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 13);
-            this.label5.TabIndex = 2;
+            this.label5.TabIndex = 3;
             this.label5.Text = "Nombre:";
             // 
             // emailuserbox
@@ -100,7 +100,7 @@
             this.emailuserbox.Location = new System.Drawing.Point(214, 287);
             this.emailuserbox.Name = "emailuserbox";
             this.emailuserbox.Size = new System.Drawing.Size(199, 20);
-            this.emailuserbox.TabIndex = 3;
+            this.emailuserbox.TabIndex = 8;
             // 
             // passworduserbox
             // 
@@ -108,21 +108,21 @@
             this.passworduserbox.Name = "passworduserbox";
             this.passworduserbox.PasswordChar = '*';
             this.passworduserbox.Size = new System.Drawing.Size(199, 20);
-            this.passworduserbox.TabIndex = 2;
+            this.passworduserbox.TabIndex = 10;
             // 
             // surnameuserbox
             // 
             this.surnameuserbox.Location = new System.Drawing.Point(214, 243);
             this.surnameuserbox.Name = "surnameuserbox";
             this.surnameuserbox.Size = new System.Drawing.Size(199, 20);
-            this.surnameuserbox.TabIndex = 1;
+            this.surnameuserbox.TabIndex = 6;
             // 
             // nameuserbox
             // 
             this.nameuserbox.Location = new System.Drawing.Point(214, 203);
             this.nameuserbox.Name = "nameuserbox";
             this.nameuserbox.Size = new System.Drawing.Size(199, 20);
-            this.nameuserbox.TabIndex = 0;
+            this.nameuserbox.TabIndex = 4;
             // 
             // userSelectBox
             // 
@@ -131,7 +131,7 @@
             this.userSelectBox.Location = new System.Drawing.Point(921, 210);
             this.userSelectBox.Name = "userSelectBox";
             this.userSelectBox.Size = new System.Drawing.Size(226, 21);
-            this.userSelectBox.TabIndex = 3;
+            this.userSelectBox.TabIndex = 13;
             // 
             // label4
             // 
@@ -140,7 +140,7 @@
             this.label4.Location = new System.Drawing.Point(802, 213);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 13);
-            this.label4.TabIndex = 1;
+            this.label4.TabIndex = 12;
             this.label4.Text = "Usuario elegido";
             // 
             // eliminarButton
@@ -149,7 +149,7 @@
             this.eliminarButton.Location = new System.Drawing.Point(830, 319);
             this.eliminarButton.Name = "eliminarButton";
             this.eliminarButton.Size = new System.Drawing.Size(248, 38);
-            this.eliminarButton.TabIndex = 4;
+            this.eliminarButton.TabIndex = 15;
             this.eliminarButton.Text = "ELIMINAR";
             this.eliminarButton.UseVisualStyleBackColor = true;
             this.eliminarButton.Click += new System.EventHandler(this.button3_Click);
@@ -160,7 +160,7 @@
             this.EDITAR.Location = new System.Drawing.Point(830, 265);
             this.EDITAR.Name = "EDITAR";
             this.EDITAR.Size = new System.Drawing.Size(248, 35);
-            this.EDITAR.TabIndex = 3;
+            this.EDITAR.TabIndex = 14;
             this.EDITAR.Text = "EDITAR";
             this.EDITAR.UseVisualStyleBackColor = true;
             this.EDITAR.Click += new System.EventHandler(this.EDITAR_Click);
@@ -171,7 +171,7 @@
             this.dataGridUsers.Location = new System.Drawing.Point(38, 424);
             this.dataGridUsers.Name = "dataGridUsers";
             this.dataGridUsers.Size = new System.Drawing.Size(1187, 276);
-            this.dataGridUsers.TabIndex = 4;
+            this.dataGridUsers.TabIndex = 16;
             // 
             // menuStrip1
             // 
@@ -181,7 +181,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1249, 24);
-            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.TabIndex = 17;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // oPCIONESToolStripMenuItem
@@ -223,14 +223,14 @@
             this.textBoxRuta.Location = new System.Drawing.Point(189, 61);
             this.textBoxRuta.Name = "textBoxRuta";
             this.textBoxRuta.Size = new System.Drawing.Size(865, 20);
-            this.textBoxRuta.TabIndex = 7;
+            this.textBoxRuta.TabIndex = 1;
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(1069, 59);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(109, 23);
-            this.button2.TabIndex = 8;
+            this.button2.TabIndex = 2;
             this.button2.Text = "...";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -242,7 +242,7 @@
             this.label9.Location = new System.Drawing.Point(91, 64);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(92, 13);
-            this.label9.TabIndex = 9;
+            this.label9.TabIndex = 0;
             this.label9.Text = "RUTA DEL JSON";
             // 
             // button1
@@ -251,7 +251,7 @@
             this.button1.Location = new System.Drawing.Point(471, 246);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 45);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 11;
             this.button1.Text = "CREAR USUARIO";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);

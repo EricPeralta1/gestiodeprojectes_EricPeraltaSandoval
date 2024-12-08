@@ -1,15 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace gestiodeprojectes_EricPeraltaSandoval
 {
@@ -218,37 +213,46 @@ namespace gestiodeprojectes_EricPeraltaSandoval
                 MessageBox.Show("Por favor, selecciona un proyecto para borrar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             } else {
-                int projectIndex = projectList.IndexOf((project)projectComboBox.SelectedItem);
-                projectList.RemoveAt(projectIndex);
+                DialogResult confirmErase = MessageBox.Show("Estás seguro de querer eliminarlo? ¡Se perderá para siempre!", "Confirmación", MessageBoxButtons.YesNo);
 
-
-                for (int i = 0; i < projectList.Count; i++)
+                if (confirmErase == DialogResult.Yes)
                 {
-                    projectList[i].projectId = i + 1;
+                    int projectIndex = projectList.IndexOf((project)projectComboBox.SelectedItem);
+                    projectList.RemoveAt(projectIndex);
+
+
+                    for (int i = 0; i < projectList.Count; i++)
+                    {
+                        projectList[i].projectId = i + 1;
+                    }
+
+                    File.WriteAllText(textBoxRuta.Text, JArray.FromObject(projectList).ToString());
+
+                    dataGridProjects.DataSource = null;
+                    dataGridProjects.DataSource = projectList;
+                    proyectoElegidoLabel.Text = "";
+
+                    taskGridView.DataSource = null;
+                    tareaElegidaLabel.Text = "";
+
+                    subtaskGridView.DataSource = null;
+
+
+                    projectComboBox.DataSource = null;
+                    projectComboBox.DataSource = projectList;
+                    projectComboBox.DisplayMember = "Name";
+
+                    tasksListComboBox.DataSource = null;
+
+                    subtaskList = null;
+                    taskList = null;
+
+                    MessageBox.Show("Proyecto eliminado. Recuerde volver a elegir un proyecto para añadir tareas.", "Operación completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (confirmErase == DialogResult.No) {
+                    MessageBox.Show("Eliminación cancelada.", "Operación completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
-                File.WriteAllText(textBoxRuta.Text, JArray.FromObject(projectList).ToString());
-
-                dataGridProjects.DataSource = null;
-                dataGridProjects.DataSource = projectList;
-                proyectoElegidoLabel.Text = "";
-
-                taskGridView.DataSource = null;
-                tareaElegidaLabel.Text = "";
-
-                subtaskGridView.DataSource = null;
-
-
-                projectComboBox.DataSource = null;
-                projectComboBox.DataSource = projectList;
-                projectComboBox.DisplayMember = "Name";
-
-                tasksListComboBox.DataSource = null;
-               
-                subtaskList = null;
-                taskList = null;
-
-                MessageBox.Show("Proyecto eliminado. Recuerde volver a elegir un proyecto para añadir tareas.", "Operación completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -269,32 +273,42 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             {
                 MessageBox.Show("Por favor, selecciona una tarea para borrar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } else {
-                int taskIndex = taskList.IndexOf(selectedTask);
-                taskList.RemoveAt(taskIndex);
+                DialogResult confirmErase = MessageBox.Show("Estás seguro de querer eliminarlo? ¡Se perderá para siempre!", "Confirmación", MessageBoxButtons.YesNo);
 
-                for (int i = 0; i < taskList.Count; i++)
+                if (confirmErase == DialogResult.Yes)
                 {
-                    taskList[i].taskId = i + 1;
+                    int taskIndex = taskList.IndexOf(selectedTask);
+                    taskList.RemoveAt(taskIndex);
+
+                    for (int i = 0; i < taskList.Count; i++)
+                    {
+                        taskList[i].taskId = i + 1;
+                    }
+
+                    selectedProject.tasks = taskList;
+
+
+                    File.WriteAllText(textBoxRuta.Text, JArray.FromObject(projectList).ToString());
+
+                    taskGridView.DataSource = null;
+                    taskGridView.DataSource = taskList;
+
+                    subtaskGridView.DataSource = null;
+                    tareaElegidaLabel.Text = "";
+
+                    subtaskList = null;
+
+                    tasksListComboBox.DataSource = null;
+                    tasksListComboBox.DataSource = taskList;
+                    tasksListComboBox.DisplayMember = "Name";
+
+                    MessageBox.Show("Tarea eliminada. Recuerda volver a elegir una tarea para añadir subtareas.", "Operación completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (confirmErase == DialogResult.No) {
+                    MessageBox.Show("Eliminación cancelada", "Operación completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 }
 
-                selectedProject.tasks = taskList;
-
-
-                File.WriteAllText(textBoxRuta.Text, JArray.FromObject(projectList).ToString());
-
-                taskGridView.DataSource = null;
-                taskGridView.DataSource = taskList;
-
-                subtaskGridView.DataSource = null;
-                tareaElegidaLabel.Text = "";
-
-                subtaskList = null;
-
-                tasksListComboBox.DataSource = null;
-                tasksListComboBox.DataSource = taskList;
-                tasksListComboBox.DisplayMember = "Name";
-
-                MessageBox.Show("Tarea eliminada. Recuerda volver a elegir una tarea para añadir subtareas.", "Operación completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

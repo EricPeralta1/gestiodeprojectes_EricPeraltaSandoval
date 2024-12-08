@@ -51,7 +51,7 @@
             this.GuardarUsersJson.Location = new System.Drawing.Point(466, 87);
             this.GuardarUsersJson.Name = "GuardarUsersJson";
             this.GuardarUsersJson.Size = new System.Drawing.Size(147, 42);
-            this.GuardarUsersJson.TabIndex = 6;
+            this.GuardarUsersJson.TabIndex = 2;
             this.GuardarUsersJson.Text = "GUARDAR CAMBIOS DEL JSON";
             this.GuardarUsersJson.UseVisualStyleBackColor = true;
             this.GuardarUsersJson.Click += new System.EventHandler(this.GuardarUsersJson_Click);
@@ -64,7 +64,7 @@
             this.label1.Location = new System.Drawing.Point(79, 91);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(139, 28);
-            this.label1.TabIndex = 3;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Introduce un nuevo nombre\r\n(Usuarios):";
             // 
             // nomUsersJsonBox
@@ -81,7 +81,7 @@
             this.GuardarProjectsJson.Location = new System.Drawing.Point(481, 260);
             this.GuardarProjectsJson.Name = "GuardarProjectsJson";
             this.GuardarProjectsJson.Size = new System.Drawing.Size(132, 39);
-            this.GuardarProjectsJson.TabIndex = 8;
+            this.GuardarProjectsJson.TabIndex = 5;
             this.GuardarProjectsJson.Text = "GUARDAR CAMBIOS DEL JSON";
             this.GuardarProjectsJson.UseVisualStyleBackColor = true;
             this.GuardarProjectsJson.Click += new System.EventHandler(this.GuardarProjectsJson_Click);
@@ -94,7 +94,7 @@
             this.label3.Location = new System.Drawing.Point(79, 267);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(139, 28);
-            this.label3.TabIndex = 5;
+            this.label3.TabIndex = 3;
             this.label3.Text = "Introduce un nuevo nombre\r\n(Proyectos):";
             // 
             // nomProjectsJsonBox
@@ -102,7 +102,7 @@
             this.nomProjectsJsonBox.Location = new System.Drawing.Point(235, 269);
             this.nomProjectsJsonBox.Name = "nomProjectsJsonBox";
             this.nomProjectsJsonBox.Size = new System.Drawing.Size(217, 20);
-            this.nomProjectsJsonBox.TabIndex = 1;
+            this.nomProjectsJsonBox.TabIndex = 4;
             // 
             // menuStrip1
             // 
@@ -112,7 +112,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(698, 24);
-            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // oPCIONESToolStripMenuItem
@@ -154,7 +154,7 @@
             this.returnButton.Location = new System.Drawing.Point(241, 387);
             this.returnButton.Name = "returnButton";
             this.returnButton.Size = new System.Drawing.Size(219, 23);
-            this.returnButton.TabIndex = 7;
+            this.returnButton.TabIndex = 6;
             this.returnButton.Text = "VOLVER A LA PANTALLA DE INICIO";
             this.returnButton.UseVisualStyleBackColor = true;
             this.returnButton.Click += new System.EventHandler(this.button1_Click);

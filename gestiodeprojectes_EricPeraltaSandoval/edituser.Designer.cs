@@ -49,7 +49,7 @@
             this.contraeñaBoton.Location = new System.Drawing.Point(133, 311);
             this.contraeñaBoton.Name = "contraeñaBoton";
             this.contraeñaBoton.Size = new System.Drawing.Size(131, 23);
-            this.contraeñaBoton.TabIndex = 11;
+            this.contraeñaBoton.TabIndex = 8;
             this.contraeñaBoton.Text = "CAMBIAR CONTRASEÑA";
             this.contraeñaBoton.UseVisualStyleBackColor = true;
             this.contraeñaBoton.Click += new System.EventHandler(this.button1_Click);
@@ -60,7 +60,7 @@
             this.cancelarBoton.Location = new System.Drawing.Point(338, 232);
             this.cancelarBoton.Name = "cancelarBoton";
             this.cancelarBoton.Size = new System.Drawing.Size(123, 23);
-            this.cancelarBoton.TabIndex = 1;
+            this.cancelarBoton.TabIndex = 10;
             this.cancelarBoton.Text = "Cancelar cambios";
             this.cancelarBoton.UseVisualStyleBackColor = true;
             this.cancelarBoton.Click += new System.EventHandler(this.cancelarBoton_Click);
@@ -71,7 +71,7 @@
             this.aplicarBoton.Location = new System.Drawing.Point(338, 175);
             this.aplicarBoton.Name = "aplicarBoton";
             this.aplicarBoton.Size = new System.Drawing.Size(123, 23);
-            this.aplicarBoton.TabIndex = 0;
+            this.aplicarBoton.TabIndex = 9;
             this.aplicarBoton.Text = "Aplicar cambios";
             this.aplicarBoton.UseVisualStyleBackColor = true;
             this.aplicarBoton.Click += new System.EventHandler(this.aplicarBoton_Click);
@@ -81,21 +81,21 @@
             this.emailEditBox.Location = new System.Drawing.Point(127, 241);
             this.emailEditBox.Name = "emailEditBox";
             this.emailEditBox.Size = new System.Drawing.Size(131, 20);
-            this.emailEditBox.TabIndex = 8;
+            this.emailEditBox.TabIndex = 6;
             // 
             // apellidoEditBox
             // 
             this.apellidoEditBox.Location = new System.Drawing.Point(127, 166);
             this.apellidoEditBox.Name = "apellidoEditBox";
             this.apellidoEditBox.Size = new System.Drawing.Size(131, 20);
-            this.apellidoEditBox.TabIndex = 7;
+            this.apellidoEditBox.TabIndex = 4;
             // 
             // nomEditBox
             // 
             this.nomEditBox.Location = new System.Drawing.Point(127, 98);
             this.nomEditBox.Name = "nomEditBox";
             this.nomEditBox.Size = new System.Drawing.Size(131, 20);
-            this.nomEditBox.TabIndex = 6;
+            this.nomEditBox.TabIndex = 2;
             // 
             // label1
             // 
@@ -116,7 +116,7 @@
             this.label5.Location = new System.Drawing.Point(48, 315);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 16);
-            this.label5.TabIndex = 5;
+            this.label5.TabIndex = 7;
             this.label5.Text = "Contraseña:";
             // 
             // label4
@@ -127,7 +127,7 @@
             this.label4.Location = new System.Drawing.Point(76, 243);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 16);
-            this.label4.TabIndex = 4;
+            this.label4.TabIndex = 5;
             this.label4.Text = "Email:";
             // 
             // label3
@@ -149,7 +149,7 @@
             this.label2.Location = new System.Drawing.Point(65, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 16);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 1;
             this.label2.Text = "Nombre:";
             // 
             // edituser
