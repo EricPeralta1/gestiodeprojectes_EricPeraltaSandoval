@@ -168,9 +168,9 @@
             // dataGridUsers
             // 
             this.dataGridUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridUsers.Location = new System.Drawing.Point(38, 424);
+            this.dataGridUsers.Location = new System.Drawing.Point(345, 421);
             this.dataGridUsers.Name = "dataGridUsers";
-            this.dataGridUsers.Size = new System.Drawing.Size(1187, 276);
+            this.dataGridUsers.Size = new System.Drawing.Size(583, 288);
             this.dataGridUsers.TabIndex = 16;
             // 
             // menuStrip1
