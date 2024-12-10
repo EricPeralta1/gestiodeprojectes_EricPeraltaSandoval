@@ -11,7 +11,7 @@ using Newtonsoft.Json.Linq;
 
 namespace gestiodeprojectes_EricPeraltaSandoval
 {
-    public partial class userimportjson : Form
+    public  partial class userimportjson : Form
     {
 
         /// <summary>

@@ -10,6 +10,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         /// Incluye el usuario a editar.
         /// </summary>
         user editeduser;
+        changepasswordform changePasswordForm;
 
         /// <summary>
         /// Inicializa el form y guarda del usuario a editar en user(editedUser)
@@ -17,7 +18,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         /// <param name="edituser"></param>
         public checkpasswordform(user edituser)
         {
-             editeduser = edituser;
+            editeduser = edituser;
             InitializeComponent();
         }
 
@@ -31,7 +32,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         {
             if (passwordCheckBox.Text == "admin1234")
             {
-                using (changepasswordform changePasswordForm = new changepasswordform(editeduser))
+                using (changePasswordForm = new changepasswordform(editeduser))
                 {
                     if (changePasswordForm.ShowDialog() == DialogResult.OK)
                     {

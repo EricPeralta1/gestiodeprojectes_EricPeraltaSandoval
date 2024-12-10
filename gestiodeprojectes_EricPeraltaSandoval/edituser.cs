@@ -11,14 +11,14 @@ namespace gestiodeprojectes_EricPeraltaSandoval
     public partial class edituser : Form
     {
 
-
         /// <summary>
         /// Incluyen la ruta del JSON de usuarios, el usuario a editar (editedUser) y la lista de Usuarios(userList)
         /// </summary>
         private string jsonfilepath;
         private user editedUser;
         List<user> userlist;
-
+        checkpasswordform checkpasswordform;
+        private checkpasswordform checkPasswordForm;
 
         /// <summary>
         /// Al inicializar la aplicacíón, guarda el usuario a Editar en el user(editedUser).
@@ -115,7 +115,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            checkpasswordform checkPasswordForm = new checkpasswordform(editedUser);
+            checkPasswordForm = new checkpasswordform(editedUser);
 
             if (checkPasswordForm.ShowDialog() == DialogResult.OK)
             {

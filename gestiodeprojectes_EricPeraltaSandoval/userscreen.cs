@@ -17,6 +17,8 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         /// </summary>
         List<user> userlist;
         string rutaProjects;
+        projectscreen projectscreen;
+        jsonscreen jsonscreen;
 
 
 
@@ -50,6 +52,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             userSelectBox.DataSource = userlist;
             userSelectBox.DisplayMember = "Name";
 
+
         }
 
 
@@ -62,7 +65,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         /// <param name="e"></param>
         private void gestionDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            projectscreen projectscreen = new projectscreen(textBoxRuta.Text, rutaProjects);
+            projectscreen = new projectscreen(textBoxRuta.Text, rutaProjects);
 
             projectscreen.Show();
             this.Hide();
@@ -76,8 +79,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         /// <param name="e"></param>
         private void gestiónDelJSONToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            jsonscreen jsonscreen = new jsonscreen(textBoxRuta.Text, rutaProjects);
-
+            jsonscreen = new jsonscreen(textBoxRuta.Text, rutaProjects);
             jsonscreen.Show();
             this.Hide();
         }
