@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 using System.Windows.Forms;
 
 namespace gestiodeprojectes_EricPeraltaSandoval
@@ -91,7 +92,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
                 {
 
                     string pathSavedFolder = saveFileDialog.FileName;
-                    string jsonContent = File.ReadAllText(rutaUsers);
+                    string jsonContent = File.ReadAllText(rutaUsers, Encoding.UTF8);
 
                     File.WriteAllText(pathSavedFolder, jsonContent);
 
@@ -125,7 +126,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
                 {
 
                     string pathSavedFolder = saveFileDialog.FileName;
-                    string jsonContent = File.ReadAllText(rutaProjects);
+                    string jsonContent = File.ReadAllText(rutaProjects, Encoding.UTF8);
 
                     File.WriteAllText(pathSavedFolder, jsonContent);
 

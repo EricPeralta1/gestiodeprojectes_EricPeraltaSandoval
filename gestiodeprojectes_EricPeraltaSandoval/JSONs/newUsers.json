@@ -1,1 +1,9 @@
-[]
+﻿[
+  {
+    "userId": 1,
+    "name": "Carlos",
+    "surname": "Pérez",
+    "email": "carlos@gmail.com",
+    "password": "R4sencoRI7NStycThTvGGw=="
+  }
+]

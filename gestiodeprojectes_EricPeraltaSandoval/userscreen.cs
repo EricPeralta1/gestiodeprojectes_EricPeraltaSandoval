@@ -33,7 +33,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             textBoxRuta.Text = userJsonPath;
             rutaProjects = projectJsonPath;
 
-            JArray jarrayusers = JArray.Parse(File.ReadAllText(textBoxRuta.Text, Encoding.Default));
+            JArray jarrayusers = JArray.Parse(File.ReadAllText(textBoxRuta.Text, Encoding.UTF8));
             userlist = jarrayusers.ToObject<List<user>>();
 
 
@@ -152,9 +152,9 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
                 userlist.Add(user);
 
-                File.WriteAllText(textBoxRuta.Text, JArray.FromObject(userlist).ToString());
+                File.WriteAllText(textBoxRuta.Text, JArray.FromObject(userlist).ToString(), Encoding.UTF8);
 
-                string jsonContent = File.ReadAllText(textBoxRuta.Text);
+                string jsonContent = File.ReadAllText(textBoxRuta.Text, Encoding.UTF8);
                 userlist = JArray.Parse(jsonContent).ToObject<List<user>>();
 
                 dataGridUsers.DataSource = null;
@@ -197,7 +197,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
             if (openFileDialog.ShowDialog().Equals(DialogResult.OK)) { 
                 textBoxRuta.Text = openFileDialog.FileName;
-                JArray jarrayusers = JArray.Parse(File.ReadAllText(textBoxRuta.Text, Encoding.Default));
+                JArray jarrayusers = JArray.Parse(File.ReadAllText(textBoxRuta.Text, Encoding.UTF8));
                 userlist = jarrayusers.ToObject<List<user>>();
 
                 dataGridUsers.DataSource = null;

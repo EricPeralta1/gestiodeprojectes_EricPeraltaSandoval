@@ -54,7 +54,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         {
 
             string email = emailEditBox.Text;
-            JArray jarrayusers = JArray.Parse(File.ReadAllText(jsonfilepath, Encoding.Default));
+            JArray jarrayusers = JArray.Parse(File.ReadAllText(jsonfilepath, Encoding.UTF8));
             userlist = jarrayusers.ToObject<List<user>>();
 
             if (string.IsNullOrEmpty(nomEditBox.Text) || string.IsNullOrEmpty(apellidoEditBox.Text) || string.IsNullOrEmpty(emailEditBox.Text))

@@ -38,8 +38,8 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             rutaUsuariosBox.Text = jsonUsersPath;
             textBoxRuta.Text = jsonProjectsPath;
 
-            JArray jarrayusers = JArray.Parse(File.ReadAllText(rutaUsuariosBox.Text, Encoding.Default));
-            JArray jarrayprojects = JArray.Parse(File.ReadAllText(textBoxRuta.Text, Encoding.Default));
+            JArray jarrayusers = JArray.Parse(File.ReadAllText(rutaUsuariosBox.Text, Encoding.UTF8));
+            JArray jarrayprojects = JArray.Parse(File.ReadAllText(textBoxRuta.Text, Encoding.UTF8));
 
             userList = jarrayusers.ToObject<List<user>>();
             projectList = jarrayprojects.ToObject<List<project>>();
@@ -123,7 +123,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             if (openFileDialog.ShowDialog().Equals(DialogResult.OK))
             {
                 textBoxRuta.Text = openFileDialog.FileName;
-                JArray jarrayprojects = JArray.Parse(File.ReadAllText(textBoxRuta.Text, Encoding.Default));
+                JArray jarrayprojects = JArray.Parse(File.ReadAllText(textBoxRuta.Text, Encoding.UTF8));
                 projectList = jarrayprojects.ToObject<List<project>>();
 
                 dataGridProjects.DataSource = null;
@@ -175,9 +175,9 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
                 projectList.Add(project);
 
-                File.WriteAllText(textBoxRuta.Text, JArray.FromObject(projectList).ToString());
+                File.WriteAllText(textBoxRuta.Text, JArray.FromObject(projectList).ToString(), Encoding.UTF8);
 
-                string jsonContent = File.ReadAllText(textBoxRuta.Text);
+                string jsonContent = File.ReadAllText(textBoxRuta.Text, Encoding.UTF8);
                 projectList = JArray.Parse(jsonContent).ToObject<List<project>>();
 
                 dataGridProjects.DataSource = null;
@@ -226,7 +226,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
                         projectList[i].projectId = i + 1;
                     }
 
-                    File.WriteAllText(textBoxRuta.Text, JArray.FromObject(projectList).ToString());
+                    File.WriteAllText(textBoxRuta.Text, JArray.FromObject(projectList).ToString(), Encoding.UTF8);
 
                     dataGridProjects.DataSource = null;
                     dataGridProjects.DataSource = projectList;
@@ -288,7 +288,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
                     selectedProject.tasks = taskList;
 
 
-                    File.WriteAllText(textBoxRuta.Text, JArray.FromObject(projectList).ToString());
+                    File.WriteAllText(textBoxRuta.Text, JArray.FromObject(projectList).ToString(), Encoding.UTF8);
 
                     taskGridView.DataSource = null;
                     taskGridView.DataSource = taskList;
@@ -412,7 +412,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
                     selectedProject.tasks.Add(task);
                 }
 
-                File.WriteAllText(textBoxRuta.Text, JArray.FromObject(projectList).ToString());
+                File.WriteAllText(textBoxRuta.Text, JArray.FromObject(projectList).ToString(), Encoding.UTF8);
 
                 taskList = selectedProject.tasks;
 
@@ -450,7 +450,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             if (openFileDialog.ShowDialog().Equals(DialogResult.OK))
             {
                 rutaUsuariosBox.Text = openFileDialog.FileName;
-                JArray jarrayusers = JArray.Parse(File.ReadAllText(rutaUsuariosBox.Text, Encoding.Default));
+                JArray jarrayusers = JArray.Parse(File.ReadAllText(rutaUsuariosBox.Text, Encoding.UTF8));
                 userList = jarrayusers.ToObject<List<user>>();
 
                 usuarioTareaBox.DataSource = null;
@@ -560,7 +560,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
                     selectedTask.subtasks.Add(subtarea);
                 }
 
-                File.WriteAllText(textBoxRuta.Text, JArray.FromObject(projectList).ToString());
+                File.WriteAllText(textBoxRuta.Text, JArray.FromObject(projectList).ToString(), Encoding.UTF8);
 
                 subtaskGridView.DataSource = null;
                 subtaskGridView.DataSource = selectedTask.subtasks;
