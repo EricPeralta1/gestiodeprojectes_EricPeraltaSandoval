@@ -40,6 +40,8 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
             userscreen userscreen = new userscreen(userJsonPath, projectJsonPath);
 
+
+
             userscreen.Show();
             this.Hide();
 

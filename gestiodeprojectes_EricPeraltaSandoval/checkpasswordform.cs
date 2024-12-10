@@ -31,13 +31,24 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         {
             if (passwordCheckBox.Text == "admin1234")
             {
-                changepasswordform changePasswordForm = new changepasswordform(editeduser);
-
-                changePasswordForm.ShowDialog();
-
+                using (changepasswordform changePasswordForm = new changepasswordform(editeduser))
+                {
+                    if (changePasswordForm.ShowDialog() == DialogResult.OK)
+                    {
+                        this.DialogResult = DialogResult.OK;
+                    }
+                    else
+                    {
+                        this.DialogResult = DialogResult.Cancel;
+                    }
+                }
                 this.Close();
-            } else {
-                MessageBox.Show("La contraseña no es correcta. Volviendo al menú..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("La contraseña no es correcta. Volviendo al menú...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                this.DialogResult = DialogResult.Cancel;
                 this.Close();
             }
         }

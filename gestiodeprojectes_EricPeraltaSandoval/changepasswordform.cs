@@ -55,7 +55,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
                 MessageBox.Show("Contraseña actualizada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                this.Close();
+                this.Hide();
             }
 
             
