@@ -6,12 +6,19 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 {
     public partial class inicialscreen : Form
     {
+        userimportjson userimportjson;
+        userscreen userscreen;
+        string userJsonPath;
+        string projectJsonPath;
+
         /// <summary>
         ///Incializa el form.
         /// </summary>
         public inicialscreen()
         {
             InitializeComponent();
+            userimportjson = new userimportjson();
+
         }
 
 
@@ -30,17 +37,14 @@ namespace gestiodeprojectes_EricPeraltaSandoval
 
             string jsonsFolderPath = Path.Combine(projectDirectory, "JSONs");
 
-
-            string userJsonPath = Path.Combine(jsonsFolderPath, "newUsers.json");
-            string projectJsonPath = Path.Combine(jsonsFolderPath, "newProjects.json");
+            userJsonPath = Path.Combine(jsonsFolderPath, "newUsers.json");
+            projectJsonPath = Path.Combine(jsonsFolderPath, "newProjects.json");
             string initialBody = "[]";
 
             File.WriteAllText(userJsonPath, initialBody);
             File.WriteAllText(projectJsonPath, initialBody);
 
-            userscreen userscreen = new userscreen(userJsonPath, projectJsonPath);
-
-
+            userscreen = new userscreen(userJsonPath, projectJsonPath);
 
             userscreen.Show();
             this.Hide();
@@ -54,8 +58,6 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
-            userimportjson userimportjson = new userimportjson();
-            
             userimportjson.Show();
             this.Hide();
         }

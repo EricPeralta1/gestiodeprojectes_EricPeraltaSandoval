@@ -14,6 +14,9 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         /// </summary>
         string rutaUsers;
         string rutaProjects;
+        userscreen userscreen;
+        projectscreen projectscreen;
+        inicialscreen inicialscreen;
 
 
         /// <summary>
@@ -26,7 +29,8 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             InitializeComponent();
 
             rutaUsers = jsonUsersPath;
-            rutaProjects = jsonProjectsPath;   
+            rutaProjects = jsonProjectsPath;
+
         }
 
         /// <summary> 
@@ -37,8 +41,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         /// <param name="e"></param>
         private void gestiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            userscreen userscreen = new userscreen(rutaUsers, rutaProjects);
-
+            userscreen = new userscreen(rutaUsers, rutaProjects);
             userscreen.ShowDialog();
             this.Hide();
         }
@@ -52,8 +55,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         /// <param name="e"></param>
         private void gestionDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            projectscreen projectscreen = new projectscreen(rutaUsers, rutaProjects);
-
+            projectscreen = new projectscreen(rutaUsers, rutaProjects);
             projectscreen.Show();
             this.Hide();
         }
@@ -148,7 +150,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            inicialscreen inicialscreen = new inicialscreen();
+            inicialscreen = new inicialscreen();
             inicialscreen.Show();
             this.Close();
         }

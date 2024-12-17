@@ -607,21 +607,21 @@
             // gestiónToolStripMenuItem
             // 
             this.gestiónToolStripMenuItem.Name = "gestiónToolStripMenuItem";
-            this.gestiónToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.gestiónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gestiónToolStripMenuItem.Text = "Gestión de usuarios";
             this.gestiónToolStripMenuItem.Click += new System.EventHandler(this.gestiónToolStripMenuItem_Click);
             // 
             // gestiónDelJSONToolStripMenuItem
             // 
             this.gestiónDelJSONToolStripMenuItem.Name = "gestiónDelJSONToolStripMenuItem";
-            this.gestiónDelJSONToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.gestiónDelJSONToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gestiónDelJSONToolStripMenuItem.Text = "Gestión del JSON";
             this.gestiónDelJSONToolStripMenuItem.Click += new System.EventHandler(this.gestiónDelJSONToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
