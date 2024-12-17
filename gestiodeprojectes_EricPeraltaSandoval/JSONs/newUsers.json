@@ -1,9 +1,23 @@
 ﻿[
   {
     "userId": 1,
-    "name": "dasdad",
-    "surname": "dasdadd",
-    "email": "sadasda@asdads",
-    "password": "VqSQks4H/XdYPjakcRPSnQ=="
+    "name": "Federico",
+    "surname": "Fernandez",
+    "email": "ffernandez@gmail.com",
+    "password": "$2a$11$Fxq.PiJpHNN5XPOKetmL/euQu52iBoDnYkkaErptKQdnclU6pvWVq"
+  },
+  {
+    "userId": 2,
+    "name": "Eric",
+    "surname": "Peralta",
+    "email": "eperaltas@politecnics.barcelona",
+    "password": "$2a$11$IoiWeLxD79IEPwtx.8MV4OymFlnXhEvGKTS8l.XM4pOpwa2DlNVia"
+  },
+  {
+    "userId": 3,
+    "name": "Carlos",
+    "surname": "Pérez",
+    "email": "cperez@gmail.com",
+    "password": "$2a$11$gvMEirBXhOCczQqhCYieWutBAzg7EM/sAEzLmpcOGRQqCfkxswHvK"
   }
 ]

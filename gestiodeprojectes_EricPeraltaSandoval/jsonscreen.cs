@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 
@@ -94,7 +95,9 @@ namespace gestiodeprojectes_EricPeraltaSandoval
                     string pathSavedFolder = saveFileDialog.FileName;
                     string jsonContent = File.ReadAllText(rutaUsers, Encoding.UTF8);
 
-                    File.WriteAllText(pathSavedFolder, jsonContent);
+                    string encryptedContent = EncryptData(jsonContent, "clau-secreta-123");
+
+                    File.WriteAllText(pathSavedFolder, encryptedContent);
 
                     MessageBox.Show("Archivo guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -148,6 +151,22 @@ namespace gestiodeprojectes_EricPeraltaSandoval
             inicialscreen inicialscreen = new inicialscreen();
             inicialscreen.Show();
             this.Close();
+        }
+
+        private string EncryptData(string plainText, string key)
+        {
+            using (Aes aes = Aes.Create())
+            {
+                aes.Key = Encoding.UTF8.GetBytes(key.PadRight(32).Substring(0, 32));
+                aes.IV = new byte[16]; // Vector d'inicialització per defecte
+
+                using (var encryptor = aes.CreateEncryptor(aes.Key, aes.IV))
+                {
+                    byte[] plainBytes = Encoding.UTF8.GetBytes(plainText);
+                    byte[] encryptedBytes = encryptor.TransformFinalBlock(plainBytes, 0, plainBytes.Length);
+                    return Convert.ToBase64String(encryptedBytes);
+                }
+            }
         }
     }
 }

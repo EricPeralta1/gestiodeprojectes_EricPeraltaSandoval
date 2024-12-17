@@ -136,7 +136,7 @@ namespace gestiodeprojectes_EricPeraltaSandoval
                 user.surname = surnameuserbox.Text;
                 user.email = emailuserbox.Text;
                 string llaveEncriptar = "12345678";
-                user.password = EncriptarContra(passworduserbox.Text, llaveEncriptar);
+                user.password = HashearContra(passworduserbox.Text);
 
                 Console.WriteLine(userlist.Count);
                 if (userlist.Count == 0)
@@ -331,6 +331,11 @@ namespace gestiodeprojectes_EricPeraltaSandoval
                     }
                 }
             }
+        }
+
+        private static string HashearContra(string contraNoEncriptada)
+        {
+            return BCrypt.Net.BCrypt.HashPassword(contraNoEncriptada);
         }
     }
 }
